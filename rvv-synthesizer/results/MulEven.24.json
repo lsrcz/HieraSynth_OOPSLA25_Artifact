@@ -1,0 +1,24 @@
+{
+  "results": [
+    {
+      "command": "./scripts/target/mul_even_odd.sh -j 24 --ir-func-name MulEven --log-prog-name MulEven.24 ",
+      "mean": 1214.8825897140666,
+      "stddev": 17.47859838907822,
+      "median": 1213.2643630134,
+      "user": 19747.15979542,
+      "system": 373.1164060333333,
+      "min": 1198.2693780644,
+      "max": 1233.1140280644,
+      "times": [
+        1213.2643630134,
+        1233.1140280644,
+        1198.2693780644
+      ],
+      "exit_codes": [
+        0,
+        0,
+        0
+      ]
+    }
+  ]
+}

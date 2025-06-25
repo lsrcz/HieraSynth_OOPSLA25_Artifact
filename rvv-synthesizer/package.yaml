@@ -1,0 +1,134 @@
+name: rvv-synthesizer
+version: 0.1.0.0
+synopsis: A synthesizer for programs with RISC-V vector extension
+description: A synthesizer for programs with RISC-V vector extension
+category: Formal Methods, Theorem Provers, Symbolic Computation, SMT
+extra-source-files:
+  - CHANGELOG.md
+  - README.md
+dependencies:
+  - base >= 4.16 && < 5
+  - grisette >= 0.11 && < 0.12
+  - mtl >= 2.2.2 && < 2.4
+  - unordered-containers >= 0.2.11 && < 0.3
+  - QuickCheck >= 2.14 && < 2.15
+  - quickcheck-with-counterexamples >= 1.2 && < 1.3
+  - sbv >= 8.11 && < 11
+  - hashable >= 1.3 && < 1.5
+  - text >= 1.2.4.1 && < 2.2
+  - prettyprinter >= 1.5 && < 1.8
+  - ordered-containers >= 0.1.1 && < 0.3
+  - deepseq
+  - hierasynth
+  - split
+  - extra
+  - criterion
+  - time
+  - graphviz
+  # - llvm-hs == 15.0.0
+  # - llvm-hs-pure == 15.0.0
+  - bytestring
+  - demangler
+  - sayable
+  - containers
+  - filepath
+  - ascii
+  - stm
+  - hslogger
+  - ansi-terminal
+  - template-haskell
+  - random
+  - async
+  - ghc-debug-stub
+  - bytes
+  - unix
+  - psqueues
+  - pqueue
+  - Chart
+  - Chart-cairo
+  - Chart-diagrams
+  - optparse-applicative
+  - split
+  - filepath
+  - megaparsec
+  - lens
+  - vector
+ghc-options:
+  - -Wextra
+  - -Wcompat
+  - -Widentities
+  - -Wincomplete-record-updates
+  - -Wmissing-export-lists
+  - -Wmissing-home-modules
+  - -Wmissing-import-lists
+  - -Wpartial-fields
+  - -Wunused-type-patterns
+  - -Wno-x-partial
+  - -threaded
+  - -rtsopts
+  - -finfo-table-map
+  - -fdistinct-constructor-tables
+  - -fwarn-orphans
+  # - -debug
+library:
+  source-dirs: src
+executables:
+  # reorder_widen_mul_accumulate:
+  #   source-dirs: reorder_widen_mul_accumulate
+  #   main: Main.hs
+  #   dependencies: rvv-synthesizer
+  min_max_128:
+    source-dirs: min_max_128
+    main: Main.hs
+    dependencies: rvv-synthesizer
+  lt128:
+    source-dirs: lt128
+    main: Main.hs
+    dependencies: rvv-synthesizer
+  odd_even_blocks:
+    source-dirs: odd_even_blocks
+    main: Main.hs
+    dependencies: rvv-synthesizer
+  insert_lane:
+    source-dirs: insert_lane
+    main: Main.hs
+    dependencies: rvv-synthesizer
+  add_sub:
+    source-dirs: add_sub
+    main: Main.hs
+    dependencies: rvv-synthesizer
+  mul_even_odd:
+    source-dirs: mul_even_odd
+    main: Main.hs
+    dependencies: rvv-synthesizer
+  zero_extend_resize_bit_cast:
+    source-dirs: zero_extend_resize_bit_cast
+    main: Main.hs
+    dependencies: rvv-synthesizer
+  concat:
+    source-dirs: concat
+    main: Main.hs
+    dependencies: rvv-synthesizer
+  l444_alpha_to_argb_row:
+    source-dirs: l444_alpha_to_argb_row
+    main: Main.hs
+    dependencies: rvv-synthesizer
+  hacker:
+    source-dirs: hacker
+    main: Main.hs
+    dependencies: rvv-synthesizer
+  vqsort:
+    source-dirs: vqsort
+    main: Main.hs
+    dependencies: rvv-synthesizer
+tests:
+  spec:
+    main: Main.hs
+    source-dirs: test
+    dependencies:
+      - hierasynth
+      - test-framework >= 0.8.2 && < 0.9
+      - test-framework-hunit >= 0.3.0.2 && < 0.4
+      - test-framework-quickcheck2 >= 0.3.0.5 && < 0.4
+      - HUnit >= 1.6
+      - rvv-synthesizer

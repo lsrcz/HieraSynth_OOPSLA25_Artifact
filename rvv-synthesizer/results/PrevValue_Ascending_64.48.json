@@ -1,0 +1,24 @@
+{
+  "results": [
+    {
+      "command": "./scripts/target/vqsort.sh PrevValue_Ascending 64 -j 48 --log-prog-name PrevValue_Ascending_64.48  ",
+      "mean": 7.297327030433333,
+      "stddev": 0.05549808359260194,
+      "median": 7.2899035171,
+      "user": 13.327514799999998,
+      "system": 3.1578474066666664,
+      "min": 7.2459143291,
+      "max": 7.3561632451,
+      "times": [
+        7.2459143291,
+        7.3561632451,
+        7.2899035171
+      ],
+      "exit_codes": [
+        0,
+        0,
+        0
+      ]
+    }
+  ]
+}

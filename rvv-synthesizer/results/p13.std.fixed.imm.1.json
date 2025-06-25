@@ -1,0 +1,24 @@
+{
+  "results": [
+    {
+      "command": "./scripts/target/hacker.sh stdlib_fixed_imm p13 -j 1 --log-prog-name p13.std.fixed.imm.1",
+      "mean": 59.71767598296666,
+      "stddev": 0.013530132230960067,
+      "median": 59.7212761513,
+      "user": 60.144566013333325,
+      "system": 1.0038826866666668,
+      "min": 59.7027098983,
+      "max": 59.7290418993,
+      "times": [
+        59.7290418993,
+        59.7212761513,
+        59.7027098983
+      ],
+      "exit_codes": [
+        0,
+        0,
+        0
+      ]
+    }
+  ]
+}

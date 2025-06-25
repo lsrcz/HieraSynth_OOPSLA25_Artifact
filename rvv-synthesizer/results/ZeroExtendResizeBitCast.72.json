@@ -1,0 +1,24 @@
+{
+  "results": [
+    {
+      "command": "./scripts/target/zero_extend_resize_bit_cast.sh -j 72  --log-prog-name ZeroExtendResizeBitCast.72  ",
+      "mean": 8.368954982786667,
+      "stddev": 0.1131867194384432,
+      "median": 8.42374930812,
+      "user": 26.16859483333333,
+      "system": 4.966638186666667,
+      "min": 8.23879878212,
+      "max": 8.44431685812,
+      "times": [
+        8.42374930812,
+        8.44431685812,
+        8.23879878212
+      ],
+      "exit_codes": [
+        0,
+        0,
+        0
+      ]
+    }
+  ]
+}

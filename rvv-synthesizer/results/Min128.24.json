@@ -1,0 +1,24 @@
+{
+  "results": [
+    {
+      "command": "./scripts/target/min_max_128.sh -j 24 --ir-func-name Min128 --sketch-selector=sub_prog_inferred_8 --log-prog-name Min128.24  --target-cost 13 ",
+      "mean": 2297.7531237358667,
+      "stddev": 521.709750573241,
+      "median": 2248.2931248152,
+      "user": 23118.165926633334,
+      "system": 482.11969909999993,
+      "min": 1802.5347168872,
+      "max": 2842.4315295052,
+      "times": [
+        2248.2931248152,
+        2842.4315295052,
+        1802.5347168872
+      ],
+      "exit_codes": [
+        0,
+        0,
+        0
+      ]
+    }
+  ]
+}

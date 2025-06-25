@@ -1,0 +1,24 @@
+{
+  "results": [
+    {
+      "command": "./scripts/target/lt128.sh -j 1 --ir-func-name Lt128 --sketch-selector=optimal --log-prog-name Lt128.optimal.1  --target-cost 11 ",
+      "mean": 16.06885890804,
+      "stddev": 0.2516047159984806,
+      "median": 15.93356317404,
+      "user": 6.770861113333333,
+      "system": 0.7934884066666665,
+      "min": 15.91384956904,
+      "max": 16.359163981040002,
+      "times": [
+        15.91384956904,
+        16.359163981040002,
+        15.93356317404
+      ],
+      "exit_codes": [
+        0,
+        0,
+        0
+      ]
+    }
+  ]
+}

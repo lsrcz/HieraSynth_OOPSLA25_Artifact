@@ -1,0 +1,249 @@
+def p01(x: scalar<xmul=f2>) -> scalar<xmul=f2>:
+  one = scalar[xmul=f2, imm=0x1]()
+  o1 = sub.xx[width=f2](x, one)
+  res = and.xx[width=f2](o1, x)
+  return res
+
+def p02(x: scalar<xmul=f2>) -> scalar<xmul=f2>:
+  one = scalar[xmul=f2, imm=0x1]()
+  o1 = add.xx[width=f2](x, one)
+  res = and.xx[width=f2](o1, x)
+  return res
+
+def p03(x: scalar<xmul=f2>) -> scalar<xmul=f2>:
+  o1 = neg.x[width=f2](x)
+  res = and.xx[width=f2](o1, x)
+  return res
+
+def p04(x: scalar<xmul=f2>) -> scalar<xmul=f2>:
+  one = scalar[xmul=f2, imm=0x1]()
+  o1 = sub.xx[width=f2](x, one)
+  res = xor.xx[width=f2](o1, x)
+  return res
+
+def p05(x: scalar<xmul=f2>) -> scalar<xmul=f2>:
+  one = scalar[xmul=f2, imm=0x1]()
+  o1 = sub.xx[width=f2](x, one)
+  res = or.xx[width=f2](o1, x)
+  return res
+
+def p06(x: scalar<xmul=f2>) -> scalar<xmul=f2>:
+  one = scalar[xmul=f2, imm=0x1]()
+  o1 = add.xx[width=f2](x, one)
+  res = or.xx[width=f2](o1, x)
+  return res
+
+def p07(x: scalar<xmul=f2>) -> scalar<xmul=f2>:
+  o1 = not.x[width=f2](x)
+  one = scalar[xmul=f2, imm=0x1]()
+  o2 = add.xx[width=f2](x, one)
+  res = and.xx[width=f2](o1, o2)
+  return res
+
+def p08(x: scalar<xmul=f2>) -> scalar<xmul=f2>:
+  one = scalar[xmul=f2, imm=0x1]()
+  o1 = sub.xx[width=f2](x, one)
+  o2 = not.x[width=f2](x)
+  res = and.xx[width=f2](o1, o2)
+  return res
+
+def p09(x: scalar<xmul=f2>) -> scalar<xmul=f2>:
+  v31 = scalar[xmul=f2, imm=0x1f]()
+  o1 = sra.xx[width=f2](x, v31)
+  o2 = xor.xx[width=f2](x, o1)
+  res = sub.xx[width=f2](o2, o1)
+  return res
+
+def p10(x: scalar<xmul=f2>, y: scalar<xmul=f2>) -> scalar<xmul=f2>:
+  o1 = and.xx[width=f2](x, y)
+  o2 = xor.xx[width=f2](x, y)
+  res0 = sltu.xx[width=f2](o1, o2)
+  one = scalar[xmul=f2, imm=0x1]()
+  res1 = xor.xx[width=f2](res0, one)
+  return res1
+
+def p11(x: scalar<xmul=f2>, y: scalar<xmul=f2>) -> scalar<xmul=f2>:
+  o1 = not.x[width=f2](y)
+  o2 = and.xx[width=f2](x, o1)
+  res = sltu.xx[width=f2](y, o2)
+  return res
+
+def p12(x: scalar<xmul=f2>, y: scalar<xmul=f2>) -> scalar<xmul=f2>:
+  o1 = not.x[width=f2](y)
+  o2 = and.xx[width=f2](x, o1)
+  res0 = sltu.xx[width=f2](o2, y)
+  one = scalar[xmul=f2, imm=0x1]()
+  res = xor.xx[width=f2](res0, one)
+  return res
+
+def p13(x: scalar<xmul=f2>) -> scalar<xmul=f2>:
+  v31 = scalar[xmul=f2, imm=0x1f]()
+  o1 = sra.xx[width=f2](x, v31)
+  o2 = neg.x[width=f2](x)
+  o3 = sra.xx[width=f2](o2, v31)
+  res = or.xx[width=f2](o1, o3)
+  return res
+
+def p14(x: scalar<xmul=f2>, y: scalar<xmul=f2>) -> scalar<xmul=f2>:
+  o1 = and.xx[width=f2](x, y)
+  o2 = xor.xx[width=f2](x, y)
+  one = scalar[xmul=f2, imm=0x1]()
+  o3 = sra.xx[width=f2](o2, one)
+  res = add.xx[width=f2](o1, o3)
+  return res
+
+def p15(x: scalar<xmul=f2>, y: scalar<xmul=f2>) -> scalar<xmul=f2>:
+  o1 = or.xx[width=f2](x, y)
+  o2 = xor.xx[width=f2](x, y)
+  one = scalar[xmul=f2, imm=0x1]()
+  o3 = sra.xx[width=f2](o2, one)
+  res = sub.xx[width=f2](o1, o3)
+  return res
+
+def p16(x: scalar<xmul=f2>, y: scalar<xmul=f2>) -> scalar<xmul=f2>:
+  o1 = xor.xx[width=f2](x, y)
+  o2x = sltu.xx[width=f2](x, y)
+  one = scalar[xmul=f2, imm=0x1]()
+  o2y = xor.xx[width=f2](o2x, one)
+  o2 = neg.x[width=f2](o2y)
+  o3 = and.xx[width=f2](o1, o2)
+  res = xor.xx[width=f2](o3, y)
+  return res
+
+def p17(x: scalar<xmul=f2>) -> scalar<xmul=f2>:
+  one = scalar[xmul=f2, imm=0x1]()
+  o1 = sub.xx[width=f2](x, one)
+  o2 = or.xx[width=f2](x, o1)
+  o3 = add.xx[width=f2](o2, one)
+  res = and.xx[width=f2](o3, x)
+  return res
+
+def p18(x: scalar<xmul=f2>) -> scalar<xmul=f2>:
+  one = scalar[xmul=f2, imm=0x1]()
+  o1 = sub.xx[width=f2](x, one)
+  o2 = and.xx[width=f2](o1, x)
+  o3 = snez.x[width=f2](x)
+  o4 = snez.x[width=f2](o2)
+  o5 = seqz.x[width=f2](o4)
+  res = and.xx[width=f2](o3, o5)
+  return res
+
+def p19(x: scalar<xmul=f2>, m: scalar<xmul=f2>, k: scalar<xmul=f2>) -> scalar<xmul=f2>:
+  o1 = sra.xx[width=f2](x, k)
+  o2 = xor.xx[width=f2](x, o1)
+  o3 = and.xx[width=f2](o2, m)
+  o4 = sll.xx[width=f2](o3, k)
+  o5 = xor.xx[width=f2](o4, o3)
+  o6 = xor.xx[width=f2](o5, x)
+  return o6
+
+def p20(x: scalar<xmul=f2>) -> scalar<xmul=f2>:
+  o1 = neg.x[width=f2](x)
+  o2 = and.xx[width=f2](x, o1)
+  o3 = add.xx[width=f2](x, o2)
+  o4 = xor.xx[width=f2](x, o2)
+  two = scalar[xmul=f2, imm=0x2]()
+  o5 = sra.xx[width=f2](x, two)
+  o6 = div.xx[width=f2](o5, o2)
+  o7 = or.xx[width=f2](o3, o6)
+  return o7
+
+def p21(x: scalar<xmul=f2>, a: scalar<xmul=f2>, b: scalar<xmul=f2>, c: scalar<xmul=f2>) -> scalar<xmul=f2>:
+  // Following assembly sequence exactly:
+  o1 = xor.xx[width=f2](x, c)        // xor a4, a0, a3
+  o2 = snez.x[width=f2](o1)          // snez a4, a4
+  o3 = xor.xx[width=f2](a, c)        // xor a5, a1, a3
+  o4 = xor.xx[width=f2](x, a)        // xor a0, a0, a1
+  o5 = snez.x[width=f2](o4)          // snez a0, a0
+  o6 = xor.xx[width=f2](b, c)        // xor a2, a2, a3
+  minus_one = scalar[xmul=f2, imm=0xffffffff]()
+  o7 = add.xx[width=f2](o2, minus_one) // addi a4, a4, -1
+  o8 = and.xx[width=f2](o7, o3)      // and a4, a4, a5
+  o9 = add.xx[width=f2](o5, minus_one) // addi a0, a0, -1
+  o10 = and.xx[width=f2](o9, o6)     // and a0, a0, a2
+  o11 = xor.xx[width=f2](o10, o8)    // xor a0, a0, a4
+  res = xor.xx[width=f2](o11, c)     // xor a0, a0, a3
+  return res
+
+def p22(x: scalar<xmul=f2>) -> scalar<xmul=f2>:
+  one = scalar[xmul=f2, imm=0x1]()
+  o1 = sra.xx[width=f2](x, one)
+  o2 = xor.xx[width=f2](o1, x)
+  s2 = scalar[xmul=f2, imm=0x2]()
+  o3 = sra.xx[width=f2](o2, s2)
+  o4 = xor.xx[width=f2](o2, o3)
+  ones = scalar[xmul=f2, imm=0x11111111]()
+  o5 = and.xx[width=f2](o4, ones)
+  o6 = mul.xx[width=f2](o5, ones)
+  s28 = scalar[xmul=f2, imm=0x1c]()
+  o7 = sra.xx[width=f2](o6, s28)
+  res = and.xx[width=f2](o7, one)
+  return res
+
+def p23(x: scalar<xmul=f2>) -> scalar<xmul=f2>:
+  v1 = scalar[xmul=f2, imm=0x1]()
+  o1 = sra.xx[width=f2](x, v1)
+  v55555555 = scalar[xmul=f2, imm=0x55555555]()
+  o2 = and.xx[width=f2](o1, v55555555)
+  o3 = sub.xx[width=f2](x, o2)
+  v33333333 = scalar[xmul=f2, imm=0x33333333]()
+  o4 = and.xx[width=f2](o3, v33333333)
+  v2 = scalar[xmul=f2, imm=0x2]()
+  o5 = sra.xx[width=f2](o3, v2)
+  o6 = and.xx[width=f2](o5, v33333333)
+  o7 = add.xx[width=f2](o4, o6)
+  v4 = scalar[xmul=f2, imm=0x4]()
+  o8 = sra.xx[width=f2](o7, v4)
+  o9 = add.xx[width=f2](o8, o7)
+  v0f0f0f0f = scalar[xmul=f2, imm=0x0f0f0f0f]()
+  o10 = and.xx[width=f2](o9, v0f0f0f0f)
+  v8 = scalar[xmul=f2, imm=0x8]()
+  o11 = sra.xx[width=f2](o10, v8)
+  o12 = add.xx[width=f2](o10, o11)
+  v16 = scalar[xmul=f2, imm=0x10]()
+  o13 = sra.xx[width=f2](o12, v16)
+  o14 = add.xx[width=f2](o12, o13)
+  v3f = scalar[xmul=f2, imm=0x3f]()
+  res = and.xx[width=f2](o14, v3f)
+  return res
+
+def p24(x: scalar<xmul=f2>) -> scalar<xmul=f2>:
+  s1 = scalar[xmul=f2, imm=0x1]() 
+  o1 = sub.xx[width=f2](x, s1)
+  o2 = sra.xx[width=f2](o1, s1)
+  o3 = or.xx[width=f2](o1, o2)
+  s2 = scalar[xmul=f2, imm=0x2]() 
+  o4 = sra.xx[width=f2](o3, s2)
+  o5 = or.xx[width=f2](o3, o4)
+  s4 = scalar[xmul=f2, imm=0x4]() 
+  o6 = sra.xx[width=f2](o5, s4)
+  o7 = or.xx[width=f2](o5, o6)
+  s8 = scalar[xmul=f2, imm=0x8]()
+  o8 = sra.xx[width=f2](o7, s8)
+  o9 = or.xx[width=f2](o7, o8)
+  s16 = scalar[xmul=f2, imm=0x10]()
+  o10 = sra.xx[width=f2](o9, s16)
+  o11 = or.xx[width=f2](o9, o10)
+  res = add.xx[width=f2](o11, s1)
+  return res
+
+def p25(x: scalar<xmul=f2>, y: scalar<xmul=f2>) -> scalar<xmul=f2>:
+  vffff = scalar[xmul=f2, imm=0xffff]()
+  v16 = scalar[xmul=f2, imm=0x10]()
+  o1 = and.xx[width=f2](x, vffff)
+  o2 = sra.xx[width=f2](x, v16)
+  o3 = and.xx[width=f2](y, vffff)
+  o4 = sra.xx[width=f2](y, v16)
+  o5 = mul.xx[width=f2](o1, o3)
+  o6 = mul.xx[width=f2](o2, o3)
+  o7 = mul.xx[width=f2](o1, o4)
+  o8 = mul.xx[width=f2](o2, o4)
+  o9 = srl.xx[width=f2](o5, v16)
+  o10 = add.xx[width=f2](o6, o9)
+  o11 = and.xx[width=f2](o10, vffff)
+  o12 = sra.xx[width=f2](o10, v16)
+  o13 = add.xx[width=f2](o7, o11)
+  o14 = sra.xx[width=f2](o13, v16)
+  o15 = add.xx[width=f2](o14, o12)
+  res = add.xx[width=f2](o15, o8)
+  return res

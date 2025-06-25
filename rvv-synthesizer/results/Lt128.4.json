@@ -1,0 +1,24 @@
+{
+  "results": [
+    {
+      "command": "./scripts/target/lt128.sh -j 4 --ir-func-name Lt128 --sketch-selector=sub_prog_inferred_7 --log-prog-name Lt128.4  --target-cost 11 ",
+      "mean": 5626.70572267416,
+      "stddev": 697.3167395691086,
+      "median": 5636.93929517616,
+      "user": 7104.043567953333,
+      "system": 136.71091594666666,
+      "min": 4924.328518230161,
+      "max": 6318.84935461616,
+      "times": [
+        6318.84935461616,
+        5636.93929517616,
+        4924.328518230161
+      ],
+      "exit_codes": [
+        0,
+        0,
+        0
+      ]
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "results": [
+    {
+      "command": "./scripts/target/add_sub.sh -j 1 --ir-func-name AddSub --log-prog-name AddSub.optimal.1  --use-optimal-sketch",
+      "mean": 5.89916812124,
+      "stddev": 0.03013646821818325,
+      "median": 5.91440966024,
+      "user": 4.266409066666667,
+      "system": 0.6808294866666667,
+      "min": 5.86445531724,
+      "max": 5.91863938624,
+      "times": [
+        5.91440966024,
+        5.91863938624,
+        5.86445531724
+      ],
+      "exit_codes": [
+        0,
+        0,
+        0
+      ]
+    }
+  ]
+}

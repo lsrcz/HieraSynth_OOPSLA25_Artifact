@@ -1,0 +1,24 @@
+{
+  "results": [
+    {
+      "command": "./scripts/target/lt128.sh -j 1 --ir-func-name Lt128 --sketch-selector=fixed_cmp_optimal --log-prog-name Lt128.Fixed.optimal.1 ",
+      "mean": 32.63281149468,
+      "stddev": 0.6911846802437377,
+      "median": 32.72680613368,
+      "user": 31.925940753333332,
+      "system": 1.1338883266666666,
+      "min": 31.89943962868,
+      "max": 33.27218872168,
+      "times": [
+        32.72680613368,
+        31.89943962868,
+        33.27218872168
+      ],
+      "exit_codes": [
+        0,
+        0,
+        0
+      ]
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "results": [
+    {
+      "command": "./scripts/target/vqsort.sh SortPairsDistance1_Ascending 32 -j 8 --log-prog-name SortPairsDistance1_Ascending_32.8  ",
+      "mean": 10843.489478862,
+      "stddev": 2709.6746995834733,
+      "median": 11066.153433148,
+      "user": 49818.23057496666,
+      "system": 640.4875546333333,
+      "min": 8029.352930508,
+      "max": 13434.96207293,
+      "times": [
+        11066.153433148,
+        13434.96207293,
+        8029.352930508
+      ],
+      "exit_codes": [
+        0,
+        0,
+        0
+      ]
+    }
+  ]
+}

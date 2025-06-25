@@ -1,0 +1,24 @@
+{
+  "results": [
+    {
+      "command": "./scripts/target/odd_even_blocks.sh -j 1 --ir-func-name OddEvenBlocks --log-prog-name OddEvenBlocks.optimal.1  --use-optimal-sketch",
+      "mean": 7.229526153239999,
+      "stddev": 0.11841051425960959,
+      "median": 7.16734546224,
+      "user": 5.6512716,
+      "system": 0.7532081666666666,
+      "min": 7.15515929824,
+      "max": 7.366073699239999,
+      "times": [
+        7.15515929824,
+        7.16734546224,
+        7.366073699239999
+      ],
+      "exit_codes": [
+        0,
+        0,
+        0
+      ]
+    }
+  ]
+}

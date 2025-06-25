@@ -1,0 +1,24 @@
+{
+  "results": [
+    {
+      "command": "./scripts/target/vqsort.sh SwapAdjacentPairs 32 -j 48 --log-prog-name SwapAdjacentPairs_32.48  ",
+      "mean": 822.3139325385067,
+      "stddev": 8.047000522775596,
+      "median": 824.70440814884,
+      "user": 19334.17014195333,
+      "system": 400.40295008,
+      "min": 813.3425493398399,
+      "max": 828.89484012684,
+      "times": [
+        813.3425493398399,
+        824.70440814884,
+        828.89484012684
+      ],
+      "exit_codes": [
+        0,
+        0,
+        0
+      ]
+    }
+  ]
+}

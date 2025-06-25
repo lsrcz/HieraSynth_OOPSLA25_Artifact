@@ -1,0 +1,24 @@
+{
+  "results": [
+    {
+      "command": "./scripts/target/concat.sh -j 72 --ir-func-name ConcatUpperLower --log-prog-name ConcatUpperLower.72  ",
+      "mean": 8.461320016453335,
+      "stddev": 0.14762313029867755,
+      "median": 8.456086945120001,
+      "user": 70.01283302666667,
+      "system": 9.716631526666665,
+      "min": 8.31638300312,
+      "max": 8.611490101120001,
+      "times": [
+        8.611490101120001,
+        8.456086945120001,
+        8.31638300312
+      ],
+      "exit_codes": [
+        0,
+        0,
+        0
+      ]
+    }
+  ]
+}

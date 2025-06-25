@@ -1,0 +1,24 @@
+{
+  "results": [
+    {
+      "command": "./scripts/target/insert_lane.sh -j 1 --ir-func-name InsertLane --log-prog-name InsertLane.optimal.1  --use-optimal-sketch",
+      "mean": 8.47391248538,
+      "stddev": 0.1091360673200019,
+      "median": 8.53484612238,
+      "user": 7.4550779799999995,
+      "system": 0.6843956933333333,
+      "min": 8.34791556638,
+      "max": 8.53897576738,
+      "times": [
+        8.53897576738,
+        8.34791556638,
+        8.53484612238
+      ],
+      "exit_codes": [
+        0,
+        0,
+        0
+      ]
+    }
+  ]
+}

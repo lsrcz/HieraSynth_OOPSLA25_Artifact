@@ -1,0 +1,24 @@
+{
+  "results": [
+    {
+      "command": "./scripts/target/zero_extend_resize_bit_cast.sh -j 1  --log-prog-name ZeroExtendResizeBitCast.optimal.1  --use-optimal-sketch",
+      "mean": 6.143886914933333,
+      "stddev": 0.00774093338724637,
+      "median": 6.1415729586,
+      "user": 4.938287046666667,
+      "system": 0.5730017333333333,
+      "min": 6.1375668446,
+      "max": 6.152520941600001,
+      "times": [
+        6.1415729586,
+        6.152520941600001,
+        6.1375668446
+      ],
+      "exit_codes": [
+        0,
+        0,
+        0
+      ]
+    }
+  ]
+}

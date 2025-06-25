@@ -1,0 +1,1584 @@
+def _Z16ConcatUpperLowerIu16__rvv_uint8mf8_tET_S0_S0_(v0: vec<ef8mf8>, v1: vec<ef8mf8>) -> vec<ef8mf8>:
+  (v2) = vsetvlmax[mmul=1, tama]()
+  (v3) = vl_to_scalar[mmul=1](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslidedown.vx[ef8mf8, ud, fm](v2, v0, v5)
+  (v9) = vslideup.vx[ef8mf8, pd, fm](v2, v6, v5, v1)
+  return (v9)
+
+def _Z16ConcatLowerUpperIu16__rvv_uint8mf8_tET_S0_S0_(v0: vec<ef8mf8>, v1: vec<ef8mf8>) -> vec<ef8mf8>:
+  (v2) = vsetvlmax[mmul=1, tama]()
+  (v3) = vl_to_scalar[mmul=1](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslidedown.vx[ef8mf8, ud, fm](v2, v1, v5)
+  (v9) = vslideup.vx[ef8mf8, pd, fm](v2, v0, v5, v6)
+  return (v9)
+
+def _Z16ConcatLowerLowerIu16__rvv_uint8mf8_tET_S0_S0_(v0: vec<ef8mf8>, v1: vec<ef8mf8>) -> vec<ef8mf8>:
+  (v2) = vsetvlmax[mmul=1, tama]()
+  (v3) = vl_to_scalar[mmul=1](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslideup.vx[ef8mf8, pd, fm](v2, v0, v5, v1)
+  return (v6)
+
+def _Z16ConcatUpperUpperIu16__rvv_uint8mf8_tET_S0_S0_(v0: vec<ef8mf8>, v1: vec<ef8mf8>) -> vec<ef8mf8>:
+  (v2) = vsetvlmax[mmul=1, tama]()
+  (v3) = vl_to_scalar[mmul=1](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslidedown.vx[ef8mf8, ud, fm](v2, v0, v5)
+  (v9) = vslidedown.vx[ef8mf8, ud, fm](v2, v1, v5)
+  (v11) = vslideup.vx[ef8mf8, pd, fm](v2, v6, v5, v9)
+  return (v11)
+
+def _Z16ConcatUpperLowerIu16__rvv_uint8mf4_tET_S0_S0_(v0: vec<ef8mf4>, v1: vec<ef8mf4>) -> vec<ef8mf4>:
+  (v2) = vsetvlmax[mmul=2, tama]()
+  (v3) = vl_to_scalar[mmul=2](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslidedown.vx[ef8mf4, ud, fm](v2, v0, v5)
+  (v9) = vslideup.vx[ef8mf4, pd, fm](v2, v6, v5, v1)
+  return (v9)
+
+def _Z16ConcatLowerUpperIu16__rvv_uint8mf4_tET_S0_S0_(v0: vec<ef8mf4>, v1: vec<ef8mf4>) -> vec<ef8mf4>:
+  (v2) = vsetvlmax[mmul=2, tama]()
+  (v3) = vl_to_scalar[mmul=2](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslidedown.vx[ef8mf4, ud, fm](v2, v1, v5)
+  (v9) = vslideup.vx[ef8mf4, pd, fm](v2, v0, v5, v6)
+  return (v9)
+
+def _Z16ConcatLowerLowerIu16__rvv_uint8mf4_tET_S0_S0_(v0: vec<ef8mf4>, v1: vec<ef8mf4>) -> vec<ef8mf4>:
+  (v2) = vsetvlmax[mmul=2, tama]()
+  (v3) = vl_to_scalar[mmul=2](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslideup.vx[ef8mf4, pd, fm](v2, v0, v5, v1)
+  return (v6)
+
+def _Z16ConcatUpperUpperIu16__rvv_uint8mf4_tET_S0_S0_(v0: vec<ef8mf4>, v1: vec<ef8mf4>) -> vec<ef8mf4>:
+  (v2) = vsetvlmax[mmul=2, tama]()
+  (v3) = vl_to_scalar[mmul=2](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslidedown.vx[ef8mf4, ud, fm](v2, v0, v5)
+  (v9) = vslidedown.vx[ef8mf4, ud, fm](v2, v1, v5)
+  (v11) = vslideup.vx[ef8mf4, pd, fm](v2, v6, v5, v9)
+  return (v11)
+
+def _Z16ConcatUpperLowerIu16__rvv_uint8mf2_tET_S0_S0_(v0: vec<ef8mf2>, v1: vec<ef8mf2>) -> vec<ef8mf2>:
+  (v2) = vsetvlmax[mmul=4, tama]()
+  (v3) = vl_to_scalar[mmul=4](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslidedown.vx[ef8mf2, ud, fm](v2, v0, v5)
+  (v9) = vslideup.vx[ef8mf2, pd, fm](v2, v6, v5, v1)
+  return (v9)
+
+def _Z16ConcatLowerUpperIu16__rvv_uint8mf2_tET_S0_S0_(v0: vec<ef8mf2>, v1: vec<ef8mf2>) -> vec<ef8mf2>:
+  (v2) = vsetvlmax[mmul=4, tama]()
+  (v3) = vl_to_scalar[mmul=4](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslidedown.vx[ef8mf2, ud, fm](v2, v1, v5)
+  (v9) = vslideup.vx[ef8mf2, pd, fm](v2, v0, v5, v6)
+  return (v9)
+
+def _Z16ConcatLowerLowerIu16__rvv_uint8mf2_tET_S0_S0_(v0: vec<ef8mf2>, v1: vec<ef8mf2>) -> vec<ef8mf2>:
+  (v2) = vsetvlmax[mmul=4, tama]()
+  (v3) = vl_to_scalar[mmul=4](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslideup.vx[ef8mf2, pd, fm](v2, v0, v5, v1)
+  return (v6)
+
+def _Z16ConcatUpperUpperIu16__rvv_uint8mf2_tET_S0_S0_(v0: vec<ef8mf2>, v1: vec<ef8mf2>) -> vec<ef8mf2>:
+  (v2) = vsetvlmax[mmul=4, tama]()
+  (v3) = vl_to_scalar[mmul=4](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslidedown.vx[ef8mf2, ud, fm](v2, v0, v5)
+  (v9) = vslidedown.vx[ef8mf2, ud, fm](v2, v1, v5)
+  (v11) = vslideup.vx[ef8mf2, pd, fm](v2, v6, v5, v9)
+  return (v11)
+
+def _Z16ConcatUpperLowerIu15__rvv_uint8m1_tET_S0_S0_(v0: vec<ef8m1>, v1: vec<ef8m1>) -> vec<ef8m1>:
+  (v2) = vsetvlmax[mmul=8, tama]()
+  (v3) = vl_to_scalar[mmul=8](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslidedown.vx[ef8m1, ud, fm](v2, v0, v5)
+  (v9) = vslideup.vx[ef8m1, pd, fm](v2, v6, v5, v1)
+  return (v9)
+
+def _Z16ConcatLowerUpperIu15__rvv_uint8m1_tET_S0_S0_(v0: vec<ef8m1>, v1: vec<ef8m1>) -> vec<ef8m1>:
+  (v2) = vsetvlmax[mmul=8, tama]()
+  (v3) = vl_to_scalar[mmul=8](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslidedown.vx[ef8m1, ud, fm](v2, v1, v5)
+  (v9) = vslideup.vx[ef8m1, pd, fm](v2, v0, v5, v6)
+  return (v9)
+
+def _Z16ConcatLowerLowerIu15__rvv_uint8m1_tET_S0_S0_(v0: vec<ef8m1>, v1: vec<ef8m1>) -> vec<ef8m1>:
+  (v2) = vsetvlmax[mmul=8, tama]()
+  (v3) = vl_to_scalar[mmul=8](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslideup.vx[ef8m1, pd, fm](v2, v0, v5, v1)
+  return (v6)
+
+def _Z16ConcatUpperUpperIu15__rvv_uint8m1_tET_S0_S0_(v0: vec<ef8m1>, v1: vec<ef8m1>) -> vec<ef8m1>:
+  (v2) = vsetvlmax[mmul=8, tama]()
+  (v3) = vl_to_scalar[mmul=8](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslidedown.vx[ef8m1, ud, fm](v2, v0, v5)
+  (v9) = vslidedown.vx[ef8m1, ud, fm](v2, v1, v5)
+  (v11) = vslideup.vx[ef8m1, pd, fm](v2, v6, v5, v9)
+  return (v11)
+
+def _Z16ConcatUpperLowerIu15__rvv_uint8m2_tET_S0_S0_(v0: vec<ef8m2>, v1: vec<ef8m2>) -> vec<ef8m2>:
+  (v2) = vsetvlmax[mmul=16, tama]()
+  (v3) = vl_to_scalar[mmul=16](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslidedown.vx[ef8m2, ud, fm](v2, v0, v5)
+  (v9) = vslideup.vx[ef8m2, pd, fm](v2, v6, v5, v1)
+  return (v9)
+
+def _Z16ConcatLowerUpperIu15__rvv_uint8m2_tET_S0_S0_(v0: vec<ef8m2>, v1: vec<ef8m2>) -> vec<ef8m2>:
+  (v2) = vsetvlmax[mmul=16, tama]()
+  (v3) = vl_to_scalar[mmul=16](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslidedown.vx[ef8m2, ud, fm](v2, v1, v5)
+  (v9) = vslideup.vx[ef8m2, pd, fm](v2, v0, v5, v6)
+  return (v9)
+
+def _Z16ConcatLowerLowerIu15__rvv_uint8m2_tET_S0_S0_(v0: vec<ef8m2>, v1: vec<ef8m2>) -> vec<ef8m2>:
+  (v2) = vsetvlmax[mmul=16, tama]()
+  (v3) = vl_to_scalar[mmul=16](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslideup.vx[ef8m2, pd, fm](v2, v0, v5, v1)
+  return (v6)
+
+def _Z16ConcatUpperUpperIu15__rvv_uint8m2_tET_S0_S0_(v0: vec<ef8m2>, v1: vec<ef8m2>) -> vec<ef8m2>:
+  (v2) = vsetvlmax[mmul=16, tama]()
+  (v3) = vl_to_scalar[mmul=16](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslidedown.vx[ef8m2, ud, fm](v2, v0, v5)
+  (v9) = vslidedown.vx[ef8m2, ud, fm](v2, v1, v5)
+  (v11) = vslideup.vx[ef8m2, pd, fm](v2, v6, v5, v9)
+  return (v11)
+
+def _Z16ConcatUpperLowerIu15__rvv_uint8m4_tET_S0_S0_(v0: vec<ef8m4>, v1: vec<ef8m4>) -> vec<ef8m4>:
+  (v2) = vsetvlmax[mmul=32, tama]()
+  (v3) = vl_to_scalar[mmul=32](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslidedown.vx[ef8m4, ud, fm](v2, v0, v5)
+  (v9) = vslideup.vx[ef8m4, pd, fm](v2, v6, v5, v1)
+  return (v9)
+
+def _Z16ConcatLowerUpperIu15__rvv_uint8m4_tET_S0_S0_(v0: vec<ef8m4>, v1: vec<ef8m4>) -> vec<ef8m4>:
+  (v2) = vsetvlmax[mmul=32, tama]()
+  (v3) = vl_to_scalar[mmul=32](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslidedown.vx[ef8m4, ud, fm](v2, v1, v5)
+  (v9) = vslideup.vx[ef8m4, pd, fm](v2, v0, v5, v6)
+  return (v9)
+
+def _Z16ConcatLowerLowerIu15__rvv_uint8m4_tET_S0_S0_(v0: vec<ef8m4>, v1: vec<ef8m4>) -> vec<ef8m4>:
+  (v2) = vsetvlmax[mmul=32, tama]()
+  (v3) = vl_to_scalar[mmul=32](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslideup.vx[ef8m4, pd, fm](v2, v0, v5, v1)
+  return (v6)
+
+def _Z16ConcatUpperUpperIu15__rvv_uint8m4_tET_S0_S0_(v0: vec<ef8m4>, v1: vec<ef8m4>) -> vec<ef8m4>:
+  (v2) = vsetvlmax[mmul=32, tama]()
+  (v3) = vl_to_scalar[mmul=32](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslidedown.vx[ef8m4, ud, fm](v2, v0, v5)
+  (v9) = vslidedown.vx[ef8m4, ud, fm](v2, v1, v5)
+  (v11) = vslideup.vx[ef8m4, pd, fm](v2, v6, v5, v9)
+  return (v11)
+
+def _Z16ConcatUpperLowerIu15__rvv_uint8m8_tET_S0_S0_(v0: vec<ef8m8>, v1: vec<ef8m8>) -> vec<ef8m8>:
+  (v2) = vsetvlmax[mmul=64, tama]()
+  (v3) = vl_to_scalar[mmul=64](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslidedown.vx[ef8m8, ud, fm](v2, v0, v5)
+  (v9) = vslideup.vx[ef8m8, pd, fm](v2, v6, v5, v1)
+  return (v9)
+
+def _Z16ConcatLowerUpperIu15__rvv_uint8m8_tET_S0_S0_(v0: vec<ef8m8>, v1: vec<ef8m8>) -> vec<ef8m8>:
+  (v2) = vsetvlmax[mmul=64, tama]()
+  (v3) = vl_to_scalar[mmul=64](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslidedown.vx[ef8m8, ud, fm](v2, v1, v5)
+  (v9) = vslideup.vx[ef8m8, pd, fm](v2, v0, v5, v6)
+  return (v9)
+
+def _Z16ConcatLowerLowerIu15__rvv_uint8m8_tET_S0_S0_(v0: vec<ef8m8>, v1: vec<ef8m8>) -> vec<ef8m8>:
+  (v2) = vsetvlmax[mmul=64, tama]()
+  (v3) = vl_to_scalar[mmul=64](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslideup.vx[ef8m8, pd, fm](v2, v0, v5, v1)
+  return (v6)
+
+def _Z16ConcatUpperUpperIu15__rvv_uint8m8_tET_S0_S0_(v0: vec<ef8m8>, v1: vec<ef8m8>) -> vec<ef8m8>:
+  (v2) = vsetvlmax[mmul=64, tama]()
+  (v3) = vl_to_scalar[mmul=64](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslidedown.vx[ef8m8, ud, fm](v2, v0, v5)
+  (v9) = vslidedown.vx[ef8m8, ud, fm](v2, v1, v5)
+  (v11) = vslideup.vx[ef8m8, pd, fm](v2, v6, v5, v9)
+  return (v11)
+
+def _Z16ConcatUpperLowerIu17__rvv_uint16mf4_tET_S0_S0_(v0: vec<ef4mf4>, v1: vec<ef4mf4>) -> vec<ef4mf4>:
+  (v2) = vsetvlmax[mmul=1, tama]()
+  (v3) = vl_to_scalar[mmul=1](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslidedown.vx[ef4mf4, ud, fm](v2, v0, v5)
+  (v9) = vslideup.vx[ef4mf4, pd, fm](v2, v6, v5, v1)
+  return (v9)
+
+def _Z16ConcatLowerUpperIu17__rvv_uint16mf4_tET_S0_S0_(v0: vec<ef4mf4>, v1: vec<ef4mf4>) -> vec<ef4mf4>:
+  (v2) = vsetvlmax[mmul=1, tama]()
+  (v3) = vl_to_scalar[mmul=1](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslidedown.vx[ef4mf4, ud, fm](v2, v1, v5)
+  (v9) = vslideup.vx[ef4mf4, pd, fm](v2, v0, v5, v6)
+  return (v9)
+
+def _Z16ConcatLowerLowerIu17__rvv_uint16mf4_tET_S0_S0_(v0: vec<ef4mf4>, v1: vec<ef4mf4>) -> vec<ef4mf4>:
+  (v2) = vsetvlmax[mmul=1, tama]()
+  (v3) = vl_to_scalar[mmul=1](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslideup.vx[ef4mf4, pd, fm](v2, v0, v5, v1)
+  return (v6)
+
+def _Z16ConcatUpperUpperIu17__rvv_uint16mf4_tET_S0_S0_(v0: vec<ef4mf4>, v1: vec<ef4mf4>) -> vec<ef4mf4>:
+  (v2) = vsetvlmax[mmul=1, tama]()
+  (v3) = vl_to_scalar[mmul=1](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslidedown.vx[ef4mf4, ud, fm](v2, v0, v5)
+  (v9) = vslidedown.vx[ef4mf4, ud, fm](v2, v1, v5)
+  (v11) = vslideup.vx[ef4mf4, pd, fm](v2, v6, v5, v9)
+  return (v11)
+
+def _Z16ConcatUpperLowerIu17__rvv_uint16mf2_tET_S0_S0_(v0: vec<ef4mf2>, v1: vec<ef4mf2>) -> vec<ef4mf2>:
+  (v2) = vsetvlmax[mmul=2, tama]()
+  (v3) = vl_to_scalar[mmul=2](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslidedown.vx[ef4mf2, ud, fm](v2, v0, v5)
+  (v9) = vslideup.vx[ef4mf2, pd, fm](v2, v6, v5, v1)
+  return (v9)
+
+def _Z16ConcatLowerUpperIu17__rvv_uint16mf2_tET_S0_S0_(v0: vec<ef4mf2>, v1: vec<ef4mf2>) -> vec<ef4mf2>:
+  (v2) = vsetvlmax[mmul=2, tama]()
+  (v3) = vl_to_scalar[mmul=2](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslidedown.vx[ef4mf2, ud, fm](v2, v1, v5)
+  (v9) = vslideup.vx[ef4mf2, pd, fm](v2, v0, v5, v6)
+  return (v9)
+
+def _Z16ConcatLowerLowerIu17__rvv_uint16mf2_tET_S0_S0_(v0: vec<ef4mf2>, v1: vec<ef4mf2>) -> vec<ef4mf2>:
+  (v2) = vsetvlmax[mmul=2, tama]()
+  (v3) = vl_to_scalar[mmul=2](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslideup.vx[ef4mf2, pd, fm](v2, v0, v5, v1)
+  return (v6)
+
+def _Z16ConcatUpperUpperIu17__rvv_uint16mf2_tET_S0_S0_(v0: vec<ef4mf2>, v1: vec<ef4mf2>) -> vec<ef4mf2>:
+  (v2) = vsetvlmax[mmul=2, tama]()
+  (v3) = vl_to_scalar[mmul=2](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslidedown.vx[ef4mf2, ud, fm](v2, v0, v5)
+  (v9) = vslidedown.vx[ef4mf2, ud, fm](v2, v1, v5)
+  (v11) = vslideup.vx[ef4mf2, pd, fm](v2, v6, v5, v9)
+  return (v11)
+
+def _Z16ConcatUpperLowerIu16__rvv_uint16m1_tET_S0_S0_(v0: vec<ef4m1>, v1: vec<ef4m1>) -> vec<ef4m1>:
+  (v2) = vsetvlmax[mmul=4, tama]()
+  (v3) = vl_to_scalar[mmul=4](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslidedown.vx[ef4m1, ud, fm](v2, v0, v5)
+  (v9) = vslideup.vx[ef4m1, pd, fm](v2, v6, v5, v1)
+  return (v9)
+
+def _Z16ConcatLowerUpperIu16__rvv_uint16m1_tET_S0_S0_(v0: vec<ef4m1>, v1: vec<ef4m1>) -> vec<ef4m1>:
+  (v2) = vsetvlmax[mmul=4, tama]()
+  (v3) = vl_to_scalar[mmul=4](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslidedown.vx[ef4m1, ud, fm](v2, v1, v5)
+  (v9) = vslideup.vx[ef4m1, pd, fm](v2, v0, v5, v6)
+  return (v9)
+
+def _Z16ConcatLowerLowerIu16__rvv_uint16m1_tET_S0_S0_(v0: vec<ef4m1>, v1: vec<ef4m1>) -> vec<ef4m1>:
+  (v2) = vsetvlmax[mmul=4, tama]()
+  (v3) = vl_to_scalar[mmul=4](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslideup.vx[ef4m1, pd, fm](v2, v0, v5, v1)
+  return (v6)
+
+def _Z16ConcatUpperUpperIu16__rvv_uint16m1_tET_S0_S0_(v0: vec<ef4m1>, v1: vec<ef4m1>) -> vec<ef4m1>:
+  (v2) = vsetvlmax[mmul=4, tama]()
+  (v3) = vl_to_scalar[mmul=4](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslidedown.vx[ef4m1, ud, fm](v2, v0, v5)
+  (v9) = vslidedown.vx[ef4m1, ud, fm](v2, v1, v5)
+  (v11) = vslideup.vx[ef4m1, pd, fm](v2, v6, v5, v9)
+  return (v11)
+
+def _Z16ConcatUpperLowerIu16__rvv_uint16m2_tET_S0_S0_(v0: vec<ef4m2>, v1: vec<ef4m2>) -> vec<ef4m2>:
+  (v2) = vsetvlmax[mmul=8, tama]()
+  (v3) = vl_to_scalar[mmul=8](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslidedown.vx[ef4m2, ud, fm](v2, v0, v5)
+  (v9) = vslideup.vx[ef4m2, pd, fm](v2, v6, v5, v1)
+  return (v9)
+
+def _Z16ConcatLowerUpperIu16__rvv_uint16m2_tET_S0_S0_(v0: vec<ef4m2>, v1: vec<ef4m2>) -> vec<ef4m2>:
+  (v2) = vsetvlmax[mmul=8, tama]()
+  (v3) = vl_to_scalar[mmul=8](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslidedown.vx[ef4m2, ud, fm](v2, v1, v5)
+  (v9) = vslideup.vx[ef4m2, pd, fm](v2, v0, v5, v6)
+  return (v9)
+
+def _Z16ConcatLowerLowerIu16__rvv_uint16m2_tET_S0_S0_(v0: vec<ef4m2>, v1: vec<ef4m2>) -> vec<ef4m2>:
+  (v2) = vsetvlmax[mmul=8, tama]()
+  (v3) = vl_to_scalar[mmul=8](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslideup.vx[ef4m2, pd, fm](v2, v0, v5, v1)
+  return (v6)
+
+def _Z16ConcatUpperUpperIu16__rvv_uint16m2_tET_S0_S0_(v0: vec<ef4m2>, v1: vec<ef4m2>) -> vec<ef4m2>:
+  (v2) = vsetvlmax[mmul=8, tama]()
+  (v3) = vl_to_scalar[mmul=8](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslidedown.vx[ef4m2, ud, fm](v2, v0, v5)
+  (v9) = vslidedown.vx[ef4m2, ud, fm](v2, v1, v5)
+  (v11) = vslideup.vx[ef4m2, pd, fm](v2, v6, v5, v9)
+  return (v11)
+
+def _Z16ConcatUpperLowerIu16__rvv_uint16m4_tET_S0_S0_(v0: vec<ef4m4>, v1: vec<ef4m4>) -> vec<ef4m4>:
+  (v2) = vsetvlmax[mmul=16, tama]()
+  (v3) = vl_to_scalar[mmul=16](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslidedown.vx[ef4m4, ud, fm](v2, v0, v5)
+  (v9) = vslideup.vx[ef4m4, pd, fm](v2, v6, v5, v1)
+  return (v9)
+
+def _Z16ConcatLowerUpperIu16__rvv_uint16m4_tET_S0_S0_(v0: vec<ef4m4>, v1: vec<ef4m4>) -> vec<ef4m4>:
+  (v2) = vsetvlmax[mmul=16, tama]()
+  (v3) = vl_to_scalar[mmul=16](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslidedown.vx[ef4m4, ud, fm](v2, v1, v5)
+  (v9) = vslideup.vx[ef4m4, pd, fm](v2, v0, v5, v6)
+  return (v9)
+
+def _Z16ConcatLowerLowerIu16__rvv_uint16m4_tET_S0_S0_(v0: vec<ef4m4>, v1: vec<ef4m4>) -> vec<ef4m4>:
+  (v2) = vsetvlmax[mmul=16, tama]()
+  (v3) = vl_to_scalar[mmul=16](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslideup.vx[ef4m4, pd, fm](v2, v0, v5, v1)
+  return (v6)
+
+def _Z16ConcatUpperUpperIu16__rvv_uint16m4_tET_S0_S0_(v0: vec<ef4m4>, v1: vec<ef4m4>) -> vec<ef4m4>:
+  (v2) = vsetvlmax[mmul=16, tama]()
+  (v3) = vl_to_scalar[mmul=16](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslidedown.vx[ef4m4, ud, fm](v2, v0, v5)
+  (v9) = vslidedown.vx[ef4m4, ud, fm](v2, v1, v5)
+  (v11) = vslideup.vx[ef4m4, pd, fm](v2, v6, v5, v9)
+  return (v11)
+
+def _Z16ConcatUpperLowerIu16__rvv_uint16m8_tET_S0_S0_(v0: vec<ef4m8>, v1: vec<ef4m8>) -> vec<ef4m8>:
+  (v2) = vsetvlmax[mmul=32, tama]()
+  (v3) = vl_to_scalar[mmul=32](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslidedown.vx[ef4m8, ud, fm](v2, v0, v5)
+  (v9) = vslideup.vx[ef4m8, pd, fm](v2, v6, v5, v1)
+  return (v9)
+
+def _Z16ConcatLowerUpperIu16__rvv_uint16m8_tET_S0_S0_(v0: vec<ef4m8>, v1: vec<ef4m8>) -> vec<ef4m8>:
+  (v2) = vsetvlmax[mmul=32, tama]()
+  (v3) = vl_to_scalar[mmul=32](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslidedown.vx[ef4m8, ud, fm](v2, v1, v5)
+  (v9) = vslideup.vx[ef4m8, pd, fm](v2, v0, v5, v6)
+  return (v9)
+
+def _Z16ConcatLowerLowerIu16__rvv_uint16m8_tET_S0_S0_(v0: vec<ef4m8>, v1: vec<ef4m8>) -> vec<ef4m8>:
+  (v2) = vsetvlmax[mmul=32, tama]()
+  (v3) = vl_to_scalar[mmul=32](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslideup.vx[ef4m8, pd, fm](v2, v0, v5, v1)
+  return (v6)
+
+def _Z16ConcatUpperUpperIu16__rvv_uint16m8_tET_S0_S0_(v0: vec<ef4m8>, v1: vec<ef4m8>) -> vec<ef4m8>:
+  (v2) = vsetvlmax[mmul=32, tama]()
+  (v3) = vl_to_scalar[mmul=32](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslidedown.vx[ef4m8, ud, fm](v2, v0, v5)
+  (v9) = vslidedown.vx[ef4m8, ud, fm](v2, v1, v5)
+  (v11) = vslideup.vx[ef4m8, pd, fm](v2, v6, v5, v9)
+  return (v11)
+
+def _Z16ConcatUpperLowerIu17__rvv_uint32mf2_tET_S0_S0_(v0: vec<ef2mf2>, v1: vec<ef2mf2>) -> vec<ef2mf2>:
+  (v2) = vsetvlmax[mmul=1, tama]()
+  (v3) = vl_to_scalar[mmul=1](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslidedown.vx[ef2mf2, ud, fm](v2, v0, v5)
+  (v9) = vslideup.vx[ef2mf2, pd, fm](v2, v6, v5, v1)
+  return (v9)
+
+def _Z16ConcatLowerUpperIu17__rvv_uint32mf2_tET_S0_S0_(v0: vec<ef2mf2>, v1: vec<ef2mf2>) -> vec<ef2mf2>:
+  (v2) = vsetvlmax[mmul=1, tama]()
+  (v3) = vl_to_scalar[mmul=1](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslidedown.vx[ef2mf2, ud, fm](v2, v1, v5)
+  (v9) = vslideup.vx[ef2mf2, pd, fm](v2, v0, v5, v6)
+  return (v9)
+
+def _Z16ConcatLowerLowerIu17__rvv_uint32mf2_tET_S0_S0_(v0: vec<ef2mf2>, v1: vec<ef2mf2>) -> vec<ef2mf2>:
+  (v2) = vsetvlmax[mmul=1, tama]()
+  (v3) = vl_to_scalar[mmul=1](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslideup.vx[ef2mf2, pd, fm](v2, v0, v5, v1)
+  return (v6)
+
+def _Z16ConcatUpperUpperIu17__rvv_uint32mf2_tET_S0_S0_(v0: vec<ef2mf2>, v1: vec<ef2mf2>) -> vec<ef2mf2>:
+  (v2) = vsetvlmax[mmul=1, tama]()
+  (v3) = vl_to_scalar[mmul=1](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslidedown.vx[ef2mf2, ud, fm](v2, v0, v5)
+  (v9) = vslidedown.vx[ef2mf2, ud, fm](v2, v1, v5)
+  (v11) = vslideup.vx[ef2mf2, pd, fm](v2, v6, v5, v9)
+  return (v11)
+
+def _Z16ConcatUpperLowerIu16__rvv_uint32m1_tET_S0_S0_(v0: vec<ef2m1>, v1: vec<ef2m1>) -> vec<ef2m1>:
+  (v2) = vsetvlmax[mmul=2, tama]()
+  (v3) = vl_to_scalar[mmul=2](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslidedown.vx[ef2m1, ud, fm](v2, v0, v5)
+  (v9) = vslideup.vx[ef2m1, pd, fm](v2, v6, v5, v1)
+  return (v9)
+
+def _Z16ConcatLowerUpperIu16__rvv_uint32m1_tET_S0_S0_(v0: vec<ef2m1>, v1: vec<ef2m1>) -> vec<ef2m1>:
+  (v2) = vsetvlmax[mmul=2, tama]()
+  (v3) = vl_to_scalar[mmul=2](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslidedown.vx[ef2m1, ud, fm](v2, v1, v5)
+  (v9) = vslideup.vx[ef2m1, pd, fm](v2, v0, v5, v6)
+  return (v9)
+
+def _Z16ConcatLowerLowerIu16__rvv_uint32m1_tET_S0_S0_(v0: vec<ef2m1>, v1: vec<ef2m1>) -> vec<ef2m1>:
+  (v2) = vsetvlmax[mmul=2, tama]()
+  (v3) = vl_to_scalar[mmul=2](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslideup.vx[ef2m1, pd, fm](v2, v0, v5, v1)
+  return (v6)
+
+def _Z16ConcatUpperUpperIu16__rvv_uint32m1_tET_S0_S0_(v0: vec<ef2m1>, v1: vec<ef2m1>) -> vec<ef2m1>:
+  (v2) = vsetvlmax[mmul=2, tama]()
+  (v3) = vl_to_scalar[mmul=2](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslidedown.vx[ef2m1, ud, fm](v2, v0, v5)
+  (v9) = vslidedown.vx[ef2m1, ud, fm](v2, v1, v5)
+  (v11) = vslideup.vx[ef2m1, pd, fm](v2, v6, v5, v9)
+  return (v11)
+
+def _Z16ConcatUpperLowerIu16__rvv_uint32m2_tET_S0_S0_(v0: vec<ef2m2>, v1: vec<ef2m2>) -> vec<ef2m2>:
+  (v2) = vsetvlmax[mmul=4, tama]()
+  (v3) = vl_to_scalar[mmul=4](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslidedown.vx[ef2m2, ud, fm](v2, v0, v5)
+  (v9) = vslideup.vx[ef2m2, pd, fm](v2, v6, v5, v1)
+  return (v9)
+
+def _Z16ConcatLowerUpperIu16__rvv_uint32m2_tET_S0_S0_(v0: vec<ef2m2>, v1: vec<ef2m2>) -> vec<ef2m2>:
+  (v2) = vsetvlmax[mmul=4, tama]()
+  (v3) = vl_to_scalar[mmul=4](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslidedown.vx[ef2m2, ud, fm](v2, v1, v5)
+  (v9) = vslideup.vx[ef2m2, pd, fm](v2, v0, v5, v6)
+  return (v9)
+
+def _Z16ConcatLowerLowerIu16__rvv_uint32m2_tET_S0_S0_(v0: vec<ef2m2>, v1: vec<ef2m2>) -> vec<ef2m2>:
+  (v2) = vsetvlmax[mmul=4, tama]()
+  (v3) = vl_to_scalar[mmul=4](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslideup.vx[ef2m2, pd, fm](v2, v0, v5, v1)
+  return (v6)
+
+def _Z16ConcatUpperUpperIu16__rvv_uint32m2_tET_S0_S0_(v0: vec<ef2m2>, v1: vec<ef2m2>) -> vec<ef2m2>:
+  (v2) = vsetvlmax[mmul=4, tama]()
+  (v3) = vl_to_scalar[mmul=4](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslidedown.vx[ef2m2, ud, fm](v2, v0, v5)
+  (v9) = vslidedown.vx[ef2m2, ud, fm](v2, v1, v5)
+  (v11) = vslideup.vx[ef2m2, pd, fm](v2, v6, v5, v9)
+  return (v11)
+
+def _Z16ConcatUpperLowerIu16__rvv_uint32m4_tET_S0_S0_(v0: vec<ef2m4>, v1: vec<ef2m4>) -> vec<ef2m4>:
+  (v2) = vsetvlmax[mmul=8, tama]()
+  (v3) = vl_to_scalar[mmul=8](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslidedown.vx[ef2m4, ud, fm](v2, v0, v5)
+  (v9) = vslideup.vx[ef2m4, pd, fm](v2, v6, v5, v1)
+  return (v9)
+
+def _Z16ConcatLowerUpperIu16__rvv_uint32m4_tET_S0_S0_(v0: vec<ef2m4>, v1: vec<ef2m4>) -> vec<ef2m4>:
+  (v2) = vsetvlmax[mmul=8, tama]()
+  (v3) = vl_to_scalar[mmul=8](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslidedown.vx[ef2m4, ud, fm](v2, v1, v5)
+  (v9) = vslideup.vx[ef2m4, pd, fm](v2, v0, v5, v6)
+  return (v9)
+
+def _Z16ConcatLowerLowerIu16__rvv_uint32m4_tET_S0_S0_(v0: vec<ef2m4>, v1: vec<ef2m4>) -> vec<ef2m4>:
+  (v2) = vsetvlmax[mmul=8, tama]()
+  (v3) = vl_to_scalar[mmul=8](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslideup.vx[ef2m4, pd, fm](v2, v0, v5, v1)
+  return (v6)
+
+def _Z16ConcatUpperUpperIu16__rvv_uint32m4_tET_S0_S0_(v0: vec<ef2m4>, v1: vec<ef2m4>) -> vec<ef2m4>:
+  (v2) = vsetvlmax[mmul=8, tama]()
+  (v3) = vl_to_scalar[mmul=8](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslidedown.vx[ef2m4, ud, fm](v2, v0, v5)
+  (v9) = vslidedown.vx[ef2m4, ud, fm](v2, v1, v5)
+  (v11) = vslideup.vx[ef2m4, pd, fm](v2, v6, v5, v9)
+  return (v11)
+
+def _Z16ConcatUpperLowerIu16__rvv_uint32m8_tET_S0_S0_(v0: vec<ef2m8>, v1: vec<ef2m8>) -> vec<ef2m8>:
+  (v2) = vsetvlmax[mmul=16, tama]()
+  (v3) = vl_to_scalar[mmul=16](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslidedown.vx[ef2m8, ud, fm](v2, v0, v5)
+  (v9) = vslideup.vx[ef2m8, pd, fm](v2, v6, v5, v1)
+  return (v9)
+
+def _Z16ConcatLowerUpperIu16__rvv_uint32m8_tET_S0_S0_(v0: vec<ef2m8>, v1: vec<ef2m8>) -> vec<ef2m8>:
+  (v2) = vsetvlmax[mmul=16, tama]()
+  (v3) = vl_to_scalar[mmul=16](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslidedown.vx[ef2m8, ud, fm](v2, v1, v5)
+  (v9) = vslideup.vx[ef2m8, pd, fm](v2, v0, v5, v6)
+  return (v9)
+
+def _Z16ConcatLowerLowerIu16__rvv_uint32m8_tET_S0_S0_(v0: vec<ef2m8>, v1: vec<ef2m8>) -> vec<ef2m8>:
+  (v2) = vsetvlmax[mmul=16, tama]()
+  (v3) = vl_to_scalar[mmul=16](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslideup.vx[ef2m8, pd, fm](v2, v0, v5, v1)
+  return (v6)
+
+def _Z16ConcatUpperUpperIu16__rvv_uint32m8_tET_S0_S0_(v0: vec<ef2m8>, v1: vec<ef2m8>) -> vec<ef2m8>:
+  (v2) = vsetvlmax[mmul=16, tama]()
+  (v3) = vl_to_scalar[mmul=16](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslidedown.vx[ef2m8, ud, fm](v2, v0, v5)
+  (v9) = vslidedown.vx[ef2m8, ud, fm](v2, v1, v5)
+  (v11) = vslideup.vx[ef2m8, pd, fm](v2, v6, v5, v9)
+  return (v11)
+
+def _Z16ConcatUpperLowerIu16__rvv_uint64m1_tET_S0_S0_(v0: vec<e1m1>, v1: vec<e1m1>) -> vec<e1m1>:
+  (v2) = vsetvlmax[mmul=1, tama]()
+  (v3) = vl_to_scalar[mmul=1](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslidedown.vx[e1m1, ud, fm](v2, v0, v5)
+  (v9) = vslideup.vx[e1m1, pd, fm](v2, v6, v5, v1)
+  return (v9)
+
+def _Z16ConcatLowerUpperIu16__rvv_uint64m1_tET_S0_S0_(v0: vec<e1m1>, v1: vec<e1m1>) -> vec<e1m1>:
+  (v2) = vsetvlmax[mmul=1, tama]()
+  (v3) = vl_to_scalar[mmul=1](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslidedown.vx[e1m1, ud, fm](v2, v1, v5)
+  (v9) = vslideup.vx[e1m1, pd, fm](v2, v0, v5, v6)
+  return (v9)
+
+def _Z16ConcatLowerLowerIu16__rvv_uint64m1_tET_S0_S0_(v0: vec<e1m1>, v1: vec<e1m1>) -> vec<e1m1>:
+  (v2) = vsetvlmax[mmul=1, tama]()
+  (v3) = vl_to_scalar[mmul=1](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslideup.vx[e1m1, pd, fm](v2, v0, v5, v1)
+  return (v6)
+
+def _Z16ConcatUpperUpperIu16__rvv_uint64m1_tET_S0_S0_(v0: vec<e1m1>, v1: vec<e1m1>) -> vec<e1m1>:
+  (v2) = vsetvlmax[mmul=1, tama]()
+  (v3) = vl_to_scalar[mmul=1](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslidedown.vx[e1m1, ud, fm](v2, v0, v5)
+  (v9) = vslidedown.vx[e1m1, ud, fm](v2, v1, v5)
+  (v11) = vslideup.vx[e1m1, pd, fm](v2, v6, v5, v9)
+  return (v11)
+
+def _Z16ConcatUpperLowerIu16__rvv_uint64m2_tET_S0_S0_(v0: vec<e1m2>, v1: vec<e1m2>) -> vec<e1m2>:
+  (v2) = vsetvlmax[mmul=2, tama]()
+  (v3) = vl_to_scalar[mmul=2](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslidedown.vx[e1m2, ud, fm](v2, v0, v5)
+  (v9) = vslideup.vx[e1m2, pd, fm](v2, v6, v5, v1)
+  return (v9)
+
+def _Z16ConcatLowerUpperIu16__rvv_uint64m2_tET_S0_S0_(v0: vec<e1m2>, v1: vec<e1m2>) -> vec<e1m2>:
+  (v2) = vsetvlmax[mmul=2, tama]()
+  (v3) = vl_to_scalar[mmul=2](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslidedown.vx[e1m2, ud, fm](v2, v1, v5)
+  (v9) = vslideup.vx[e1m2, pd, fm](v2, v0, v5, v6)
+  return (v9)
+
+def _Z16ConcatLowerLowerIu16__rvv_uint64m2_tET_S0_S0_(v0: vec<e1m2>, v1: vec<e1m2>) -> vec<e1m2>:
+  (v2) = vsetvlmax[mmul=2, tama]()
+  (v3) = vl_to_scalar[mmul=2](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslideup.vx[e1m2, pd, fm](v2, v0, v5, v1)
+  return (v6)
+
+def _Z16ConcatUpperUpperIu16__rvv_uint64m2_tET_S0_S0_(v0: vec<e1m2>, v1: vec<e1m2>) -> vec<e1m2>:
+  (v2) = vsetvlmax[mmul=2, tama]()
+  (v3) = vl_to_scalar[mmul=2](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslidedown.vx[e1m2, ud, fm](v2, v0, v5)
+  (v9) = vslidedown.vx[e1m2, ud, fm](v2, v1, v5)
+  (v11) = vslideup.vx[e1m2, pd, fm](v2, v6, v5, v9)
+  return (v11)
+
+def _Z16ConcatUpperLowerIu16__rvv_uint64m4_tET_S0_S0_(v0: vec<e1m4>, v1: vec<e1m4>) -> vec<e1m4>:
+  (v2) = vsetvlmax[mmul=4, tama]()
+  (v3) = vl_to_scalar[mmul=4](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslidedown.vx[e1m4, ud, fm](v2, v0, v5)
+  (v9) = vslideup.vx[e1m4, pd, fm](v2, v6, v5, v1)
+  return (v9)
+
+def _Z16ConcatLowerUpperIu16__rvv_uint64m4_tET_S0_S0_(v0: vec<e1m4>, v1: vec<e1m4>) -> vec<e1m4>:
+  (v2) = vsetvlmax[mmul=4, tama]()
+  (v3) = vl_to_scalar[mmul=4](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslidedown.vx[e1m4, ud, fm](v2, v1, v5)
+  (v9) = vslideup.vx[e1m4, pd, fm](v2, v0, v5, v6)
+  return (v9)
+
+def _Z16ConcatLowerLowerIu16__rvv_uint64m4_tET_S0_S0_(v0: vec<e1m4>, v1: vec<e1m4>) -> vec<e1m4>:
+  (v2) = vsetvlmax[mmul=4, tama]()
+  (v3) = vl_to_scalar[mmul=4](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslideup.vx[e1m4, pd, fm](v2, v0, v5, v1)
+  return (v6)
+
+def _Z16ConcatUpperUpperIu16__rvv_uint64m4_tET_S0_S0_(v0: vec<e1m4>, v1: vec<e1m4>) -> vec<e1m4>:
+  (v2) = vsetvlmax[mmul=4, tama]()
+  (v3) = vl_to_scalar[mmul=4](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslidedown.vx[e1m4, ud, fm](v2, v0, v5)
+  (v9) = vslidedown.vx[e1m4, ud, fm](v2, v1, v5)
+  (v11) = vslideup.vx[e1m4, pd, fm](v2, v6, v5, v9)
+  return (v11)
+
+def _Z16ConcatUpperLowerIu16__rvv_uint64m8_tET_S0_S0_(v0: vec<e1m8>, v1: vec<e1m8>) -> vec<e1m8>:
+  (v2) = vsetvlmax[mmul=8, tama]()
+  (v3) = vl_to_scalar[mmul=8](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslidedown.vx[e1m8, ud, fm](v2, v0, v5)
+  (v9) = vslideup.vx[e1m8, pd, fm](v2, v6, v5, v1)
+  return (v9)
+
+def _Z16ConcatLowerUpperIu16__rvv_uint64m8_tET_S0_S0_(v0: vec<e1m8>, v1: vec<e1m8>) -> vec<e1m8>:
+  (v2) = vsetvlmax[mmul=8, tama]()
+  (v3) = vl_to_scalar[mmul=8](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslidedown.vx[e1m8, ud, fm](v2, v1, v5)
+  (v9) = vslideup.vx[e1m8, pd, fm](v2, v0, v5, v6)
+  return (v9)
+
+def _Z16ConcatLowerLowerIu16__rvv_uint64m8_tET_S0_S0_(v0: vec<e1m8>, v1: vec<e1m8>) -> vec<e1m8>:
+  (v2) = vsetvlmax[mmul=8, tama]()
+  (v3) = vl_to_scalar[mmul=8](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslideup.vx[e1m8, pd, fm](v2, v0, v5, v1)
+  return (v6)
+
+def _Z16ConcatUpperUpperIu16__rvv_uint64m8_tET_S0_S0_(v0: vec<e1m8>, v1: vec<e1m8>) -> vec<e1m8>:
+  (v2) = vsetvlmax[mmul=8, tama]()
+  (v3) = vl_to_scalar[mmul=8](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslidedown.vx[e1m8, ud, fm](v2, v0, v5)
+  (v9) = vslidedown.vx[e1m8, ud, fm](v2, v1, v5)
+  (v11) = vslideup.vx[e1m8, pd, fm](v2, v6, v5, v9)
+  return (v11)
+
+def _Z16ConcatUpperLowerIu15__rvv_int8mf8_tET_S0_S0_(v0: vec<ef8mf8>, v1: vec<ef8mf8>) -> vec<ef8mf8>:
+  (v2) = vsetvlmax[mmul=1, tama]()
+  (v3) = vl_to_scalar[mmul=1](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslidedown.vx[ef8mf8, ud, fm](v2, v0, v5)
+  (v9) = vslideup.vx[ef8mf8, pd, fm](v2, v6, v5, v1)
+  return (v9)
+
+def _Z16ConcatLowerUpperIu15__rvv_int8mf8_tET_S0_S0_(v0: vec<ef8mf8>, v1: vec<ef8mf8>) -> vec<ef8mf8>:
+  (v2) = vsetvlmax[mmul=1, tama]()
+  (v3) = vl_to_scalar[mmul=1](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslidedown.vx[ef8mf8, ud, fm](v2, v1, v5)
+  (v9) = vslideup.vx[ef8mf8, pd, fm](v2, v0, v5, v6)
+  return (v9)
+
+def _Z16ConcatLowerLowerIu15__rvv_int8mf8_tET_S0_S0_(v0: vec<ef8mf8>, v1: vec<ef8mf8>) -> vec<ef8mf8>:
+  (v2) = vsetvlmax[mmul=1, tama]()
+  (v3) = vl_to_scalar[mmul=1](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslideup.vx[ef8mf8, pd, fm](v2, v0, v5, v1)
+  return (v6)
+
+def _Z16ConcatUpperUpperIu15__rvv_int8mf8_tET_S0_S0_(v0: vec<ef8mf8>, v1: vec<ef8mf8>) -> vec<ef8mf8>:
+  (v2) = vsetvlmax[mmul=1, tama]()
+  (v3) = vl_to_scalar[mmul=1](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslidedown.vx[ef8mf8, ud, fm](v2, v0, v5)
+  (v9) = vslidedown.vx[ef8mf8, ud, fm](v2, v1, v5)
+  (v11) = vslideup.vx[ef8mf8, pd, fm](v2, v6, v5, v9)
+  return (v11)
+
+def _Z16ConcatUpperLowerIu15__rvv_int8mf4_tET_S0_S0_(v0: vec<ef8mf4>, v1: vec<ef8mf4>) -> vec<ef8mf4>:
+  (v2) = vsetvlmax[mmul=2, tama]()
+  (v3) = vl_to_scalar[mmul=2](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslidedown.vx[ef8mf4, ud, fm](v2, v0, v5)
+  (v9) = vslideup.vx[ef8mf4, pd, fm](v2, v6, v5, v1)
+  return (v9)
+
+def _Z16ConcatLowerUpperIu15__rvv_int8mf4_tET_S0_S0_(v0: vec<ef8mf4>, v1: vec<ef8mf4>) -> vec<ef8mf4>:
+  (v2) = vsetvlmax[mmul=2, tama]()
+  (v3) = vl_to_scalar[mmul=2](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslidedown.vx[ef8mf4, ud, fm](v2, v1, v5)
+  (v9) = vslideup.vx[ef8mf4, pd, fm](v2, v0, v5, v6)
+  return (v9)
+
+def _Z16ConcatLowerLowerIu15__rvv_int8mf4_tET_S0_S0_(v0: vec<ef8mf4>, v1: vec<ef8mf4>) -> vec<ef8mf4>:
+  (v2) = vsetvlmax[mmul=2, tama]()
+  (v3) = vl_to_scalar[mmul=2](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslideup.vx[ef8mf4, pd, fm](v2, v0, v5, v1)
+  return (v6)
+
+def _Z16ConcatUpperUpperIu15__rvv_int8mf4_tET_S0_S0_(v0: vec<ef8mf4>, v1: vec<ef8mf4>) -> vec<ef8mf4>:
+  (v2) = vsetvlmax[mmul=2, tama]()
+  (v3) = vl_to_scalar[mmul=2](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslidedown.vx[ef8mf4, ud, fm](v2, v0, v5)
+  (v9) = vslidedown.vx[ef8mf4, ud, fm](v2, v1, v5)
+  (v11) = vslideup.vx[ef8mf4, pd, fm](v2, v6, v5, v9)
+  return (v11)
+
+def _Z16ConcatUpperLowerIu15__rvv_int8mf2_tET_S0_S0_(v0: vec<ef8mf2>, v1: vec<ef8mf2>) -> vec<ef8mf2>:
+  (v2) = vsetvlmax[mmul=4, tama]()
+  (v3) = vl_to_scalar[mmul=4](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslidedown.vx[ef8mf2, ud, fm](v2, v0, v5)
+  (v9) = vslideup.vx[ef8mf2, pd, fm](v2, v6, v5, v1)
+  return (v9)
+
+def _Z16ConcatLowerUpperIu15__rvv_int8mf2_tET_S0_S0_(v0: vec<ef8mf2>, v1: vec<ef8mf2>) -> vec<ef8mf2>:
+  (v2) = vsetvlmax[mmul=4, tama]()
+  (v3) = vl_to_scalar[mmul=4](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslidedown.vx[ef8mf2, ud, fm](v2, v1, v5)
+  (v9) = vslideup.vx[ef8mf2, pd, fm](v2, v0, v5, v6)
+  return (v9)
+
+def _Z16ConcatLowerLowerIu15__rvv_int8mf2_tET_S0_S0_(v0: vec<ef8mf2>, v1: vec<ef8mf2>) -> vec<ef8mf2>:
+  (v2) = vsetvlmax[mmul=4, tama]()
+  (v3) = vl_to_scalar[mmul=4](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslideup.vx[ef8mf2, pd, fm](v2, v0, v5, v1)
+  return (v6)
+
+def _Z16ConcatUpperUpperIu15__rvv_int8mf2_tET_S0_S0_(v0: vec<ef8mf2>, v1: vec<ef8mf2>) -> vec<ef8mf2>:
+  (v2) = vsetvlmax[mmul=4, tama]()
+  (v3) = vl_to_scalar[mmul=4](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslidedown.vx[ef8mf2, ud, fm](v2, v0, v5)
+  (v9) = vslidedown.vx[ef8mf2, ud, fm](v2, v1, v5)
+  (v11) = vslideup.vx[ef8mf2, pd, fm](v2, v6, v5, v9)
+  return (v11)
+
+def _Z16ConcatUpperLowerIu14__rvv_int8m1_tET_S0_S0_(v0: vec<ef8m1>, v1: vec<ef8m1>) -> vec<ef8m1>:
+  (v2) = vsetvlmax[mmul=8, tama]()
+  (v3) = vl_to_scalar[mmul=8](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslidedown.vx[ef8m1, ud, fm](v2, v0, v5)
+  (v9) = vslideup.vx[ef8m1, pd, fm](v2, v6, v5, v1)
+  return (v9)
+
+def _Z16ConcatLowerUpperIu14__rvv_int8m1_tET_S0_S0_(v0: vec<ef8m1>, v1: vec<ef8m1>) -> vec<ef8m1>:
+  (v2) = vsetvlmax[mmul=8, tama]()
+  (v3) = vl_to_scalar[mmul=8](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslidedown.vx[ef8m1, ud, fm](v2, v1, v5)
+  (v9) = vslideup.vx[ef8m1, pd, fm](v2, v0, v5, v6)
+  return (v9)
+
+def _Z16ConcatLowerLowerIu14__rvv_int8m1_tET_S0_S0_(v0: vec<ef8m1>, v1: vec<ef8m1>) -> vec<ef8m1>:
+  (v2) = vsetvlmax[mmul=8, tama]()
+  (v3) = vl_to_scalar[mmul=8](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslideup.vx[ef8m1, pd, fm](v2, v0, v5, v1)
+  return (v6)
+
+def _Z16ConcatUpperUpperIu14__rvv_int8m1_tET_S0_S0_(v0: vec<ef8m1>, v1: vec<ef8m1>) -> vec<ef8m1>:
+  (v2) = vsetvlmax[mmul=8, tama]()
+  (v3) = vl_to_scalar[mmul=8](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslidedown.vx[ef8m1, ud, fm](v2, v0, v5)
+  (v9) = vslidedown.vx[ef8m1, ud, fm](v2, v1, v5)
+  (v11) = vslideup.vx[ef8m1, pd, fm](v2, v6, v5, v9)
+  return (v11)
+
+def _Z16ConcatUpperLowerIu14__rvv_int8m2_tET_S0_S0_(v0: vec<ef8m2>, v1: vec<ef8m2>) -> vec<ef8m2>:
+  (v2) = vsetvlmax[mmul=16, tama]()
+  (v3) = vl_to_scalar[mmul=16](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslidedown.vx[ef8m2, ud, fm](v2, v0, v5)
+  (v9) = vslideup.vx[ef8m2, pd, fm](v2, v6, v5, v1)
+  return (v9)
+
+def _Z16ConcatLowerUpperIu14__rvv_int8m2_tET_S0_S0_(v0: vec<ef8m2>, v1: vec<ef8m2>) -> vec<ef8m2>:
+  (v2) = vsetvlmax[mmul=16, tama]()
+  (v3) = vl_to_scalar[mmul=16](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslidedown.vx[ef8m2, ud, fm](v2, v1, v5)
+  (v9) = vslideup.vx[ef8m2, pd, fm](v2, v0, v5, v6)
+  return (v9)
+
+def _Z16ConcatLowerLowerIu14__rvv_int8m2_tET_S0_S0_(v0: vec<ef8m2>, v1: vec<ef8m2>) -> vec<ef8m2>:
+  (v2) = vsetvlmax[mmul=16, tama]()
+  (v3) = vl_to_scalar[mmul=16](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslideup.vx[ef8m2, pd, fm](v2, v0, v5, v1)
+  return (v6)
+
+def _Z16ConcatUpperUpperIu14__rvv_int8m2_tET_S0_S0_(v0: vec<ef8m2>, v1: vec<ef8m2>) -> vec<ef8m2>:
+  (v2) = vsetvlmax[mmul=16, tama]()
+  (v3) = vl_to_scalar[mmul=16](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslidedown.vx[ef8m2, ud, fm](v2, v0, v5)
+  (v9) = vslidedown.vx[ef8m2, ud, fm](v2, v1, v5)
+  (v11) = vslideup.vx[ef8m2, pd, fm](v2, v6, v5, v9)
+  return (v11)
+
+def _Z16ConcatUpperLowerIu14__rvv_int8m4_tET_S0_S0_(v0: vec<ef8m4>, v1: vec<ef8m4>) -> vec<ef8m4>:
+  (v2) = vsetvlmax[mmul=32, tama]()
+  (v3) = vl_to_scalar[mmul=32](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslidedown.vx[ef8m4, ud, fm](v2, v0, v5)
+  (v9) = vslideup.vx[ef8m4, pd, fm](v2, v6, v5, v1)
+  return (v9)
+
+def _Z16ConcatLowerUpperIu14__rvv_int8m4_tET_S0_S0_(v0: vec<ef8m4>, v1: vec<ef8m4>) -> vec<ef8m4>:
+  (v2) = vsetvlmax[mmul=32, tama]()
+  (v3) = vl_to_scalar[mmul=32](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslidedown.vx[ef8m4, ud, fm](v2, v1, v5)
+  (v9) = vslideup.vx[ef8m4, pd, fm](v2, v0, v5, v6)
+  return (v9)
+
+def _Z16ConcatLowerLowerIu14__rvv_int8m4_tET_S0_S0_(v0: vec<ef8m4>, v1: vec<ef8m4>) -> vec<ef8m4>:
+  (v2) = vsetvlmax[mmul=32, tama]()
+  (v3) = vl_to_scalar[mmul=32](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslideup.vx[ef8m4, pd, fm](v2, v0, v5, v1)
+  return (v6)
+
+def _Z16ConcatUpperUpperIu14__rvv_int8m4_tET_S0_S0_(v0: vec<ef8m4>, v1: vec<ef8m4>) -> vec<ef8m4>:
+  (v2) = vsetvlmax[mmul=32, tama]()
+  (v3) = vl_to_scalar[mmul=32](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslidedown.vx[ef8m4, ud, fm](v2, v0, v5)
+  (v9) = vslidedown.vx[ef8m4, ud, fm](v2, v1, v5)
+  (v11) = vslideup.vx[ef8m4, pd, fm](v2, v6, v5, v9)
+  return (v11)
+
+def _Z16ConcatUpperLowerIu14__rvv_int8m8_tET_S0_S0_(v0: vec<ef8m8>, v1: vec<ef8m8>) -> vec<ef8m8>:
+  (v2) = vsetvlmax[mmul=64, tama]()
+  (v3) = vl_to_scalar[mmul=64](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslidedown.vx[ef8m8, ud, fm](v2, v0, v5)
+  (v9) = vslideup.vx[ef8m8, pd, fm](v2, v6, v5, v1)
+  return (v9)
+
+def _Z16ConcatLowerUpperIu14__rvv_int8m8_tET_S0_S0_(v0: vec<ef8m8>, v1: vec<ef8m8>) -> vec<ef8m8>:
+  (v2) = vsetvlmax[mmul=64, tama]()
+  (v3) = vl_to_scalar[mmul=64](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslidedown.vx[ef8m8, ud, fm](v2, v1, v5)
+  (v9) = vslideup.vx[ef8m8, pd, fm](v2, v0, v5, v6)
+  return (v9)
+
+def _Z16ConcatLowerLowerIu14__rvv_int8m8_tET_S0_S0_(v0: vec<ef8m8>, v1: vec<ef8m8>) -> vec<ef8m8>:
+  (v2) = vsetvlmax[mmul=64, tama]()
+  (v3) = vl_to_scalar[mmul=64](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslideup.vx[ef8m8, pd, fm](v2, v0, v5, v1)
+  return (v6)
+
+def _Z16ConcatUpperUpperIu14__rvv_int8m8_tET_S0_S0_(v0: vec<ef8m8>, v1: vec<ef8m8>) -> vec<ef8m8>:
+  (v2) = vsetvlmax[mmul=64, tama]()
+  (v3) = vl_to_scalar[mmul=64](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslidedown.vx[ef8m8, ud, fm](v2, v0, v5)
+  (v9) = vslidedown.vx[ef8m8, ud, fm](v2, v1, v5)
+  (v11) = vslideup.vx[ef8m8, pd, fm](v2, v6, v5, v9)
+  return (v11)
+
+def _Z16ConcatUpperLowerIu16__rvv_int16mf4_tET_S0_S0_(v0: vec<ef4mf4>, v1: vec<ef4mf4>) -> vec<ef4mf4>:
+  (v2) = vsetvlmax[mmul=1, tama]()
+  (v3) = vl_to_scalar[mmul=1](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslidedown.vx[ef4mf4, ud, fm](v2, v0, v5)
+  (v9) = vslideup.vx[ef4mf4, pd, fm](v2, v6, v5, v1)
+  return (v9)
+
+def _Z16ConcatLowerUpperIu16__rvv_int16mf4_tET_S0_S0_(v0: vec<ef4mf4>, v1: vec<ef4mf4>) -> vec<ef4mf4>:
+  (v2) = vsetvlmax[mmul=1, tama]()
+  (v3) = vl_to_scalar[mmul=1](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslidedown.vx[ef4mf4, ud, fm](v2, v1, v5)
+  (v9) = vslideup.vx[ef4mf4, pd, fm](v2, v0, v5, v6)
+  return (v9)
+
+def _Z16ConcatLowerLowerIu16__rvv_int16mf4_tET_S0_S0_(v0: vec<ef4mf4>, v1: vec<ef4mf4>) -> vec<ef4mf4>:
+  (v2) = vsetvlmax[mmul=1, tama]()
+  (v3) = vl_to_scalar[mmul=1](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslideup.vx[ef4mf4, pd, fm](v2, v0, v5, v1)
+  return (v6)
+
+def _Z16ConcatUpperUpperIu16__rvv_int16mf4_tET_S0_S0_(v0: vec<ef4mf4>, v1: vec<ef4mf4>) -> vec<ef4mf4>:
+  (v2) = vsetvlmax[mmul=1, tama]()
+  (v3) = vl_to_scalar[mmul=1](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslidedown.vx[ef4mf4, ud, fm](v2, v0, v5)
+  (v9) = vslidedown.vx[ef4mf4, ud, fm](v2, v1, v5)
+  (v11) = vslideup.vx[ef4mf4, pd, fm](v2, v6, v5, v9)
+  return (v11)
+
+def _Z16ConcatUpperLowerIu16__rvv_int16mf2_tET_S0_S0_(v0: vec<ef4mf2>, v1: vec<ef4mf2>) -> vec<ef4mf2>:
+  (v2) = vsetvlmax[mmul=2, tama]()
+  (v3) = vl_to_scalar[mmul=2](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslidedown.vx[ef4mf2, ud, fm](v2, v0, v5)
+  (v9) = vslideup.vx[ef4mf2, pd, fm](v2, v6, v5, v1)
+  return (v9)
+
+def _Z16ConcatLowerUpperIu16__rvv_int16mf2_tET_S0_S0_(v0: vec<ef4mf2>, v1: vec<ef4mf2>) -> vec<ef4mf2>:
+  (v2) = vsetvlmax[mmul=2, tama]()
+  (v3) = vl_to_scalar[mmul=2](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslidedown.vx[ef4mf2, ud, fm](v2, v1, v5)
+  (v9) = vslideup.vx[ef4mf2, pd, fm](v2, v0, v5, v6)
+  return (v9)
+
+def _Z16ConcatLowerLowerIu16__rvv_int16mf2_tET_S0_S0_(v0: vec<ef4mf2>, v1: vec<ef4mf2>) -> vec<ef4mf2>:
+  (v2) = vsetvlmax[mmul=2, tama]()
+  (v3) = vl_to_scalar[mmul=2](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslideup.vx[ef4mf2, pd, fm](v2, v0, v5, v1)
+  return (v6)
+
+def _Z16ConcatUpperUpperIu16__rvv_int16mf2_tET_S0_S0_(v0: vec<ef4mf2>, v1: vec<ef4mf2>) -> vec<ef4mf2>:
+  (v2) = vsetvlmax[mmul=2, tama]()
+  (v3) = vl_to_scalar[mmul=2](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslidedown.vx[ef4mf2, ud, fm](v2, v0, v5)
+  (v9) = vslidedown.vx[ef4mf2, ud, fm](v2, v1, v5)
+  (v11) = vslideup.vx[ef4mf2, pd, fm](v2, v6, v5, v9)
+  return (v11)
+
+def _Z16ConcatUpperLowerIu15__rvv_int16m1_tET_S0_S0_(v0: vec<ef4m1>, v1: vec<ef4m1>) -> vec<ef4m1>:
+  (v2) = vsetvlmax[mmul=4, tama]()
+  (v3) = vl_to_scalar[mmul=4](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslidedown.vx[ef4m1, ud, fm](v2, v0, v5)
+  (v9) = vslideup.vx[ef4m1, pd, fm](v2, v6, v5, v1)
+  return (v9)
+
+def _Z16ConcatLowerUpperIu15__rvv_int16m1_tET_S0_S0_(v0: vec<ef4m1>, v1: vec<ef4m1>) -> vec<ef4m1>:
+  (v2) = vsetvlmax[mmul=4, tama]()
+  (v3) = vl_to_scalar[mmul=4](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslidedown.vx[ef4m1, ud, fm](v2, v1, v5)
+  (v9) = vslideup.vx[ef4m1, pd, fm](v2, v0, v5, v6)
+  return (v9)
+
+def _Z16ConcatLowerLowerIu15__rvv_int16m1_tET_S0_S0_(v0: vec<ef4m1>, v1: vec<ef4m1>) -> vec<ef4m1>:
+  (v2) = vsetvlmax[mmul=4, tama]()
+  (v3) = vl_to_scalar[mmul=4](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslideup.vx[ef4m1, pd, fm](v2, v0, v5, v1)
+  return (v6)
+
+def _Z16ConcatUpperUpperIu15__rvv_int16m1_tET_S0_S0_(v0: vec<ef4m1>, v1: vec<ef4m1>) -> vec<ef4m1>:
+  (v2) = vsetvlmax[mmul=4, tama]()
+  (v3) = vl_to_scalar[mmul=4](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslidedown.vx[ef4m1, ud, fm](v2, v0, v5)
+  (v9) = vslidedown.vx[ef4m1, ud, fm](v2, v1, v5)
+  (v11) = vslideup.vx[ef4m1, pd, fm](v2, v6, v5, v9)
+  return (v11)
+
+def _Z16ConcatUpperLowerIu15__rvv_int16m2_tET_S0_S0_(v0: vec<ef4m2>, v1: vec<ef4m2>) -> vec<ef4m2>:
+  (v2) = vsetvlmax[mmul=8, tama]()
+  (v3) = vl_to_scalar[mmul=8](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslidedown.vx[ef4m2, ud, fm](v2, v0, v5)
+  (v9) = vslideup.vx[ef4m2, pd, fm](v2, v6, v5, v1)
+  return (v9)
+
+def _Z16ConcatLowerUpperIu15__rvv_int16m2_tET_S0_S0_(v0: vec<ef4m2>, v1: vec<ef4m2>) -> vec<ef4m2>:
+  (v2) = vsetvlmax[mmul=8, tama]()
+  (v3) = vl_to_scalar[mmul=8](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslidedown.vx[ef4m2, ud, fm](v2, v1, v5)
+  (v9) = vslideup.vx[ef4m2, pd, fm](v2, v0, v5, v6)
+  return (v9)
+
+def _Z16ConcatLowerLowerIu15__rvv_int16m2_tET_S0_S0_(v0: vec<ef4m2>, v1: vec<ef4m2>) -> vec<ef4m2>:
+  (v2) = vsetvlmax[mmul=8, tama]()
+  (v3) = vl_to_scalar[mmul=8](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslideup.vx[ef4m2, pd, fm](v2, v0, v5, v1)
+  return (v6)
+
+def _Z16ConcatUpperUpperIu15__rvv_int16m2_tET_S0_S0_(v0: vec<ef4m2>, v1: vec<ef4m2>) -> vec<ef4m2>:
+  (v2) = vsetvlmax[mmul=8, tama]()
+  (v3) = vl_to_scalar[mmul=8](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslidedown.vx[ef4m2, ud, fm](v2, v0, v5)
+  (v9) = vslidedown.vx[ef4m2, ud, fm](v2, v1, v5)
+  (v11) = vslideup.vx[ef4m2, pd, fm](v2, v6, v5, v9)
+  return (v11)
+
+def _Z16ConcatUpperLowerIu15__rvv_int16m4_tET_S0_S0_(v0: vec<ef4m4>, v1: vec<ef4m4>) -> vec<ef4m4>:
+  (v2) = vsetvlmax[mmul=16, tama]()
+  (v3) = vl_to_scalar[mmul=16](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslidedown.vx[ef4m4, ud, fm](v2, v0, v5)
+  (v9) = vslideup.vx[ef4m4, pd, fm](v2, v6, v5, v1)
+  return (v9)
+
+def _Z16ConcatLowerUpperIu15__rvv_int16m4_tET_S0_S0_(v0: vec<ef4m4>, v1: vec<ef4m4>) -> vec<ef4m4>:
+  (v2) = vsetvlmax[mmul=16, tama]()
+  (v3) = vl_to_scalar[mmul=16](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslidedown.vx[ef4m4, ud, fm](v2, v1, v5)
+  (v9) = vslideup.vx[ef4m4, pd, fm](v2, v0, v5, v6)
+  return (v9)
+
+def _Z16ConcatLowerLowerIu15__rvv_int16m4_tET_S0_S0_(v0: vec<ef4m4>, v1: vec<ef4m4>) -> vec<ef4m4>:
+  (v2) = vsetvlmax[mmul=16, tama]()
+  (v3) = vl_to_scalar[mmul=16](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslideup.vx[ef4m4, pd, fm](v2, v0, v5, v1)
+  return (v6)
+
+def _Z16ConcatUpperUpperIu15__rvv_int16m4_tET_S0_S0_(v0: vec<ef4m4>, v1: vec<ef4m4>) -> vec<ef4m4>:
+  (v2) = vsetvlmax[mmul=16, tama]()
+  (v3) = vl_to_scalar[mmul=16](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslidedown.vx[ef4m4, ud, fm](v2, v0, v5)
+  (v9) = vslidedown.vx[ef4m4, ud, fm](v2, v1, v5)
+  (v11) = vslideup.vx[ef4m4, pd, fm](v2, v6, v5, v9)
+  return (v11)
+
+def _Z16ConcatUpperLowerIu15__rvv_int16m8_tET_S0_S0_(v0: vec<ef4m8>, v1: vec<ef4m8>) -> vec<ef4m8>:
+  (v2) = vsetvlmax[mmul=32, tama]()
+  (v3) = vl_to_scalar[mmul=32](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslidedown.vx[ef4m8, ud, fm](v2, v0, v5)
+  (v9) = vslideup.vx[ef4m8, pd, fm](v2, v6, v5, v1)
+  return (v9)
+
+def _Z16ConcatLowerUpperIu15__rvv_int16m8_tET_S0_S0_(v0: vec<ef4m8>, v1: vec<ef4m8>) -> vec<ef4m8>:
+  (v2) = vsetvlmax[mmul=32, tama]()
+  (v3) = vl_to_scalar[mmul=32](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslidedown.vx[ef4m8, ud, fm](v2, v1, v5)
+  (v9) = vslideup.vx[ef4m8, pd, fm](v2, v0, v5, v6)
+  return (v9)
+
+def _Z16ConcatLowerLowerIu15__rvv_int16m8_tET_S0_S0_(v0: vec<ef4m8>, v1: vec<ef4m8>) -> vec<ef4m8>:
+  (v2) = vsetvlmax[mmul=32, tama]()
+  (v3) = vl_to_scalar[mmul=32](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslideup.vx[ef4m8, pd, fm](v2, v0, v5, v1)
+  return (v6)
+
+def _Z16ConcatUpperUpperIu15__rvv_int16m8_tET_S0_S0_(v0: vec<ef4m8>, v1: vec<ef4m8>) -> vec<ef4m8>:
+  (v2) = vsetvlmax[mmul=32, tama]()
+  (v3) = vl_to_scalar[mmul=32](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslidedown.vx[ef4m8, ud, fm](v2, v0, v5)
+  (v9) = vslidedown.vx[ef4m8, ud, fm](v2, v1, v5)
+  (v11) = vslideup.vx[ef4m8, pd, fm](v2, v6, v5, v9)
+  return (v11)
+
+def _Z16ConcatUpperLowerIu16__rvv_int32mf2_tET_S0_S0_(v0: vec<ef2mf2>, v1: vec<ef2mf2>) -> vec<ef2mf2>:
+  (v2) = vsetvlmax[mmul=1, tama]()
+  (v3) = vl_to_scalar[mmul=1](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslidedown.vx[ef2mf2, ud, fm](v2, v0, v5)
+  (v9) = vslideup.vx[ef2mf2, pd, fm](v2, v6, v5, v1)
+  return (v9)
+
+def _Z16ConcatLowerUpperIu16__rvv_int32mf2_tET_S0_S0_(v0: vec<ef2mf2>, v1: vec<ef2mf2>) -> vec<ef2mf2>:
+  (v2) = vsetvlmax[mmul=1, tama]()
+  (v3) = vl_to_scalar[mmul=1](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslidedown.vx[ef2mf2, ud, fm](v2, v1, v5)
+  (v9) = vslideup.vx[ef2mf2, pd, fm](v2, v0, v5, v6)
+  return (v9)
+
+def _Z16ConcatLowerLowerIu16__rvv_int32mf2_tET_S0_S0_(v0: vec<ef2mf2>, v1: vec<ef2mf2>) -> vec<ef2mf2>:
+  (v2) = vsetvlmax[mmul=1, tama]()
+  (v3) = vl_to_scalar[mmul=1](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslideup.vx[ef2mf2, pd, fm](v2, v0, v5, v1)
+  return (v6)
+
+def _Z16ConcatUpperUpperIu16__rvv_int32mf2_tET_S0_S0_(v0: vec<ef2mf2>, v1: vec<ef2mf2>) -> vec<ef2mf2>:
+  (v2) = vsetvlmax[mmul=1, tama]()
+  (v3) = vl_to_scalar[mmul=1](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslidedown.vx[ef2mf2, ud, fm](v2, v0, v5)
+  (v9) = vslidedown.vx[ef2mf2, ud, fm](v2, v1, v5)
+  (v11) = vslideup.vx[ef2mf2, pd, fm](v2, v6, v5, v9)
+  return (v11)
+
+def _Z16ConcatUpperLowerIu15__rvv_int32m1_tET_S0_S0_(v0: vec<ef2m1>, v1: vec<ef2m1>) -> vec<ef2m1>:
+  (v2) = vsetvlmax[mmul=2, tama]()
+  (v3) = vl_to_scalar[mmul=2](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslidedown.vx[ef2m1, ud, fm](v2, v0, v5)
+  (v9) = vslideup.vx[ef2m1, pd, fm](v2, v6, v5, v1)
+  return (v9)
+
+def _Z16ConcatLowerUpperIu15__rvv_int32m1_tET_S0_S0_(v0: vec<ef2m1>, v1: vec<ef2m1>) -> vec<ef2m1>:
+  (v2) = vsetvlmax[mmul=2, tama]()
+  (v3) = vl_to_scalar[mmul=2](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslidedown.vx[ef2m1, ud, fm](v2, v1, v5)
+  (v9) = vslideup.vx[ef2m1, pd, fm](v2, v0, v5, v6)
+  return (v9)
+
+def _Z16ConcatLowerLowerIu15__rvv_int32m1_tET_S0_S0_(v0: vec<ef2m1>, v1: vec<ef2m1>) -> vec<ef2m1>:
+  (v2) = vsetvlmax[mmul=2, tama]()
+  (v3) = vl_to_scalar[mmul=2](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslideup.vx[ef2m1, pd, fm](v2, v0, v5, v1)
+  return (v6)
+
+def _Z16ConcatUpperUpperIu15__rvv_int32m1_tET_S0_S0_(v0: vec<ef2m1>, v1: vec<ef2m1>) -> vec<ef2m1>:
+  (v2) = vsetvlmax[mmul=2, tama]()
+  (v3) = vl_to_scalar[mmul=2](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslidedown.vx[ef2m1, ud, fm](v2, v0, v5)
+  (v9) = vslidedown.vx[ef2m1, ud, fm](v2, v1, v5)
+  (v11) = vslideup.vx[ef2m1, pd, fm](v2, v6, v5, v9)
+  return (v11)
+
+def _Z16ConcatUpperLowerIu15__rvv_int32m2_tET_S0_S0_(v0: vec<ef2m2>, v1: vec<ef2m2>) -> vec<ef2m2>:
+  (v2) = vsetvlmax[mmul=4, tama]()
+  (v3) = vl_to_scalar[mmul=4](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslidedown.vx[ef2m2, ud, fm](v2, v0, v5)
+  (v9) = vslideup.vx[ef2m2, pd, fm](v2, v6, v5, v1)
+  return (v9)
+
+def _Z16ConcatLowerUpperIu15__rvv_int32m2_tET_S0_S0_(v0: vec<ef2m2>, v1: vec<ef2m2>) -> vec<ef2m2>:
+  (v2) = vsetvlmax[mmul=4, tama]()
+  (v3) = vl_to_scalar[mmul=4](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslidedown.vx[ef2m2, ud, fm](v2, v1, v5)
+  (v9) = vslideup.vx[ef2m2, pd, fm](v2, v0, v5, v6)
+  return (v9)
+
+def _Z16ConcatLowerLowerIu15__rvv_int32m2_tET_S0_S0_(v0: vec<ef2m2>, v1: vec<ef2m2>) -> vec<ef2m2>:
+  (v2) = vsetvlmax[mmul=4, tama]()
+  (v3) = vl_to_scalar[mmul=4](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslideup.vx[ef2m2, pd, fm](v2, v0, v5, v1)
+  return (v6)
+
+def _Z16ConcatUpperUpperIu15__rvv_int32m2_tET_S0_S0_(v0: vec<ef2m2>, v1: vec<ef2m2>) -> vec<ef2m2>:
+  (v2) = vsetvlmax[mmul=4, tama]()
+  (v3) = vl_to_scalar[mmul=4](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslidedown.vx[ef2m2, ud, fm](v2, v0, v5)
+  (v9) = vslidedown.vx[ef2m2, ud, fm](v2, v1, v5)
+  (v11) = vslideup.vx[ef2m2, pd, fm](v2, v6, v5, v9)
+  return (v11)
+
+def _Z16ConcatUpperLowerIu15__rvv_int32m4_tET_S0_S0_(v0: vec<ef2m4>, v1: vec<ef2m4>) -> vec<ef2m4>:
+  (v2) = vsetvlmax[mmul=8, tama]()
+  (v3) = vl_to_scalar[mmul=8](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslidedown.vx[ef2m4, ud, fm](v2, v0, v5)
+  (v9) = vslideup.vx[ef2m4, pd, fm](v2, v6, v5, v1)
+  return (v9)
+
+def _Z16ConcatLowerUpperIu15__rvv_int32m4_tET_S0_S0_(v0: vec<ef2m4>, v1: vec<ef2m4>) -> vec<ef2m4>:
+  (v2) = vsetvlmax[mmul=8, tama]()
+  (v3) = vl_to_scalar[mmul=8](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslidedown.vx[ef2m4, ud, fm](v2, v1, v5)
+  (v9) = vslideup.vx[ef2m4, pd, fm](v2, v0, v5, v6)
+  return (v9)
+
+def _Z16ConcatLowerLowerIu15__rvv_int32m4_tET_S0_S0_(v0: vec<ef2m4>, v1: vec<ef2m4>) -> vec<ef2m4>:
+  (v2) = vsetvlmax[mmul=8, tama]()
+  (v3) = vl_to_scalar[mmul=8](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslideup.vx[ef2m4, pd, fm](v2, v0, v5, v1)
+  return (v6)
+
+def _Z16ConcatUpperUpperIu15__rvv_int32m4_tET_S0_S0_(v0: vec<ef2m4>, v1: vec<ef2m4>) -> vec<ef2m4>:
+  (v2) = vsetvlmax[mmul=8, tama]()
+  (v3) = vl_to_scalar[mmul=8](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslidedown.vx[ef2m4, ud, fm](v2, v0, v5)
+  (v9) = vslidedown.vx[ef2m4, ud, fm](v2, v1, v5)
+  (v11) = vslideup.vx[ef2m4, pd, fm](v2, v6, v5, v9)
+  return (v11)
+
+def _Z16ConcatUpperLowerIu15__rvv_int32m8_tET_S0_S0_(v0: vec<ef2m8>, v1: vec<ef2m8>) -> vec<ef2m8>:
+  (v2) = vsetvlmax[mmul=16, tama]()
+  (v3) = vl_to_scalar[mmul=16](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslidedown.vx[ef2m8, ud, fm](v2, v0, v5)
+  (v9) = vslideup.vx[ef2m8, pd, fm](v2, v6, v5, v1)
+  return (v9)
+
+def _Z16ConcatLowerUpperIu15__rvv_int32m8_tET_S0_S0_(v0: vec<ef2m8>, v1: vec<ef2m8>) -> vec<ef2m8>:
+  (v2) = vsetvlmax[mmul=16, tama]()
+  (v3) = vl_to_scalar[mmul=16](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslidedown.vx[ef2m8, ud, fm](v2, v1, v5)
+  (v9) = vslideup.vx[ef2m8, pd, fm](v2, v0, v5, v6)
+  return (v9)
+
+def _Z16ConcatLowerLowerIu15__rvv_int32m8_tET_S0_S0_(v0: vec<ef2m8>, v1: vec<ef2m8>) -> vec<ef2m8>:
+  (v2) = vsetvlmax[mmul=16, tama]()
+  (v3) = vl_to_scalar[mmul=16](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslideup.vx[ef2m8, pd, fm](v2, v0, v5, v1)
+  return (v6)
+
+def _Z16ConcatUpperUpperIu15__rvv_int32m8_tET_S0_S0_(v0: vec<ef2m8>, v1: vec<ef2m8>) -> vec<ef2m8>:
+  (v2) = vsetvlmax[mmul=16, tama]()
+  (v3) = vl_to_scalar[mmul=16](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslidedown.vx[ef2m8, ud, fm](v2, v0, v5)
+  (v9) = vslidedown.vx[ef2m8, ud, fm](v2, v1, v5)
+  (v11) = vslideup.vx[ef2m8, pd, fm](v2, v6, v5, v9)
+  return (v11)
+
+def _Z16ConcatUpperLowerIu15__rvv_int64m1_tET_S0_S0_(v0: vec<e1m1>, v1: vec<e1m1>) -> vec<e1m1>:
+  (v2) = vsetvlmax[mmul=1, tama]()
+  (v3) = vl_to_scalar[mmul=1](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslidedown.vx[e1m1, ud, fm](v2, v0, v5)
+  (v9) = vslideup.vx[e1m1, pd, fm](v2, v6, v5, v1)
+  return (v9)
+
+def _Z16ConcatLowerUpperIu15__rvv_int64m1_tET_S0_S0_(v0: vec<e1m1>, v1: vec<e1m1>) -> vec<e1m1>:
+  (v2) = vsetvlmax[mmul=1, tama]()
+  (v3) = vl_to_scalar[mmul=1](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslidedown.vx[e1m1, ud, fm](v2, v1, v5)
+  (v9) = vslideup.vx[e1m1, pd, fm](v2, v0, v5, v6)
+  return (v9)
+
+def _Z16ConcatLowerLowerIu15__rvv_int64m1_tET_S0_S0_(v0: vec<e1m1>, v1: vec<e1m1>) -> vec<e1m1>:
+  (v2) = vsetvlmax[mmul=1, tama]()
+  (v3) = vl_to_scalar[mmul=1](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslideup.vx[e1m1, pd, fm](v2, v0, v5, v1)
+  return (v6)
+
+def _Z16ConcatUpperUpperIu15__rvv_int64m1_tET_S0_S0_(v0: vec<e1m1>, v1: vec<e1m1>) -> vec<e1m1>:
+  (v2) = vsetvlmax[mmul=1, tama]()
+  (v3) = vl_to_scalar[mmul=1](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslidedown.vx[e1m1, ud, fm](v2, v0, v5)
+  (v9) = vslidedown.vx[e1m1, ud, fm](v2, v1, v5)
+  (v11) = vslideup.vx[e1m1, pd, fm](v2, v6, v5, v9)
+  return (v11)
+
+def _Z16ConcatUpperLowerIu15__rvv_int64m2_tET_S0_S0_(v0: vec<e1m2>, v1: vec<e1m2>) -> vec<e1m2>:
+  (v2) = vsetvlmax[mmul=2, tama]()
+  (v3) = vl_to_scalar[mmul=2](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslidedown.vx[e1m2, ud, fm](v2, v0, v5)
+  (v9) = vslideup.vx[e1m2, pd, fm](v2, v6, v5, v1)
+  return (v9)
+
+def _Z16ConcatLowerUpperIu15__rvv_int64m2_tET_S0_S0_(v0: vec<e1m2>, v1: vec<e1m2>) -> vec<e1m2>:
+  (v2) = vsetvlmax[mmul=2, tama]()
+  (v3) = vl_to_scalar[mmul=2](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslidedown.vx[e1m2, ud, fm](v2, v1, v5)
+  (v9) = vslideup.vx[e1m2, pd, fm](v2, v0, v5, v6)
+  return (v9)
+
+def _Z16ConcatLowerLowerIu15__rvv_int64m2_tET_S0_S0_(v0: vec<e1m2>, v1: vec<e1m2>) -> vec<e1m2>:
+  (v2) = vsetvlmax[mmul=2, tama]()
+  (v3) = vl_to_scalar[mmul=2](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslideup.vx[e1m2, pd, fm](v2, v0, v5, v1)
+  return (v6)
+
+def _Z16ConcatUpperUpperIu15__rvv_int64m2_tET_S0_S0_(v0: vec<e1m2>, v1: vec<e1m2>) -> vec<e1m2>:
+  (v2) = vsetvlmax[mmul=2, tama]()
+  (v3) = vl_to_scalar[mmul=2](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslidedown.vx[e1m2, ud, fm](v2, v0, v5)
+  (v9) = vslidedown.vx[e1m2, ud, fm](v2, v1, v5)
+  (v11) = vslideup.vx[e1m2, pd, fm](v2, v6, v5, v9)
+  return (v11)
+
+def _Z16ConcatUpperLowerIu15__rvv_int64m4_tET_S0_S0_(v0: vec<e1m4>, v1: vec<e1m4>) -> vec<e1m4>:
+  (v2) = vsetvlmax[mmul=4, tama]()
+  (v3) = vl_to_scalar[mmul=4](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslidedown.vx[e1m4, ud, fm](v2, v0, v5)
+  (v9) = vslideup.vx[e1m4, pd, fm](v2, v6, v5, v1)
+  return (v9)
+
+def _Z16ConcatLowerUpperIu15__rvv_int64m4_tET_S0_S0_(v0: vec<e1m4>, v1: vec<e1m4>) -> vec<e1m4>:
+  (v2) = vsetvlmax[mmul=4, tama]()
+  (v3) = vl_to_scalar[mmul=4](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslidedown.vx[e1m4, ud, fm](v2, v1, v5)
+  (v9) = vslideup.vx[e1m4, pd, fm](v2, v0, v5, v6)
+  return (v9)
+
+def _Z16ConcatLowerLowerIu15__rvv_int64m4_tET_S0_S0_(v0: vec<e1m4>, v1: vec<e1m4>) -> vec<e1m4>:
+  (v2) = vsetvlmax[mmul=4, tama]()
+  (v3) = vl_to_scalar[mmul=4](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslideup.vx[e1m4, pd, fm](v2, v0, v5, v1)
+  return (v6)
+
+def _Z16ConcatUpperUpperIu15__rvv_int64m4_tET_S0_S0_(v0: vec<e1m4>, v1: vec<e1m4>) -> vec<e1m4>:
+  (v2) = vsetvlmax[mmul=4, tama]()
+  (v3) = vl_to_scalar[mmul=4](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslidedown.vx[e1m4, ud, fm](v2, v0, v5)
+  (v9) = vslidedown.vx[e1m4, ud, fm](v2, v1, v5)
+  (v11) = vslideup.vx[e1m4, pd, fm](v2, v6, v5, v9)
+  return (v11)
+
+def _Z16ConcatUpperLowerIu15__rvv_int64m8_tET_S0_S0_(v0: vec<e1m8>, v1: vec<e1m8>) -> vec<e1m8>:
+  (v2) = vsetvlmax[mmul=8, tama]()
+  (v3) = vl_to_scalar[mmul=8](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslidedown.vx[e1m8, ud, fm](v2, v0, v5)
+  (v9) = vslideup.vx[e1m8, pd, fm](v2, v6, v5, v1)
+  return (v9)
+
+def _Z16ConcatLowerUpperIu15__rvv_int64m8_tET_S0_S0_(v0: vec<e1m8>, v1: vec<e1m8>) -> vec<e1m8>:
+  (v2) = vsetvlmax[mmul=8, tama]()
+  (v3) = vl_to_scalar[mmul=8](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslidedown.vx[e1m8, ud, fm](v2, v1, v5)
+  (v9) = vslideup.vx[e1m8, pd, fm](v2, v0, v5, v6)
+  return (v9)
+
+def _Z16ConcatLowerLowerIu15__rvv_int64m8_tET_S0_S0_(v0: vec<e1m8>, v1: vec<e1m8>) -> vec<e1m8>:
+  (v2) = vsetvlmax[mmul=8, tama]()
+  (v3) = vl_to_scalar[mmul=8](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslideup.vx[e1m8, pd, fm](v2, v0, v5, v1)
+  return (v6)
+
+def _Z16ConcatUpperUpperIu15__rvv_int64m8_tET_S0_S0_(v0: vec<e1m8>, v1: vec<e1m8>) -> vec<e1m8>:
+  (v2) = vsetvlmax[mmul=8, tama]()
+  (v3) = vl_to_scalar[mmul=8](v2)
+  (v4) = scalar[xmul=1, imm=0x0000000000000001]()
+  (v5) = srl.xx[width=1](v3, v4)
+  (v6) = vslidedown.vx[e1m8, ud, fm](v2, v0, v5)
+  (v9) = vslidedown.vx[e1m8, ud, fm](v2, v1, v5)
+  (v11) = vslideup.vx[e1m8, pd, fm](v2, v6, v5, v9)
+  return (v11)
+

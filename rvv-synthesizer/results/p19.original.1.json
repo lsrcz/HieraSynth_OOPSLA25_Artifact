@@ -1,0 +1,24 @@
+{
+  "results": [
+    {
+      "command": "./scripts/target/hacker.sh original p19 -j 1 --log-prog-name p19.original.1",
+      "mean": 13.7034632002,
+      "stddev": 7.232879888568823,
+      "median": 9.8793317252,
+      "user": 10.321569673333334,
+      "system": 1.6510346399999998,
+      "min": 9.1853994422,
+      "max": 22.0456584332,
+      "times": [
+        9.1853994422,
+        22.0456584332,
+        9.8793317252
+      ],
+      "exit_codes": [
+        0,
+        0,
+        0
+      ]
+    }
+  ]
+}

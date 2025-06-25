@@ -1,0 +1,24 @@
+{
+  "results": [
+    {
+      "command": "./scripts/target/lt128.sh -j 2 --ir-func-name Lt128 --sketch-selector=fixed_cmp_inferred_6 --log-prog-name Lt128.Fixed.2 ",
+      "mean": 4309.1034263924075,
+      "stddev": 477.6723047335843,
+      "median": 4498.81807823574,
+      "user": 4592.824700953333,
+      "system": 64.87074542666666,
+      "min": 3765.7184047077403,
+      "max": 4662.7737962337405,
+      "times": [
+        4662.7737962337405,
+        4498.81807823574,
+        3765.7184047077403
+      ],
+      "exit_codes": [
+        0,
+        0,
+        0
+      ]
+    }
+  ]
+}

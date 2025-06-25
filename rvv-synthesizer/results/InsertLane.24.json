@@ -1,0 +1,24 @@
+{
+  "results": [
+    {
+      "command": "./scripts/target/insert_lane.sh -j 24 --ir-func-name InsertLane --log-prog-name InsertLane.24 ",
+      "mean": 266.1283378534933,
+      "stddev": 20.80056100479596,
+      "median": 277.57873706815997,
+      "user": 5364.090404373333,
+      "system": 147.62972648666667,
+      "min": 242.11845595516,
+      "max": 278.68782053716,
+      "times": [
+        242.11845595516,
+        278.68782053716,
+        277.57873706815997
+      ],
+      "exit_codes": [
+        0,
+        0,
+        0
+      ]
+    }
+  ]
+}

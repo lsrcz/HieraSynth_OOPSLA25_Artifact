@@ -1,0 +1,2 @@
+num_root_programs, num_components, avg_component_choices, scheduler_elapsed_time, time_to_best_since_scheduler_start, time_to_best, min_num_instructions, num_ref_instructions, initial_cost, cost, num_lattice_nodes, num_undertermined_leaves, num_undertermined_programs, undetermined_ratio
+6.647244640492344e+21, 7.0, 31.0, 589.716883018, 589.5049954223333, 85.401155045, 7.0, 13.0, 13.0, 7.0, 111.33333333333333, 56.333333333333336, 6.645003486163294e+21, 0.9996628446145343

@@ -1,0 +1,24 @@
+{
+  "results": [
+    {
+      "command": "./hacker.sh original-fixed-imm p18 -j 72 --log-prog-name p18.original.fixed.imm.72",
+      "mean": 4.61792810754,
+      "stddev": 0.09448175005757045,
+      "median": 4.59792358254,
+      "user": 3.7642808066666666,
+      "system": 0.43637272,
+      "min": 4.53505052654,
+      "max": 4.72081021354,
+      "times": [
+        4.53505052654,
+        4.72081021354,
+        4.59792358254
+      ],
+      "exit_codes": [
+        0,
+        0,
+        0
+      ]
+    }
+  ]
+}

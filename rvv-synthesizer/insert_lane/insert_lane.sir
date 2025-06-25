@@ -1,0 +1,444 @@
+def _Z10InsertLaneIu16__rvv_uint8mf8_thET_S0_mT0_(v0: vec<ef8mf8>, v1: scalar<xmul=1>, v2: scalar<xmul=f8>) -> vec<ef8mf8>:
+  (v3) = vsetvlmax[mmul=1, tama]()
+  (v7) = scalar[xmul=f8, imm=0x0000000000000000]()
+  (v4) = scalar_to_vec[ef8mf8, ud](v3, v7)
+  (v10) = scalar[xmul=f8, imm=0x0000000000000001]()
+  (v8) = scalar_to_vec[ef8mf8, ud](v3, v10)
+  (v11) = vslideup.vx[ef8mf8, pd, fm](v3, v8, v1, v4)
+  (v13) = vmseq.vv[ef8mf8, ud, fm](v3, v11, v8)
+  (v16) = vmsof.m[mmul=1, ud, fm](v3, v13)
+  (v18) = scalar_to_vec[ef8mf8, ud](v3, v2)
+  (v20) = vmerge.vvm[ef8mf8, ud](v3, v0, v18, v16)
+  return (v20)
+
+def _Z10InsertLaneIu16__rvv_uint8mf4_thET_S0_mT0_(v0: vec<ef8mf4>, v1: scalar<xmul=1>, v2: scalar<xmul=f8>) -> vec<ef8mf4>:
+  (v3) = vsetvlmax[mmul=2, tama]()
+  (v7) = scalar[xmul=f8, imm=0x0000000000000000]()
+  (v4) = scalar_to_vec[ef8mf4, ud](v3, v7)
+  (v10) = scalar[xmul=f8, imm=0x0000000000000001]()
+  (v8) = scalar_to_vec[ef8mf4, ud](v3, v10)
+  (v11) = vslideup.vx[ef8mf4, pd, fm](v3, v8, v1, v4)
+  (v13) = vmseq.vv[ef8mf4, ud, fm](v3, v11, v8)
+  (v16) = vmsof.m[mmul=2, ud, fm](v3, v13)
+  (v18) = scalar_to_vec[ef8mf4, ud](v3, v2)
+  (v20) = vmerge.vvm[ef8mf4, ud](v3, v0, v18, v16)
+  return (v20)
+
+def _Z10InsertLaneIu16__rvv_uint8mf2_thET_S0_mT0_(v0: vec<ef8mf2>, v1: scalar<xmul=1>, v2: scalar<xmul=f8>) -> vec<ef8mf2>:
+  (v3) = vsetvlmax[mmul=4, tama]()
+  (v7) = scalar[xmul=f8, imm=0x0000000000000000]()
+  (v4) = scalar_to_vec[ef8mf2, ud](v3, v7)
+  (v10) = scalar[xmul=f8, imm=0x0000000000000001]()
+  (v8) = scalar_to_vec[ef8mf2, ud](v3, v10)
+  (v11) = vslideup.vx[ef8mf2, pd, fm](v3, v8, v1, v4)
+  (v13) = vmseq.vv[ef8mf2, ud, fm](v3, v11, v8)
+  (v16) = vmsof.m[mmul=4, ud, fm](v3, v13)
+  (v18) = scalar_to_vec[ef8mf2, ud](v3, v2)
+  (v20) = vmerge.vvm[ef8mf2, ud](v3, v0, v18, v16)
+  return (v20)
+
+def _Z10InsertLaneIu15__rvv_uint8m1_thET_S0_mT0_(v0: vec<ef8m1>, v1: scalar<xmul=1>, v2: scalar<xmul=f8>) -> vec<ef8m1>:
+  (v3) = vsetvlmax[mmul=8, tama]()
+  (v7) = scalar[xmul=f8, imm=0x0000000000000000]()
+  (v4) = scalar_to_vec[ef8m1, ud](v3, v7)
+  (v10) = scalar[xmul=f8, imm=0x0000000000000001]()
+  (v8) = scalar_to_vec[ef8m1, ud](v3, v10)
+  (v11) = vslideup.vx[ef8m1, pd, fm](v3, v8, v1, v4)
+  (v13) = vmseq.vv[ef8m1, ud, fm](v3, v11, v8)
+  (v15) = vmsof.m[mmul=8, ud, fm](v3, v13)
+  (v17) = scalar_to_vec[ef8m1, ud](v3, v2)
+  (v19) = vmerge.vvm[ef8m1, ud](v3, v0, v17, v15)
+  return (v19)
+
+def _Z10InsertLaneIu15__rvv_uint8m2_thET_S0_mT0_(v0: vec<ef8m2>, v1: scalar<xmul=1>, v2: scalar<xmul=f8>) -> vec<ef8m2>:
+  (v3) = vsetvlmax[mmul=16, tama]()
+  (v7) = scalar[xmul=f8, imm=0x0000000000000000]()
+  (v4) = scalar_to_vec[ef8m2, ud](v3, v7)
+  (v10) = scalar[xmul=f8, imm=0x0000000000000001]()
+  (v8) = scalar_to_vec[ef8m2, ud](v3, v10)
+  (v11) = vslideup.vx[ef8m2, pd, fm](v3, v8, v1, v4)
+  (v13) = vmseq.vv[ef8m2, ud, fm](v3, v11, v8)
+  (v15) = vmsof.m[mmul=16, ud, fm](v3, v13)
+  (v17) = scalar_to_vec[ef8m2, ud](v3, v2)
+  (v19) = vmerge.vvm[ef8m2, ud](v3, v0, v17, v15)
+  return (v19)
+
+def _Z10InsertLaneIu15__rvv_uint8m4_thET_S0_mT0_(v0: vec<ef8m4>, v1: scalar<xmul=1>, v2: scalar<xmul=f8>) -> vec<ef8m4>:
+  (v3) = vsetvlmax[mmul=32, tama]()
+  (v7) = scalar[xmul=f8, imm=0x0000000000000000]()
+  (v4) = scalar_to_vec[ef8m4, ud](v3, v7)
+  (v10) = scalar[xmul=f8, imm=0x0000000000000001]()
+  (v8) = scalar_to_vec[ef8m4, ud](v3, v10)
+  (v11) = vslideup.vx[ef8m4, pd, fm](v3, v8, v1, v4)
+  (v13) = vmseq.vv[ef8m4, ud, fm](v3, v11, v8)
+  (v15) = vmsof.m[mmul=32, ud, fm](v3, v13)
+  (v17) = scalar_to_vec[ef8m4, ud](v3, v2)
+  (v19) = vmerge.vvm[ef8m4, ud](v3, v0, v17, v15)
+  return (v19)
+
+def _Z10InsertLaneIu15__rvv_uint8m8_thET_S0_mT0_(v0: vec<ef8m8>, v1: scalar<xmul=1>, v2: scalar<xmul=f8>) -> vec<ef8m8>:
+  (v3) = vsetvlmax[mmul=64, tama]()
+  (v7) = scalar[xmul=f8, imm=0x0000000000000000]()
+  (v4) = scalar_to_vec[ef8m8, ud](v3, v7)
+  (v10) = scalar[xmul=f8, imm=0x0000000000000001]()
+  (v8) = scalar_to_vec[ef8m8, ud](v3, v10)
+  (v11) = vslideup.vx[ef8m8, pd, fm](v3, v8, v1, v4)
+  (v13) = vmseq.vv[ef8m8, ud, fm](v3, v11, v8)
+  (v15) = vmsof.m[mmul=64, ud, fm](v3, v13)
+  (v17) = scalar_to_vec[ef8m8, ud](v3, v2)
+  (v19) = vmerge.vvm[ef8m8, ud](v3, v0, v17, v15)
+  return (v19)
+
+def _Z10InsertLaneIu17__rvv_uint16mf4_ttET_S0_mT0_(v0: vec<ef4mf4>, v1: scalar<xmul=1>, v2: scalar<xmul=f4>) -> vec<ef4mf4>:
+  (v3) = vsetvlmax[mmul=1, tama]()
+  (v4) = vid.v[ef4mf4, ud, fm](v3)
+  (v7) = trunc[src=1, dest=f4](v1)
+  (v8) = vmseq.vx[ef4mf4, ud, fm](v3, v4, v7)
+  (v10) = scalar_to_vec[ef4mf4, ud](v3, v2)
+  (v12) = vmerge.vvm[ef4mf4, ud](v3, v0, v10, v8)
+  return (v12)
+
+def _Z10InsertLaneIu17__rvv_uint16mf2_ttET_S0_mT0_(v0: vec<ef4mf2>, v1: scalar<xmul=1>, v2: scalar<xmul=f4>) -> vec<ef4mf2>:
+  (v3) = vsetvlmax[mmul=2, tama]()
+  (v4) = vid.v[ef4mf2, ud, fm](v3)
+  (v7) = trunc[src=1, dest=f4](v1)
+  (v8) = vmseq.vx[ef4mf2, ud, fm](v3, v4, v7)
+  (v10) = scalar_to_vec[ef4mf2, ud](v3, v2)
+  (v12) = vmerge.vvm[ef4mf2, ud](v3, v0, v10, v8)
+  return (v12)
+
+def _Z10InsertLaneIu16__rvv_uint16m1_ttET_S0_mT0_(v0: vec<ef4m1>, v1: scalar<xmul=1>, v2: scalar<xmul=f4>) -> vec<ef4m1>:
+  (v3) = vsetvlmax[mmul=4, tama]()
+  (v4) = vid.v[ef4m1, ud, fm](v3)
+  (v7) = trunc[src=1, dest=f4](v1)
+  (v8) = vmseq.vx[ef4m1, ud, fm](v3, v4, v7)
+  (v10) = scalar_to_vec[ef4m1, ud](v3, v2)
+  (v12) = vmerge.vvm[ef4m1, ud](v3, v0, v10, v8)
+  return (v12)
+
+def _Z10InsertLaneIu16__rvv_uint16m2_ttET_S0_mT0_(v0: vec<ef4m2>, v1: scalar<xmul=1>, v2: scalar<xmul=f4>) -> vec<ef4m2>:
+  (v3) = vsetvlmax[mmul=8, tama]()
+  (v4) = vid.v[ef4m2, ud, fm](v3)
+  (v7) = trunc[src=1, dest=f4](v1)
+  (v8) = vmseq.vx[ef4m2, ud, fm](v3, v4, v7)
+  (v10) = scalar_to_vec[ef4m2, ud](v3, v2)
+  (v12) = vmerge.vvm[ef4m2, ud](v3, v0, v10, v8)
+  return (v12)
+
+def _Z10InsertLaneIu16__rvv_uint16m4_ttET_S0_mT0_(v0: vec<ef4m4>, v1: scalar<xmul=1>, v2: scalar<xmul=f4>) -> vec<ef4m4>:
+  (v3) = vsetvlmax[mmul=16, tama]()
+  (v4) = vid.v[ef4m4, ud, fm](v3)
+  (v7) = trunc[src=1, dest=f4](v1)
+  (v8) = vmseq.vx[ef4m4, ud, fm](v3, v4, v7)
+  (v10) = scalar_to_vec[ef4m4, ud](v3, v2)
+  (v12) = vmerge.vvm[ef4m4, ud](v3, v0, v10, v8)
+  return (v12)
+
+def _Z10InsertLaneIu16__rvv_uint16m8_ttET_S0_mT0_(v0: vec<ef4m8>, v1: scalar<xmul=1>, v2: scalar<xmul=f4>) -> vec<ef4m8>:
+  (v3) = vsetvlmax[mmul=32, tama]()
+  (v4) = vid.v[ef4m8, ud, fm](v3)
+  (v7) = trunc[src=1, dest=f4](v1)
+  (v8) = vmseq.vx[ef4m8, ud, fm](v3, v4, v7)
+  (v10) = scalar_to_vec[ef4m8, ud](v3, v2)
+  (v12) = vmerge.vvm[ef4m8, ud](v3, v0, v10, v8)
+  return (v12)
+
+def _Z10InsertLaneIu17__rvv_uint32mf2_tjET_S0_mT0_(v0: vec<ef2mf2>, v1: scalar<xmul=1>, v2: scalar<xmul=f2>) -> vec<ef2mf2>:
+  (v3) = vsetvlmax[mmul=1, tama]()
+  (v4) = vid.v[ef2mf2, ud, fm](v3)
+  (v7) = trunc[src=1, dest=f2](v1)
+  (v8) = vmseq.vx[ef2mf2, ud, fm](v3, v4, v7)
+  (v10) = scalar_to_vec[ef2mf2, ud](v3, v2)
+  (v12) = vmerge.vvm[ef2mf2, ud](v3, v0, v10, v8)
+  return (v12)
+
+def _Z10InsertLaneIu16__rvv_uint32m1_tjET_S0_mT0_(v0: vec<ef2m1>, v1: scalar<xmul=1>, v2: scalar<xmul=f2>) -> vec<ef2m1>:
+  (v3) = vsetvlmax[mmul=2, tama]()
+  (v4) = vid.v[ef2m1, ud, fm](v3)
+  (v7) = trunc[src=1, dest=f2](v1)
+  (v8) = vmseq.vx[ef2m1, ud, fm](v3, v4, v7)
+  (v10) = scalar_to_vec[ef2m1, ud](v3, v2)
+  (v12) = vmerge.vvm[ef2m1, ud](v3, v0, v10, v8)
+  return (v12)
+
+def _Z10InsertLaneIu16__rvv_uint32m2_tjET_S0_mT0_(v0: vec<ef2m2>, v1: scalar<xmul=1>, v2: scalar<xmul=f2>) -> vec<ef2m2>:
+  (v3) = vsetvlmax[mmul=4, tama]()
+  (v4) = vid.v[ef2m2, ud, fm](v3)
+  (v7) = trunc[src=1, dest=f2](v1)
+  (v8) = vmseq.vx[ef2m2, ud, fm](v3, v4, v7)
+  (v10) = scalar_to_vec[ef2m2, ud](v3, v2)
+  (v12) = vmerge.vvm[ef2m2, ud](v3, v0, v10, v8)
+  return (v12)
+
+def _Z10InsertLaneIu16__rvv_uint32m4_tjET_S0_mT0_(v0: vec<ef2m4>, v1: scalar<xmul=1>, v2: scalar<xmul=f2>) -> vec<ef2m4>:
+  (v3) = vsetvlmax[mmul=8, tama]()
+  (v4) = vid.v[ef2m4, ud, fm](v3)
+  (v7) = trunc[src=1, dest=f2](v1)
+  (v8) = vmseq.vx[ef2m4, ud, fm](v3, v4, v7)
+  (v10) = scalar_to_vec[ef2m4, ud](v3, v2)
+  (v12) = vmerge.vvm[ef2m4, ud](v3, v0, v10, v8)
+  return (v12)
+
+def _Z10InsertLaneIu16__rvv_uint32m8_tjET_S0_mT0_(v0: vec<ef2m8>, v1: scalar<xmul=1>, v2: scalar<xmul=f2>) -> vec<ef2m8>:
+  (v3) = vsetvlmax[mmul=16, tama]()
+  (v4) = vid.v[ef2m8, ud, fm](v3)
+  (v7) = trunc[src=1, dest=f2](v1)
+  (v8) = vmseq.vx[ef2m8, ud, fm](v3, v4, v7)
+  (v10) = scalar_to_vec[ef2m8, ud](v3, v2)
+  (v12) = vmerge.vvm[ef2m8, ud](v3, v0, v10, v8)
+  return (v12)
+
+def _Z10InsertLaneIu16__rvv_uint64m1_tmET_S0_mT0_(v0: vec<e1m1>, v1: scalar<xmul=1>, v2: scalar<xmul=1>) -> vec<e1m1>:
+  (v3) = vsetvlmax[mmul=1, tama]()
+  (v4) = vid.v[e1m1, ud, fm](v3)
+  (v7) = vmseq.vx[e1m1, ud, fm](v3, v4, v1)
+  (v9) = scalar_to_vec[e1m1, ud](v3, v2)
+  (v11) = vmerge.vvm[e1m1, ud](v3, v0, v9, v7)
+  return (v11)
+
+def _Z10InsertLaneIu16__rvv_uint64m2_tmET_S0_mT0_(v0: vec<e1m2>, v1: scalar<xmul=1>, v2: scalar<xmul=1>) -> vec<e1m2>:
+  (v3) = vsetvlmax[mmul=2, tama]()
+  (v4) = vid.v[e1m2, ud, fm](v3)
+  (v7) = vmseq.vx[e1m2, ud, fm](v3, v4, v1)
+  (v9) = scalar_to_vec[e1m2, ud](v3, v2)
+  (v11) = vmerge.vvm[e1m2, ud](v3, v0, v9, v7)
+  return (v11)
+
+def _Z10InsertLaneIu16__rvv_uint64m4_tmET_S0_mT0_(v0: vec<e1m4>, v1: scalar<xmul=1>, v2: scalar<xmul=1>) -> vec<e1m4>:
+  (v3) = vsetvlmax[mmul=4, tama]()
+  (v4) = vid.v[e1m4, ud, fm](v3)
+  (v7) = vmseq.vx[e1m4, ud, fm](v3, v4, v1)
+  (v9) = scalar_to_vec[e1m4, ud](v3, v2)
+  (v11) = vmerge.vvm[e1m4, ud](v3, v0, v9, v7)
+  return (v11)
+
+def _Z10InsertLaneIu16__rvv_uint64m8_tmET_S0_mT0_(v0: vec<e1m8>, v1: scalar<xmul=1>, v2: scalar<xmul=1>) -> vec<e1m8>:
+  (v3) = vsetvlmax[mmul=8, tama]()
+  (v4) = vid.v[e1m8, ud, fm](v3)
+  (v7) = vmseq.vx[e1m8, ud, fm](v3, v4, v1)
+  (v9) = scalar_to_vec[e1m8, ud](v3, v2)
+  (v11) = vmerge.vvm[e1m8, ud](v3, v0, v9, v7)
+  return (v11)
+
+def _Z10InsertLaneIu15__rvv_int8mf8_taET_S0_mT0_(v0: vec<ef8mf8>, v1: scalar<xmul=1>, v2: scalar<xmul=f8>) -> vec<ef8mf8>:
+  (v3) = vsetvlmax[mmul=1, tama]()
+  (v7) = scalar[xmul=f8, imm=0x0000000000000000]()
+  (v4) = scalar_to_vec[ef8mf8, ud](v3, v7)
+  (v10) = scalar[xmul=f8, imm=0x0000000000000001]()
+  (v8) = scalar_to_vec[ef8mf8, ud](v3, v10)
+  (v11) = vslideup.vx[ef8mf8, pd, fm](v3, v8, v1, v4)
+  (v13) = vmseq.vv[ef8mf8, ud, fm](v3, v11, v8)
+  (v16) = vmsof.m[mmul=1, ud, fm](v3, v13)
+  (v18) = scalar_to_vec[ef8mf8, ud](v3, v2)
+  (v20) = vmerge.vvm[ef8mf8, ud](v3, v0, v18, v16)
+  return (v20)
+
+def _Z10InsertLaneIu15__rvv_int8mf4_taET_S0_mT0_(v0: vec<ef8mf4>, v1: scalar<xmul=1>, v2: scalar<xmul=f8>) -> vec<ef8mf4>:
+  (v3) = vsetvlmax[mmul=2, tama]()
+  (v7) = scalar[xmul=f8, imm=0x0000000000000000]()
+  (v4) = scalar_to_vec[ef8mf4, ud](v3, v7)
+  (v10) = scalar[xmul=f8, imm=0x0000000000000001]()
+  (v8) = scalar_to_vec[ef8mf4, ud](v3, v10)
+  (v11) = vslideup.vx[ef8mf4, pd, fm](v3, v8, v1, v4)
+  (v13) = vmseq.vv[ef8mf4, ud, fm](v3, v11, v8)
+  (v16) = vmsof.m[mmul=2, ud, fm](v3, v13)
+  (v18) = scalar_to_vec[ef8mf4, ud](v3, v2)
+  (v20) = vmerge.vvm[ef8mf4, ud](v3, v0, v18, v16)
+  return (v20)
+
+def _Z10InsertLaneIu15__rvv_int8mf2_taET_S0_mT0_(v0: vec<ef8mf2>, v1: scalar<xmul=1>, v2: scalar<xmul=f8>) -> vec<ef8mf2>:
+  (v3) = vsetvlmax[mmul=4, tama]()
+  (v7) = scalar[xmul=f8, imm=0x0000000000000000]()
+  (v4) = scalar_to_vec[ef8mf2, ud](v3, v7)
+  (v10) = scalar[xmul=f8, imm=0x0000000000000001]()
+  (v8) = scalar_to_vec[ef8mf2, ud](v3, v10)
+  (v11) = vslideup.vx[ef8mf2, pd, fm](v3, v8, v1, v4)
+  (v13) = vmseq.vv[ef8mf2, ud, fm](v3, v11, v8)
+  (v16) = vmsof.m[mmul=4, ud, fm](v3, v13)
+  (v18) = scalar_to_vec[ef8mf2, ud](v3, v2)
+  (v20) = vmerge.vvm[ef8mf2, ud](v3, v0, v18, v16)
+  return (v20)
+
+def _Z10InsertLaneIu14__rvv_int8m1_taET_S0_mT0_(v0: vec<ef8m1>, v1: scalar<xmul=1>, v2: scalar<xmul=f8>) -> vec<ef8m1>:
+  (v3) = vsetvlmax[mmul=8, tama]()
+  (v7) = scalar[xmul=f8, imm=0x0000000000000000]()
+  (v4) = scalar_to_vec[ef8m1, ud](v3, v7)
+  (v10) = scalar[xmul=f8, imm=0x0000000000000001]()
+  (v8) = scalar_to_vec[ef8m1, ud](v3, v10)
+  (v11) = vslideup.vx[ef8m1, pd, fm](v3, v8, v1, v4)
+  (v13) = vmseq.vv[ef8m1, ud, fm](v3, v11, v8)
+  (v15) = vmsof.m[mmul=8, ud, fm](v3, v13)
+  (v17) = scalar_to_vec[ef8m1, ud](v3, v2)
+  (v19) = vmerge.vvm[ef8m1, ud](v3, v0, v17, v15)
+  return (v19)
+
+def _Z10InsertLaneIu14__rvv_int8m2_taET_S0_mT0_(v0: vec<ef8m2>, v1: scalar<xmul=1>, v2: scalar<xmul=f8>) -> vec<ef8m2>:
+  (v3) = vsetvlmax[mmul=16, tama]()
+  (v7) = scalar[xmul=f8, imm=0x0000000000000000]()
+  (v4) = scalar_to_vec[ef8m2, ud](v3, v7)
+  (v10) = scalar[xmul=f8, imm=0x0000000000000001]()
+  (v8) = scalar_to_vec[ef8m2, ud](v3, v10)
+  (v11) = vslideup.vx[ef8m2, pd, fm](v3, v8, v1, v4)
+  (v13) = vmseq.vv[ef8m2, ud, fm](v3, v11, v8)
+  (v15) = vmsof.m[mmul=16, ud, fm](v3, v13)
+  (v17) = scalar_to_vec[ef8m2, ud](v3, v2)
+  (v19) = vmerge.vvm[ef8m2, ud](v3, v0, v17, v15)
+  return (v19)
+
+def _Z10InsertLaneIu14__rvv_int8m4_taET_S0_mT0_(v0: vec<ef8m4>, v1: scalar<xmul=1>, v2: scalar<xmul=f8>) -> vec<ef8m4>:
+  (v3) = vsetvlmax[mmul=32, tama]()
+  (v7) = scalar[xmul=f8, imm=0x0000000000000000]()
+  (v4) = scalar_to_vec[ef8m4, ud](v3, v7)
+  (v10) = scalar[xmul=f8, imm=0x0000000000000001]()
+  (v8) = scalar_to_vec[ef8m4, ud](v3, v10)
+  (v11) = vslideup.vx[ef8m4, pd, fm](v3, v8, v1, v4)
+  (v13) = vmseq.vv[ef8m4, ud, fm](v3, v11, v8)
+  (v15) = vmsof.m[mmul=32, ud, fm](v3, v13)
+  (v17) = scalar_to_vec[ef8m4, ud](v3, v2)
+  (v19) = vmerge.vvm[ef8m4, ud](v3, v0, v17, v15)
+  return (v19)
+
+def _Z10InsertLaneIu14__rvv_int8m8_taET_S0_mT0_(v0: vec<ef8m8>, v1: scalar<xmul=1>, v2: scalar<xmul=f8>) -> vec<ef8m8>:
+  (v3) = vsetvlmax[mmul=64, tama]()
+  (v7) = scalar[xmul=f8, imm=0x0000000000000000]()
+  (v4) = scalar_to_vec[ef8m8, ud](v3, v7)
+  (v10) = scalar[xmul=f8, imm=0x0000000000000001]()
+  (v8) = scalar_to_vec[ef8m8, ud](v3, v10)
+  (v11) = vslideup.vx[ef8m8, pd, fm](v3, v8, v1, v4)
+  (v13) = vmseq.vv[ef8m8, ud, fm](v3, v11, v8)
+  (v15) = vmsof.m[mmul=64, ud, fm](v3, v13)
+  (v17) = scalar_to_vec[ef8m8, ud](v3, v2)
+  (v19) = vmerge.vvm[ef8m8, ud](v3, v0, v17, v15)
+  return (v19)
+
+def _Z10InsertLaneIu16__rvv_int16mf4_tsET_S0_mT0_(v0: vec<ef4mf4>, v1: scalar<xmul=1>, v2: scalar<xmul=f4>) -> vec<ef4mf4>:
+  (v3) = vsetvlmax[mmul=1, tama]()
+  (v4) = vid.v[ef4mf4, ud, fm](v3)
+  (v7) = trunc[src=1, dest=f4](v1)
+  (v8) = vmseq.vx[ef4mf4, ud, fm](v3, v4, v7)
+  (v10) = scalar_to_vec[ef4mf4, ud](v3, v2)
+  (v12) = vmerge.vvm[ef4mf4, ud](v3, v0, v10, v8)
+  return (v12)
+
+def _Z10InsertLaneIu16__rvv_int16mf2_tsET_S0_mT0_(v0: vec<ef4mf2>, v1: scalar<xmul=1>, v2: scalar<xmul=f4>) -> vec<ef4mf2>:
+  (v3) = vsetvlmax[mmul=2, tama]()
+  (v4) = vid.v[ef4mf2, ud, fm](v3)
+  (v7) = trunc[src=1, dest=f4](v1)
+  (v8) = vmseq.vx[ef4mf2, ud, fm](v3, v4, v7)
+  (v10) = scalar_to_vec[ef4mf2, ud](v3, v2)
+  (v12) = vmerge.vvm[ef4mf2, ud](v3, v0, v10, v8)
+  return (v12)
+
+def _Z10InsertLaneIu15__rvv_int16m1_tsET_S0_mT0_(v0: vec<ef4m1>, v1: scalar<xmul=1>, v2: scalar<xmul=f4>) -> vec<ef4m1>:
+  (v3) = vsetvlmax[mmul=4, tama]()
+  (v4) = vid.v[ef4m1, ud, fm](v3)
+  (v7) = trunc[src=1, dest=f4](v1)
+  (v8) = vmseq.vx[ef4m1, ud, fm](v3, v4, v7)
+  (v10) = scalar_to_vec[ef4m1, ud](v3, v2)
+  (v12) = vmerge.vvm[ef4m1, ud](v3, v0, v10, v8)
+  return (v12)
+
+def _Z10InsertLaneIu15__rvv_int16m2_tsET_S0_mT0_(v0: vec<ef4m2>, v1: scalar<xmul=1>, v2: scalar<xmul=f4>) -> vec<ef4m2>:
+  (v3) = vsetvlmax[mmul=8, tama]()
+  (v4) = vid.v[ef4m2, ud, fm](v3)
+  (v7) = trunc[src=1, dest=f4](v1)
+  (v8) = vmseq.vx[ef4m2, ud, fm](v3, v4, v7)
+  (v10) = scalar_to_vec[ef4m2, ud](v3, v2)
+  (v12) = vmerge.vvm[ef4m2, ud](v3, v0, v10, v8)
+  return (v12)
+
+def _Z10InsertLaneIu15__rvv_int16m4_tsET_S0_mT0_(v0: vec<ef4m4>, v1: scalar<xmul=1>, v2: scalar<xmul=f4>) -> vec<ef4m4>:
+  (v3) = vsetvlmax[mmul=16, tama]()
+  (v4) = vid.v[ef4m4, ud, fm](v3)
+  (v7) = trunc[src=1, dest=f4](v1)
+  (v8) = vmseq.vx[ef4m4, ud, fm](v3, v4, v7)
+  (v10) = scalar_to_vec[ef4m4, ud](v3, v2)
+  (v12) = vmerge.vvm[ef4m4, ud](v3, v0, v10, v8)
+  return (v12)
+
+def _Z10InsertLaneIu15__rvv_int16m8_tsET_S0_mT0_(v0: vec<ef4m8>, v1: scalar<xmul=1>, v2: scalar<xmul=f4>) -> vec<ef4m8>:
+  (v3) = vsetvlmax[mmul=32, tama]()
+  (v4) = vid.v[ef4m8, ud, fm](v3)
+  (v7) = trunc[src=1, dest=f4](v1)
+  (v8) = vmseq.vx[ef4m8, ud, fm](v3, v4, v7)
+  (v10) = scalar_to_vec[ef4m8, ud](v3, v2)
+  (v12) = vmerge.vvm[ef4m8, ud](v3, v0, v10, v8)
+  return (v12)
+
+def _Z10InsertLaneIu16__rvv_int32mf2_tiET_S0_mT0_(v0: vec<ef2mf2>, v1: scalar<xmul=1>, v2: scalar<xmul=f2>) -> vec<ef2mf2>:
+  (v3) = vsetvlmax[mmul=1, tama]()
+  (v4) = vid.v[ef2mf2, ud, fm](v3)
+  (v7) = trunc[src=1, dest=f2](v1)
+  (v8) = vmseq.vx[ef2mf2, ud, fm](v3, v4, v7)
+  (v10) = scalar_to_vec[ef2mf2, ud](v3, v2)
+  (v12) = vmerge.vvm[ef2mf2, ud](v3, v0, v10, v8)
+  return (v12)
+
+def _Z10InsertLaneIu15__rvv_int32m1_tiET_S0_mT0_(v0: vec<ef2m1>, v1: scalar<xmul=1>, v2: scalar<xmul=f2>) -> vec<ef2m1>:
+  (v3) = vsetvlmax[mmul=2, tama]()
+  (v4) = vid.v[ef2m1, ud, fm](v3)
+  (v7) = trunc[src=1, dest=f2](v1)
+  (v8) = vmseq.vx[ef2m1, ud, fm](v3, v4, v7)
+  (v10) = scalar_to_vec[ef2m1, ud](v3, v2)
+  (v12) = vmerge.vvm[ef2m1, ud](v3, v0, v10, v8)
+  return (v12)
+
+def _Z10InsertLaneIu15__rvv_int32m2_tiET_S0_mT0_(v0: vec<ef2m2>, v1: scalar<xmul=1>, v2: scalar<xmul=f2>) -> vec<ef2m2>:
+  (v3) = vsetvlmax[mmul=4, tama]()
+  (v4) = vid.v[ef2m2, ud, fm](v3)
+  (v7) = trunc[src=1, dest=f2](v1)
+  (v8) = vmseq.vx[ef2m2, ud, fm](v3, v4, v7)
+  (v10) = scalar_to_vec[ef2m2, ud](v3, v2)
+  (v12) = vmerge.vvm[ef2m2, ud](v3, v0, v10, v8)
+  return (v12)
+
+def _Z10InsertLaneIu15__rvv_int32m4_tiET_S0_mT0_(v0: vec<ef2m4>, v1: scalar<xmul=1>, v2: scalar<xmul=f2>) -> vec<ef2m4>:
+  (v3) = vsetvlmax[mmul=8, tama]()
+  (v4) = vid.v[ef2m4, ud, fm](v3)
+  (v7) = trunc[src=1, dest=f2](v1)
+  (v8) = vmseq.vx[ef2m4, ud, fm](v3, v4, v7)
+  (v10) = scalar_to_vec[ef2m4, ud](v3, v2)
+  (v12) = vmerge.vvm[ef2m4, ud](v3, v0, v10, v8)
+  return (v12)
+
+def _Z10InsertLaneIu15__rvv_int32m8_tiET_S0_mT0_(v0: vec<ef2m8>, v1: scalar<xmul=1>, v2: scalar<xmul=f2>) -> vec<ef2m8>:
+  (v3) = vsetvlmax[mmul=16, tama]()
+  (v4) = vid.v[ef2m8, ud, fm](v3)
+  (v7) = trunc[src=1, dest=f2](v1)
+  (v8) = vmseq.vx[ef2m8, ud, fm](v3, v4, v7)
+  (v10) = scalar_to_vec[ef2m8, ud](v3, v2)
+  (v12) = vmerge.vvm[ef2m8, ud](v3, v0, v10, v8)
+  return (v12)
+
+def _Z10InsertLaneIu15__rvv_int64m1_tlET_S0_mT0_(v0: vec<e1m1>, v1: scalar<xmul=1>, v2: scalar<xmul=1>) -> vec<e1m1>:
+  (v3) = vsetvlmax[mmul=1, tama]()
+  (v4) = vid.v[e1m1, ud, fm](v3)
+  (v7) = vmseq.vx[e1m1, ud, fm](v3, v4, v1)
+  (v9) = scalar_to_vec[e1m1, ud](v3, v2)
+  (v11) = vmerge.vvm[e1m1, ud](v3, v0, v9, v7)
+  return (v11)
+
+def _Z10InsertLaneIu15__rvv_int64m2_tlET_S0_mT0_(v0: vec<e1m2>, v1: scalar<xmul=1>, v2: scalar<xmul=1>) -> vec<e1m2>:
+  (v3) = vsetvlmax[mmul=2, tama]()
+  (v4) = vid.v[e1m2, ud, fm](v3)
+  (v7) = vmseq.vx[e1m2, ud, fm](v3, v4, v1)
+  (v9) = scalar_to_vec[e1m2, ud](v3, v2)
+  (v11) = vmerge.vvm[e1m2, ud](v3, v0, v9, v7)
+  return (v11)
+
+def _Z10InsertLaneIu15__rvv_int64m4_tlET_S0_mT0_(v0: vec<e1m4>, v1: scalar<xmul=1>, v2: scalar<xmul=1>) -> vec<e1m4>:
+  (v3) = vsetvlmax[mmul=4, tama]()
+  (v4) = vid.v[e1m4, ud, fm](v3)
+  (v7) = vmseq.vx[e1m4, ud, fm](v3, v4, v1)
+  (v9) = scalar_to_vec[e1m4, ud](v3, v2)
+  (v11) = vmerge.vvm[e1m4, ud](v3, v0, v9, v7)
+  return (v11)
+
+def _Z10InsertLaneIu15__rvv_int64m8_tlET_S0_mT0_(v0: vec<e1m8>, v1: scalar<xmul=1>, v2: scalar<xmul=1>) -> vec<e1m8>:
+  (v3) = vsetvlmax[mmul=8, tama]()
+  (v4) = vid.v[e1m8, ud, fm](v3)
+  (v7) = vmseq.vx[e1m8, ud, fm](v3, v4, v1)
+  (v9) = scalar_to_vec[e1m8, ud](v3, v2)
+  (v11) = vmerge.vvm[e1m8, ud](v3, v0, v9, v7)
+  return (v11)
+

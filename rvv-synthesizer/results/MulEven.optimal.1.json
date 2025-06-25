@@ -1,0 +1,24 @@
+{
+  "results": [
+    {
+      "command": "./scripts/target/mul_even_odd.sh -j 1 --ir-func-name MulEven --log-prog-name MulEven.optimal.1  --use-optimal-sketch",
+      "mean": 5.568086458100001,
+      "stddev": 0.02662647543955926,
+      "median": 5.5559382391,
+      "user": 4.345691473333333,
+      "system": 0.6892596799999998,
+      "min": 5.5497007070999995,
+      "max": 5.5986204281,
+      "times": [
+        5.5986204281,
+        5.5497007070999995,
+        5.5559382391
+      ],
+      "exit_codes": [
+        0,
+        0,
+        0
+      ]
+    }
+  ]
+}

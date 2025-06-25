@@ -1,0 +1,24 @@
+{
+  "results": [
+    {
+      "command": "./scripts/target/concat.sh -j 1 --ir-func-name ConcatLowerUpper --log-prog-name ConcatLowerUpper.optimal.1  --use-optimal-sketch",
+      "mean": 5.136000825893333,
+      "stddev": 0.01437808300111149,
+      "median": 5.13638712156,
+      "user": 3.8188810666666666,
+      "system": 0.6021462333333333,
+      "min": 5.12143348756,
+      "max": 5.15018186856,
+      "times": [
+        5.13638712156,
+        5.12143348756,
+        5.15018186856
+      ],
+      "exit_codes": [
+        0,
+        0,
+        0
+      ]
+    }
+  ]
+}

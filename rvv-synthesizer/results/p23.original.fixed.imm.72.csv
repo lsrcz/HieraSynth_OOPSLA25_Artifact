@@ -1,0 +1,2 @@
+initial_cost, cost, scheduler_elapsed_time, time_to_best_since_scheduler_start, time_to_best, num_lattice_nodes, num_undertermined_leaves, num_root_programs, num_undertermined_programs, undetermined_ratio
+-1.0, -1.0, 3600.222003215667, inf, inf, 1.0, 1.0, 1.539462831534263e+28, 1.539462831534263e+28, 1.0

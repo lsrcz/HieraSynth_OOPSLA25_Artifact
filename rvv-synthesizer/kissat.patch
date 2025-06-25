@@ -1,0 +1,13 @@
+diff --git a/src/meson.build b/src/meson.build
+index f62ede78..d82ff78b 100644
+--- a/src/meson.build
++++ b/src/meson.build
+@@ -31,7 +31,7 @@ cms_dep = dependency('cryptominisat5',
+ # Kissat does not provide pkg-config to find dependency
+ kissat_dep = cpp_compiler.find_library('kissat',
+                                         has_headers: 'kissat.h',
+-                                        static: build_static,
++                                        static: true,
+                                         required: false)
+ if not kissat_dep.found()
+   kissat_dep = dependency('kissat', required: get_option('kissat'))

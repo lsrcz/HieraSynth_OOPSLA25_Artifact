@@ -1,0 +1,24 @@
+{
+  "results": [
+    {
+      "command": "./hacker.sh optimal-fixed-imm p03 -j 72 --log-prog-name p03.optimal.fixed.imm.72",
+      "mean": 3.14904831554,
+      "stddev": 0.11688095865933529,
+      "median": 3.09189050254,
+      "user": 2.4227127733333327,
+      "system": 0.41018362,
+      "min": 3.07174569954,
+      "max": 3.28350874454,
+      "times": [
+        3.09189050254,
+        3.07174569954,
+        3.28350874454
+      ],
+      "exit_codes": [
+        0,
+        0,
+        0
+      ]
+    }
+  ]
+}

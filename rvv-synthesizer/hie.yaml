@@ -1,0 +1,100 @@
+cradle:
+  stack:
+    - path: "./src"
+      component: "rvv-synthesizer:lib"
+
+    - path: "./add_sub/Main.hs"
+      component: "rvv-synthesizer:exe:add_sub"
+
+    - path: "./add_sub/Paths_rvv_synthesizer.hs"
+      component: "rvv-synthesizer:exe:add_sub"
+
+    - path: "./concat/Main.hs"
+      component: "rvv-synthesizer:exe:concat"
+
+    - path: "./concat/Paths_rvv_synthesizer.hs"
+      component: "rvv-synthesizer:exe:concat"
+
+    - path: "./hacker/Main.hs"
+      component: "rvv-synthesizer:exe:hacker"
+
+    - path: "./hacker/InferredSketch.hs"
+      component: "rvv-synthesizer:exe:hacker"
+
+    - path: "./hacker/OptimalSketch.hs"
+      component: "rvv-synthesizer:exe:hacker"
+
+    - path: "./hacker/OriginalSketch.hs"
+      component: "rvv-synthesizer:exe:hacker"
+
+    - path: "./hacker/StdLibSketch.hs"
+      component: "rvv-synthesizer:exe:hacker"
+
+    - path: "./hacker/Paths_rvv_synthesizer.hs"
+      component: "rvv-synthesizer:exe:hacker"
+
+    - path: "./insert_lane/Main.hs"
+      component: "rvv-synthesizer:exe:insert_lane"
+
+    - path: "./insert_lane/Paths_rvv_synthesizer.hs"
+      component: "rvv-synthesizer:exe:insert_lane"
+
+    - path: "./l444_alpha_to_argb_row/Main.hs"
+      component: "rvv-synthesizer:exe:l444_alpha_to_argb_row"
+
+    - path: "./l444_alpha_to_argb_row/Paths_rvv_synthesizer.hs"
+      component: "rvv-synthesizer:exe:l444_alpha_to_argb_row"
+
+    - path: "./lt128/Main.hs"
+      component: "rvv-synthesizer:exe:lt128"
+
+    - path: "./lt128/Concrete.hs"
+      component: "rvv-synthesizer:exe:lt128"
+
+    - path: "./lt128/RestartTest.hs"
+      component: "rvv-synthesizer:exe:lt128"
+
+    - path: "./lt128/Sketch.hs"
+      component: "rvv-synthesizer:exe:lt128"
+
+    - path: "./lt128/Spec.hs"
+      component: "rvv-synthesizer:exe:lt128"
+
+    - path: "./lt128/Types.hs"
+      component: "rvv-synthesizer:exe:lt128"
+
+    - path: "./lt128/Paths_rvv_synthesizer.hs"
+      component: "rvv-synthesizer:exe:lt128"
+
+    - path: "./min_max_128/Main.hs"
+      component: "rvv-synthesizer:exe:min_max_128"
+
+    - path: "./min_max_128/Paths_rvv_synthesizer.hs"
+      component: "rvv-synthesizer:exe:min_max_128"
+
+    - path: "./mul_even_odd/Main.hs"
+      component: "rvv-synthesizer:exe:mul_even_odd"
+
+    - path: "./mul_even_odd/Paths_rvv_synthesizer.hs"
+      component: "rvv-synthesizer:exe:mul_even_odd"
+
+    - path: "./odd_even_blocks/Main.hs"
+      component: "rvv-synthesizer:exe:odd_even_blocks"
+
+    - path: "./odd_even_blocks/Paths_rvv_synthesizer.hs"
+      component: "rvv-synthesizer:exe:odd_even_blocks"
+
+    - path: "./vqsort/Main.hs"
+      component: "rvv-synthesizer:exe:vqsort"
+
+    - path: "./vqsort/Paths_rvv_synthesizer.hs"
+      component: "rvv-synthesizer:exe:vqsort"
+
+    - path: "./zero_extend_resize_bit_cast/Main.hs"
+      component: "rvv-synthesizer:exe:zero_extend_resize_bit_cast"
+
+    - path: "./zero_extend_resize_bit_cast/Paths_rvv_synthesizer.hs"
+      component: "rvv-synthesizer:exe:zero_extend_resize_bit_cast"
+
+    - path: "./test"
+      component: "rvv-synthesizer:test:spec"

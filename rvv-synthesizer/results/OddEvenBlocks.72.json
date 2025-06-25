@@ -1,0 +1,24 @@
+{
+  "results": [
+    {
+      "command": "./scripts/target/odd_even_blocks.sh -j 72 --ir-func-name OddEvenBlocks --log-prog-name OddEvenBlocks.72 ",
+      "mean": 852.5942898766734,
+      "stddev": 13.590004803405373,
+      "median": 847.30812028134,
+      "user": 48393.818030140006,
+      "system": 933.5530203466666,
+      "min": 842.44165121634,
+      "max": 868.03309813234,
+      "times": [
+        847.30812028134,
+        842.44165121634,
+        868.03309813234
+      ],
+      "exit_codes": [
+        0,
+        0,
+        0
+      ]
+    }
+  ]
+}

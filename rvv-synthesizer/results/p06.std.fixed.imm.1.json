@@ -1,0 +1,24 @@
+{
+  "results": [
+    {
+      "command": "./scripts/target/hacker.sh stdlib_fixed_imm p06 -j 1 --log-prog-name p06.std.fixed.imm.1",
+      "mean": 43.44998612579334,
+      "stddev": 0.8787085233167781,
+      "median": 43.82515840646,
+      "user": 43.80080995333333,
+      "system": 0.7759271466666666,
+      "min": 42.44596689646,
+      "max": 44.07883307446,
+      "times": [
+        44.07883307446,
+        42.44596689646,
+        43.82515840646
+      ],
+      "exit_codes": [
+        0,
+        0,
+        0
+      ]
+    }
+  ]
+}

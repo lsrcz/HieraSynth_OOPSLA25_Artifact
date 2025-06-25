@@ -1,0 +1,24 @@
+{
+  "results": [
+    {
+      "command": "./scripts/target/mul_even_odd.sh -j 1 --ir-func-name MulOdd --log-prog-name MulOdd.optimal.1  --use-optimal-sketch",
+      "mean": 5.67844586384,
+      "stddev": 0.12515925381651424,
+      "median": 5.621258135840001,
+      "user": 4.230030599999999,
+      "system": 0.6572374333333333,
+      "min": 5.5920962128400005,
+      "max": 5.82198324284,
+      "times": [
+        5.82198324284,
+        5.5920962128400005,
+        5.621258135840001
+      ],
+      "exit_codes": [
+        0,
+        0,
+        0
+      ]
+    }
+  ]
+}

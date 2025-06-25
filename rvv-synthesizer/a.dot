@@ -1,0 +1,69 @@
+digraph {
+    subgraph cluster__Z10InsertLaneIu15__rvv_uint8m1_thET_S0_mT0_ {
+        graph [label=_Z10InsertLaneIu15__rvv_uint8m1_thET_S0_mT0_];
+        _Z10InsertLaneIu15__rvv_uint8m1_thET_S0_mT0__args [label="{args|{<%0> %0:\ vec\<ef8m1,\ v0=False\>|<%1> %1:\ i\<xmul=1\>|<%2> %2:\ i\<xmul=f8\>}}"
+                                                          ,shape=record];
+        _Z10InsertLaneIu15__rvv_uint8m1_thET_S0_mT0__stmt0 [label="{{}|vsetvlmax[mmul=8,\ tama]|{<res0> vl}}"
+                                                           ,shape=record];
+        _Z10InsertLaneIu15__rvv_uint8m1_thET_S0_mT0__stmt1 [label="{{}|long_scalar[xmul=f8,\ imm=0x0000000000000000]|{<res0> x}}"
+                                                           ,shape=record];
+        _Z10InsertLaneIu15__rvv_uint8m1_thET_S0_mT0__stmt2 [label="{{<arg0> arg0|<arg1> arg1}|vmv.v.x[ef8m1,\ dest_v0=False,\ ud]|{<res0> v}}"
+                                                           ,shape=record];
+        _Z10InsertLaneIu15__rvv_uint8m1_thET_S0_mT0__stmt3 [label="{{}|long_scalar[xmul=f8,\ imm=0x0000000000000001]|{<res0> x}}"
+                                                           ,shape=record];
+        _Z10InsertLaneIu15__rvv_uint8m1_thET_S0_mT0__stmt4 [label="{{<arg0> arg0|<arg1> arg1}|vmv.v.x[ef8m1,\ dest_v0=False,\ ud]|{<res0> v}}"
+                                                           ,shape=record];
+        _Z10InsertLaneIu15__rvv_uint8m1_thET_S0_mT0__stmt5 [label="{{<arg0> arg0|<arg1> arg1|<arg2> arg2|<arg3> arg3}|vslideup.vx[ef8m1,\ dest_v0=False,\ pd,\ fm]|{<res0> v}}"
+                                                           ,shape=record];
+        _Z10InsertLaneIu15__rvv_uint8m1_thET_S0_mT0__stmt6 [label="{{<arg0> arg0|<arg1> arg1|<arg2> arg2}|vmseq.vv[ef8m1,\ dest_v0=False,\ ud,\ fm]|{<res0> m}}"
+                                                           ,shape=record];
+        _Z10InsertLaneIu15__rvv_uint8m1_thET_S0_mT0__stmt7 [label="{{<arg0> arg0|<arg1> arg1}|vmsof.m[mmul=8,\ ud,\ fm,\ dest_v0=False]|{<res0> m}}"
+                                                           ,shape=record];
+        _Z10InsertLaneIu15__rvv_uint8m1_thET_S0_mT0__stmt8 [label="{{<arg0> arg0|<arg1> arg1}|vmv.v.x[ef8m1,\ dest_v0=False,\ ud]|{<res0> v}}"
+                                                           ,shape=record];
+        _Z10InsertLaneIu15__rvv_uint8m1_thET_S0_mT0__stmt9 [label="{{<arg0> arg0|<arg1> arg1|<arg2> arg2|<arg3> arg3}|vmerge.vvm[ef8m1,\ dest_v0=False,\ ud]|{<res0> v}}"
+                                                           ,shape=record];
+        _Z10InsertLaneIu15__rvv_uint8m1_thET_S0_mT0__res [label="{{<res0> res0:\ vec\<ef8m1,\ v0=False\>}|res}"
+                                                         ,shape=record];
+        _Z10InsertLaneIu15__rvv_uint8m1_thET_S0_mT0__stmt1 -> _Z10InsertLaneIu15__rvv_uint8m1_thET_S0_mT0__stmt2 [headport=arg0
+                                                                                                                 ,tailport=res0];
+        _Z10InsertLaneIu15__rvv_uint8m1_thET_S0_mT0__stmt0 -> _Z10InsertLaneIu15__rvv_uint8m1_thET_S0_mT0__stmt2 [headport=arg1
+                                                                                                                 ,tailport=res0];
+        _Z10InsertLaneIu15__rvv_uint8m1_thET_S0_mT0__stmt3 -> _Z10InsertLaneIu15__rvv_uint8m1_thET_S0_mT0__stmt4 [headport=arg0
+                                                                                                                 ,tailport=res0];
+        _Z10InsertLaneIu15__rvv_uint8m1_thET_S0_mT0__stmt0 -> _Z10InsertLaneIu15__rvv_uint8m1_thET_S0_mT0__stmt4 [headport=arg1
+                                                                                                                 ,tailport=res0];
+        _Z10InsertLaneIu15__rvv_uint8m1_thET_S0_mT0__stmt2 -> _Z10InsertLaneIu15__rvv_uint8m1_thET_S0_mT0__stmt5 [headport=arg0
+                                                                                                                 ,tailport=res0];
+        _Z10InsertLaneIu15__rvv_uint8m1_thET_S0_mT0__stmt4 -> _Z10InsertLaneIu15__rvv_uint8m1_thET_S0_mT0__stmt5 [headport=arg1
+                                                                                                                 ,tailport=res0];
+        _Z10InsertLaneIu15__rvv_uint8m1_thET_S0_mT0__args -> _Z10InsertLaneIu15__rvv_uint8m1_thET_S0_mT0__stmt5 [headport=arg2
+                                                                                                                ,tailport="%1"];
+        _Z10InsertLaneIu15__rvv_uint8m1_thET_S0_mT0__stmt0 -> _Z10InsertLaneIu15__rvv_uint8m1_thET_S0_mT0__stmt5 [headport=arg3
+                                                                                                                 ,tailport=res0];
+        _Z10InsertLaneIu15__rvv_uint8m1_thET_S0_mT0__stmt5 -> _Z10InsertLaneIu15__rvv_uint8m1_thET_S0_mT0__stmt6 [headport=arg0
+                                                                                                                 ,tailport=res0];
+        _Z10InsertLaneIu15__rvv_uint8m1_thET_S0_mT0__stmt4 -> _Z10InsertLaneIu15__rvv_uint8m1_thET_S0_mT0__stmt6 [headport=arg1
+                                                                                                                 ,tailport=res0];
+        _Z10InsertLaneIu15__rvv_uint8m1_thET_S0_mT0__stmt0 -> _Z10InsertLaneIu15__rvv_uint8m1_thET_S0_mT0__stmt6 [headport=arg2
+                                                                                                                 ,tailport=res0];
+        _Z10InsertLaneIu15__rvv_uint8m1_thET_S0_mT0__stmt6 -> _Z10InsertLaneIu15__rvv_uint8m1_thET_S0_mT0__stmt7 [headport=arg0
+                                                                                                                 ,tailport=res0];
+        _Z10InsertLaneIu15__rvv_uint8m1_thET_S0_mT0__stmt0 -> _Z10InsertLaneIu15__rvv_uint8m1_thET_S0_mT0__stmt7 [headport=arg1
+                                                                                                                 ,tailport=res0];
+        _Z10InsertLaneIu15__rvv_uint8m1_thET_S0_mT0__args -> _Z10InsertLaneIu15__rvv_uint8m1_thET_S0_mT0__stmt8 [headport=arg0
+                                                                                                                ,tailport="%2"];
+        _Z10InsertLaneIu15__rvv_uint8m1_thET_S0_mT0__stmt0 -> _Z10InsertLaneIu15__rvv_uint8m1_thET_S0_mT0__stmt8 [headport=arg1
+                                                                                                                 ,tailport=res0];
+        _Z10InsertLaneIu15__rvv_uint8m1_thET_S0_mT0__stmt7 -> _Z10InsertLaneIu15__rvv_uint8m1_thET_S0_mT0__stmt9 [headport=arg0
+                                                                                                                 ,tailport=res0];
+        _Z10InsertLaneIu15__rvv_uint8m1_thET_S0_mT0__args -> _Z10InsertLaneIu15__rvv_uint8m1_thET_S0_mT0__stmt9 [headport=arg1
+                                                                                                                ,tailport="%0"];
+        _Z10InsertLaneIu15__rvv_uint8m1_thET_S0_mT0__stmt8 -> _Z10InsertLaneIu15__rvv_uint8m1_thET_S0_mT0__stmt9 [headport=arg2
+                                                                                                                 ,tailport=res0];
+        _Z10InsertLaneIu15__rvv_uint8m1_thET_S0_mT0__stmt0 -> _Z10InsertLaneIu15__rvv_uint8m1_thET_S0_mT0__stmt9 [headport=arg3
+                                                                                                                 ,tailport=res0];
+        _Z10InsertLaneIu15__rvv_uint8m1_thET_S0_mT0__stmt9 -> _Z10InsertLaneIu15__rvv_uint8m1_thET_S0_mT0__res [headport=res0
+                                                                                                               ,tailport=res0];
+    }
+}

@@ -1,0 +1,24 @@
+{
+  "results": [
+    {
+      "command": "./scripts/target/zero_extend_resize_bit_cast.sh -j 8 -a\"vuint8m2_t,vuint8m1_t\" --log-prog-name ZeroExtendResizeBitCast.Ext.8  ",
+      "mean": 75.46648682943332,
+      "stddev": 11.900856036415503,
+      "median": 70.1655580241,
+      "user": 305.1592448333333,
+      "system": 16.31496776,
+      "min": 67.1371748341,
+      "max": 89.09672763009999,
+      "times": [
+        89.09672763009999,
+        70.1655580241,
+        67.1371748341
+      ],
+      "exit_codes": [
+        0,
+        0,
+        0
+      ]
+    }
+  ]
+}

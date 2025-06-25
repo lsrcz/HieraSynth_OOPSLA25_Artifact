@@ -1,0 +1,24 @@
+{
+  "results": [
+    {
+      "command": "./scripts/target/vqsort.sh SwapAdjacentQuads 64 -j 48 --log-prog-name SwapAdjacentQuads_64.48  ",
+      "mean": 7.211846346046667,
+      "stddev": 0.47465783948579,
+      "median": 7.481737760380001,
+      "user": 38.63012468666666,
+      "system": 6.297082313333334,
+      "min": 6.66377955138,
+      "max": 7.49002172638,
+      "times": [
+        7.481737760380001,
+        6.66377955138,
+        7.49002172638
+      ],
+      "exit_codes": [
+        0,
+        0,
+        0
+      ]
+    }
+  ]
+}

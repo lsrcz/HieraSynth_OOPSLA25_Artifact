@@ -1,0 +1,901 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.37.0.
+--
+-- see: https://github.com/sol/hpack
+
+name:           rvv-synthesizer
+version:        0.1.0.0
+synopsis:       A synthesizer for programs with RISC-V vector extension
+description:    A synthesizer for programs with RISC-V vector extension
+category:       Formal Methods, Theorem Provers, Symbolic Computation, SMT
+build-type:     Simple
+extra-source-files:
+    CHANGELOG.md
+    README.md
+
+library
+  exposed-modules:
+      RVV.App
+      RVV.App.FileFormat
+      RVV.App.IRSpecScalingMethod
+      RVV.App.MachineConfigSpec
+      RVV.App.Solver
+      RVV.App.TemplateArgType
+      RVV.Circuit.ParallelFoldable
+      RVV.EvalMode
+      RVV.Parser.ArgParser
+      RVV.Semantics.BitSizeUtil
+      RVV.Semantics.Element
+      RVV.Semantics.Imm
+      RVV.Semantics.MachineConfig
+      RVV.Semantics.Memory
+      RVV.Semantics.Multiplier
+      RVV.Semantics.Policy
+      RVV.Semantics.PrimOp.Broadcast
+      RVV.Semantics.PrimOp.Compare
+      RVV.Semantics.PrimOp.ElementWise
+      RVV.Semantics.PrimOp.FullMask
+      RVV.Semantics.PrimOp.GetVL
+      RVV.Semantics.PrimOp.ImmToReg
+      RVV.Semantics.PrimOp.Iota
+      RVV.Semantics.PrimOp.MaskLogical
+      RVV.Semantics.PrimOp.Merge
+      RVV.Semantics.PrimOp.MiscMask
+      RVV.Semantics.PrimOp.Move
+      RVV.Semantics.PrimOp.MulAdd
+      RVV.Semantics.PrimOp.Slide
+      RVV.Semantics.PrimOp.Undefined
+      RVV.Semantics.PrimOp.UnitStrideLoadStore
+      RVV.Semantics.PrimOp.Util
+      RVV.Semantics.PrimOp.VGet
+      RVV.Semantics.PrimOp.VSet
+      RVV.Semantics.SizeConstraint
+      RVV.Semantics.Value
+      RVV.Semantics.VectorConfig
+      RVV.Synthesizer.CostModel.CostModel
+      RVV.Synthesizer.CostModel.ScalarCostModel
+      RVV.Synthesizer.CostModel.X280ApproxModel
+      RVV.Synthesizer.DefaultSynthType
+      RVV.Synthesizer.Feature.ExtractFeature
+      RVV.Synthesizer.Feature.FeatureSet
+      RVV.Synthesizer.Feature.ToSketchOp
+      RVV.Synthesizer.Generator
+      RVV.Synthesizer.Lens
+      RVV.Synthesizer.Matcher
+      RVV.Synthesizer.Op
+      RVV.Synthesizer.Operator.Common.ImmSpec
+      RVV.Synthesizer.Operator.Common.NoDescription
+      RVV.Synthesizer.Operator.Common.OpSymmetryReduction
+      RVV.Synthesizer.Operator.Common.OpToSym
+      RVV.Synthesizer.Operator.Common.Parser
+      RVV.Synthesizer.Operator.Common.PPrint
+      RVV.Synthesizer.Operator.Common.RHSSpec
+      RVV.Synthesizer.Operator.Common.TypeSketchOp
+      RVV.Synthesizer.Operator.DelegatedVectorBinaryOnMask
+      RVV.Synthesizer.Operator.Extract
+      RVV.Synthesizer.Operator.FixedPointClip
+      RVV.Synthesizer.Operator.Insert
+      RVV.Synthesizer.Operator.Load
+      RVV.Synthesizer.Operator.MaskLogical
+      RVV.Synthesizer.Operator.Merge
+      RVV.Synthesizer.Operator.MiscMask
+      RVV.Synthesizer.Operator.Move
+      RVV.Synthesizer.Operator.NarrowingRightShift
+      RVV.Synthesizer.Operator.Reinterpret
+      RVV.Synthesizer.Operator.Scalar
+      RVV.Synthesizer.Operator.ScalarOperator
+      RVV.Synthesizer.Operator.ScalarTrunc
+      RVV.Synthesizer.Operator.SetVectorLength
+      RVV.Synthesizer.Operator.SingleWidthIntBinary
+      RVV.Synthesizer.Operator.SingleWidthMulAdd
+      RVV.Synthesizer.Operator.Slide
+      RVV.Synthesizer.Operator.Store
+      RVV.Synthesizer.Operator.Undefined
+      RVV.Synthesizer.Operator.VectorCompare
+      RVV.Synthesizer.Operator.VectorIndex
+      RVV.Synthesizer.Operator.Vlenb
+      RVV.Synthesizer.Operator.WideningIntBinary
+      RVV.Synthesizer.Operator.WideningMulAdd
+      RVV.Synthesizer.OpSemantics.Compare
+      RVV.Synthesizer.OpSemantics.Convert
+      RVV.Synthesizer.OpSemantics.ElementWise
+      RVV.Synthesizer.OpSemantics.Iota
+      RVV.Synthesizer.OpSemantics.MaskLogical
+      RVV.Synthesizer.OpSemantics.Merge
+      RVV.Synthesizer.OpSemantics.Misc
+      RVV.Synthesizer.OpSemantics.MiscMask
+      RVV.Synthesizer.OpSemantics.Move
+      RVV.Synthesizer.OpSemantics.MulAdd
+      RVV.Synthesizer.OpSemantics.Reinterpret
+      RVV.Synthesizer.OpSemantics.Scalar
+      RVV.Synthesizer.OpSemantics.Slide
+      RVV.Synthesizer.OpSemantics.UnitStrideLoadStore
+      RVV.Synthesizer.OpSemantics.Util
+      RVV.Synthesizer.OpSemantics.VGet
+      RVV.Synthesizer.OpSemantics.Vlenb
+      RVV.Synthesizer.OpSemantics.VSet
+      RVV.Synthesizer.Parameter.Common
+      RVV.Synthesizer.Parameter.Destination
+      RVV.Synthesizer.Parameter.FixedPointRoundingMode
+      RVV.Synthesizer.Parameter.IntCompareOpCode
+      RVV.Synthesizer.Parameter.Masking
+      RVV.Synthesizer.Parameter.MaskLogicalOpCode
+      RVV.Synthesizer.Parameter.NarrowingRightShiftOpCode
+      RVV.Synthesizer.Parameter.SetMaskMethod
+      RVV.Synthesizer.Parameter.SingleWidthIntBinaryOpCode
+      RVV.Synthesizer.Parameter.SingleWidthIntUnaryOpCode
+      RVV.Synthesizer.Parameter.SingleWidthMulAddOpCode
+      RVV.Synthesizer.Parameter.SlideDirection
+      RVV.Synthesizer.Parameter.WideningIntBinaryOpCode
+      RVV.Synthesizer.Parameter.WideningMulAddOpCode
+      RVV.Synthesizer.SketchGen.ToFastSketch
+      RVV.Synthesizer.Specification.CountNumSplitted
+      RVV.Synthesizer.Specification.RefProg
+      RVV.Synthesizer.Specification.Scale
+      RVV.Synthesizer.Specification.ScaleConstants
+      RVV.Synthesizer.Specification.ScaleLMul
+      RVV.Synthesizer.Task
+      RVV.Synthesizer.Type
+      RVV.Synthesizer.Value
+      RVV.Util.Context
+      RVV.Util.Demangle
+      RVV.Util.Derive
+      RVV.Util.Parser
+      RVV.Util.Pretty
+  other-modules:
+      Paths_rvv_synthesizer
+  hs-source-dirs:
+      src
+  ghc-options: -Wextra -Wcompat -Widentities -Wincomplete-record-updates -Wmissing-export-lists -Wmissing-home-modules -Wmissing-import-lists -Wpartial-fields -Wunused-type-patterns -Wno-x-partial -threaded -rtsopts -finfo-table-map -fdistinct-constructor-tables -fwarn-orphans
+  build-depends:
+      Chart
+    , Chart-cairo
+    , Chart-diagrams
+    , QuickCheck ==2.14.*
+    , ansi-terminal
+    , ascii
+    , async
+    , base >=4.16 && <5
+    , bytes
+    , bytestring
+    , containers
+    , criterion
+    , deepseq
+    , demangler
+    , extra
+    , filepath
+    , ghc-debug-stub
+    , graphviz
+    , grisette ==0.11.*
+    , hashable >=1.3 && <1.5
+    , hierasynth
+    , hslogger
+    , lens
+    , megaparsec
+    , mtl >=2.2.2 && <2.4
+    , optparse-applicative
+    , ordered-containers >=0.1.1 && <0.3
+    , pqueue
+    , prettyprinter >=1.5 && <1.8
+    , psqueues
+    , quickcheck-with-counterexamples ==1.2.*
+    , random
+    , sayable
+    , sbv >=8.11 && <11
+    , split
+    , stm
+    , template-haskell
+    , text >=1.2.4.1 && <2.2
+    , time
+    , unix
+    , unordered-containers >=0.2.11 && <0.3
+    , vector
+  default-language: Haskell2010
+
+executable add_sub
+  main-is: Main.hs
+  other-modules:
+      Paths_rvv_synthesizer
+  hs-source-dirs:
+      add_sub
+  ghc-options: -Wextra -Wcompat -Widentities -Wincomplete-record-updates -Wmissing-export-lists -Wmissing-home-modules -Wmissing-import-lists -Wpartial-fields -Wunused-type-patterns -Wno-x-partial -threaded -rtsopts -finfo-table-map -fdistinct-constructor-tables -fwarn-orphans
+  build-depends:
+      Chart
+    , Chart-cairo
+    , Chart-diagrams
+    , QuickCheck ==2.14.*
+    , ansi-terminal
+    , ascii
+    , async
+    , base >=4.16 && <5
+    , bytes
+    , bytestring
+    , containers
+    , criterion
+    , deepseq
+    , demangler
+    , extra
+    , filepath
+    , ghc-debug-stub
+    , graphviz
+    , grisette ==0.11.*
+    , hashable >=1.3 && <1.5
+    , hierasynth
+    , hslogger
+    , lens
+    , megaparsec
+    , mtl >=2.2.2 && <2.4
+    , optparse-applicative
+    , ordered-containers >=0.1.1 && <0.3
+    , pqueue
+    , prettyprinter >=1.5 && <1.8
+    , psqueues
+    , quickcheck-with-counterexamples ==1.2.*
+    , random
+    , rvv-synthesizer
+    , sayable
+    , sbv >=8.11 && <11
+    , split
+    , stm
+    , template-haskell
+    , text >=1.2.4.1 && <2.2
+    , time
+    , unix
+    , unordered-containers >=0.2.11 && <0.3
+    , vector
+  default-language: Haskell2010
+
+executable concat
+  main-is: Main.hs
+  other-modules:
+      Paths_rvv_synthesizer
+  hs-source-dirs:
+      concat
+  ghc-options: -Wextra -Wcompat -Widentities -Wincomplete-record-updates -Wmissing-export-lists -Wmissing-home-modules -Wmissing-import-lists -Wpartial-fields -Wunused-type-patterns -Wno-x-partial -threaded -rtsopts -finfo-table-map -fdistinct-constructor-tables -fwarn-orphans
+  build-depends:
+      Chart
+    , Chart-cairo
+    , Chart-diagrams
+    , QuickCheck ==2.14.*
+    , ansi-terminal
+    , ascii
+    , async
+    , base >=4.16 && <5
+    , bytes
+    , bytestring
+    , containers
+    , criterion
+    , deepseq
+    , demangler
+    , extra
+    , filepath
+    , ghc-debug-stub
+    , graphviz
+    , grisette ==0.11.*
+    , hashable >=1.3 && <1.5
+    , hierasynth
+    , hslogger
+    , lens
+    , megaparsec
+    , mtl >=2.2.2 && <2.4
+    , optparse-applicative
+    , ordered-containers >=0.1.1 && <0.3
+    , pqueue
+    , prettyprinter >=1.5 && <1.8
+    , psqueues
+    , quickcheck-with-counterexamples ==1.2.*
+    , random
+    , rvv-synthesizer
+    , sayable
+    , sbv >=8.11 && <11
+    , split
+    , stm
+    , template-haskell
+    , text >=1.2.4.1 && <2.2
+    , time
+    , unix
+    , unordered-containers >=0.2.11 && <0.3
+    , vector
+  default-language: Haskell2010
+
+executable hacker
+  main-is: Main.hs
+  other-modules:
+      InferredSketch
+      OptimalSketch
+      OriginalSketch
+      StdLibSketch
+      Paths_rvv_synthesizer
+  hs-source-dirs:
+      hacker
+  ghc-options: -Wextra -Wcompat -Widentities -Wincomplete-record-updates -Wmissing-export-lists -Wmissing-home-modules -Wmissing-import-lists -Wpartial-fields -Wunused-type-patterns -Wno-x-partial -threaded -rtsopts -finfo-table-map -fdistinct-constructor-tables -fwarn-orphans
+  build-depends:
+      Chart
+    , Chart-cairo
+    , Chart-diagrams
+    , QuickCheck ==2.14.*
+    , ansi-terminal
+    , ascii
+    , async
+    , base >=4.16 && <5
+    , bytes
+    , bytestring
+    , containers
+    , criterion
+    , deepseq
+    , demangler
+    , extra
+    , filepath
+    , ghc-debug-stub
+    , graphviz
+    , grisette ==0.11.*
+    , hashable >=1.3 && <1.5
+    , hierasynth
+    , hslogger
+    , lens
+    , megaparsec
+    , mtl >=2.2.2 && <2.4
+    , optparse-applicative
+    , ordered-containers >=0.1.1 && <0.3
+    , pqueue
+    , prettyprinter >=1.5 && <1.8
+    , psqueues
+    , quickcheck-with-counterexamples ==1.2.*
+    , random
+    , rvv-synthesizer
+    , sayable
+    , sbv >=8.11 && <11
+    , split
+    , stm
+    , template-haskell
+    , text >=1.2.4.1 && <2.2
+    , time
+    , unix
+    , unordered-containers >=0.2.11 && <0.3
+    , vector
+  default-language: Haskell2010
+
+executable insert_lane
+  main-is: Main.hs
+  other-modules:
+      Paths_rvv_synthesizer
+  hs-source-dirs:
+      insert_lane
+  ghc-options: -Wextra -Wcompat -Widentities -Wincomplete-record-updates -Wmissing-export-lists -Wmissing-home-modules -Wmissing-import-lists -Wpartial-fields -Wunused-type-patterns -Wno-x-partial -threaded -rtsopts -finfo-table-map -fdistinct-constructor-tables -fwarn-orphans
+  build-depends:
+      Chart
+    , Chart-cairo
+    , Chart-diagrams
+    , QuickCheck ==2.14.*
+    , ansi-terminal
+    , ascii
+    , async
+    , base >=4.16 && <5
+    , bytes
+    , bytestring
+    , containers
+    , criterion
+    , deepseq
+    , demangler
+    , extra
+    , filepath
+    , ghc-debug-stub
+    , graphviz
+    , grisette ==0.11.*
+    , hashable >=1.3 && <1.5
+    , hierasynth
+    , hslogger
+    , lens
+    , megaparsec
+    , mtl >=2.2.2 && <2.4
+    , optparse-applicative
+    , ordered-containers >=0.1.1 && <0.3
+    , pqueue
+    , prettyprinter >=1.5 && <1.8
+    , psqueues
+    , quickcheck-with-counterexamples ==1.2.*
+    , random
+    , rvv-synthesizer
+    , sayable
+    , sbv >=8.11 && <11
+    , split
+    , stm
+    , template-haskell
+    , text >=1.2.4.1 && <2.2
+    , time
+    , unix
+    , unordered-containers >=0.2.11 && <0.3
+    , vector
+  default-language: Haskell2010
+
+executable l444_alpha_to_argb_row
+  main-is: Main.hs
+  other-modules:
+      Paths_rvv_synthesizer
+  hs-source-dirs:
+      l444_alpha_to_argb_row
+  ghc-options: -Wextra -Wcompat -Widentities -Wincomplete-record-updates -Wmissing-export-lists -Wmissing-home-modules -Wmissing-import-lists -Wpartial-fields -Wunused-type-patterns -Wno-x-partial -threaded -rtsopts -finfo-table-map -fdistinct-constructor-tables -fwarn-orphans
+  build-depends:
+      Chart
+    , Chart-cairo
+    , Chart-diagrams
+    , QuickCheck ==2.14.*
+    , ansi-terminal
+    , ascii
+    , async
+    , base >=4.16 && <5
+    , bytes
+    , bytestring
+    , containers
+    , criterion
+    , deepseq
+    , demangler
+    , extra
+    , filepath
+    , ghc-debug-stub
+    , graphviz
+    , grisette ==0.11.*
+    , hashable >=1.3 && <1.5
+    , hierasynth
+    , hslogger
+    , lens
+    , megaparsec
+    , mtl >=2.2.2 && <2.4
+    , optparse-applicative
+    , ordered-containers >=0.1.1 && <0.3
+    , pqueue
+    , prettyprinter >=1.5 && <1.8
+    , psqueues
+    , quickcheck-with-counterexamples ==1.2.*
+    , random
+    , rvv-synthesizer
+    , sayable
+    , sbv >=8.11 && <11
+    , split
+    , stm
+    , template-haskell
+    , text >=1.2.4.1 && <2.2
+    , time
+    , unix
+    , unordered-containers >=0.2.11 && <0.3
+    , vector
+  default-language: Haskell2010
+
+executable lt128
+  main-is: Main.hs
+  other-modules:
+      Concrete
+      RestartTest
+      Sketch
+      Spec
+      Types
+      Paths_rvv_synthesizer
+  hs-source-dirs:
+      lt128
+  ghc-options: -Wextra -Wcompat -Widentities -Wincomplete-record-updates -Wmissing-export-lists -Wmissing-home-modules -Wmissing-import-lists -Wpartial-fields -Wunused-type-patterns -Wno-x-partial -threaded -rtsopts -finfo-table-map -fdistinct-constructor-tables -fwarn-orphans
+  build-depends:
+      Chart
+    , Chart-cairo
+    , Chart-diagrams
+    , QuickCheck ==2.14.*
+    , ansi-terminal
+    , ascii
+    , async
+    , base >=4.16 && <5
+    , bytes
+    , bytestring
+    , containers
+    , criterion
+    , deepseq
+    , demangler
+    , extra
+    , filepath
+    , ghc-debug-stub
+    , graphviz
+    , grisette ==0.11.*
+    , hashable >=1.3 && <1.5
+    , hierasynth
+    , hslogger
+    , lens
+    , megaparsec
+    , mtl >=2.2.2 && <2.4
+    , optparse-applicative
+    , ordered-containers >=0.1.1 && <0.3
+    , pqueue
+    , prettyprinter >=1.5 && <1.8
+    , psqueues
+    , quickcheck-with-counterexamples ==1.2.*
+    , random
+    , rvv-synthesizer
+    , sayable
+    , sbv >=8.11 && <11
+    , split
+    , stm
+    , template-haskell
+    , text >=1.2.4.1 && <2.2
+    , time
+    , unix
+    , unordered-containers >=0.2.11 && <0.3
+    , vector
+  default-language: Haskell2010
+
+executable min_max_128
+  main-is: Main.hs
+  other-modules:
+      Paths_rvv_synthesizer
+  hs-source-dirs:
+      min_max_128
+  ghc-options: -Wextra -Wcompat -Widentities -Wincomplete-record-updates -Wmissing-export-lists -Wmissing-home-modules -Wmissing-import-lists -Wpartial-fields -Wunused-type-patterns -Wno-x-partial -threaded -rtsopts -finfo-table-map -fdistinct-constructor-tables -fwarn-orphans
+  build-depends:
+      Chart
+    , Chart-cairo
+    , Chart-diagrams
+    , QuickCheck ==2.14.*
+    , ansi-terminal
+    , ascii
+    , async
+    , base >=4.16 && <5
+    , bytes
+    , bytestring
+    , containers
+    , criterion
+    , deepseq
+    , demangler
+    , extra
+    , filepath
+    , ghc-debug-stub
+    , graphviz
+    , grisette ==0.11.*
+    , hashable >=1.3 && <1.5
+    , hierasynth
+    , hslogger
+    , lens
+    , megaparsec
+    , mtl >=2.2.2 && <2.4
+    , optparse-applicative
+    , ordered-containers >=0.1.1 && <0.3
+    , pqueue
+    , prettyprinter >=1.5 && <1.8
+    , psqueues
+    , quickcheck-with-counterexamples ==1.2.*
+    , random
+    , rvv-synthesizer
+    , sayable
+    , sbv >=8.11 && <11
+    , split
+    , stm
+    , template-haskell
+    , text >=1.2.4.1 && <2.2
+    , time
+    , unix
+    , unordered-containers >=0.2.11 && <0.3
+    , vector
+  default-language: Haskell2010
+
+executable mul_even_odd
+  main-is: Main.hs
+  other-modules:
+      Paths_rvv_synthesizer
+  hs-source-dirs:
+      mul_even_odd
+  ghc-options: -Wextra -Wcompat -Widentities -Wincomplete-record-updates -Wmissing-export-lists -Wmissing-home-modules -Wmissing-import-lists -Wpartial-fields -Wunused-type-patterns -Wno-x-partial -threaded -rtsopts -finfo-table-map -fdistinct-constructor-tables -fwarn-orphans
+  build-depends:
+      Chart
+    , Chart-cairo
+    , Chart-diagrams
+    , QuickCheck ==2.14.*
+    , ansi-terminal
+    , ascii
+    , async
+    , base >=4.16 && <5
+    , bytes
+    , bytestring
+    , containers
+    , criterion
+    , deepseq
+    , demangler
+    , extra
+    , filepath
+    , ghc-debug-stub
+    , graphviz
+    , grisette ==0.11.*
+    , hashable >=1.3 && <1.5
+    , hierasynth
+    , hslogger
+    , lens
+    , megaparsec
+    , mtl >=2.2.2 && <2.4
+    , optparse-applicative
+    , ordered-containers >=0.1.1 && <0.3
+    , pqueue
+    , prettyprinter >=1.5 && <1.8
+    , psqueues
+    , quickcheck-with-counterexamples ==1.2.*
+    , random
+    , rvv-synthesizer
+    , sayable
+    , sbv >=8.11 && <11
+    , split
+    , stm
+    , template-haskell
+    , text >=1.2.4.1 && <2.2
+    , time
+    , unix
+    , unordered-containers >=0.2.11 && <0.3
+    , vector
+  default-language: Haskell2010
+
+executable odd_even_blocks
+  main-is: Main.hs
+  other-modules:
+      Paths_rvv_synthesizer
+  hs-source-dirs:
+      odd_even_blocks
+  ghc-options: -Wextra -Wcompat -Widentities -Wincomplete-record-updates -Wmissing-export-lists -Wmissing-home-modules -Wmissing-import-lists -Wpartial-fields -Wunused-type-patterns -Wno-x-partial -threaded -rtsopts -finfo-table-map -fdistinct-constructor-tables -fwarn-orphans
+  build-depends:
+      Chart
+    , Chart-cairo
+    , Chart-diagrams
+    , QuickCheck ==2.14.*
+    , ansi-terminal
+    , ascii
+    , async
+    , base >=4.16 && <5
+    , bytes
+    , bytestring
+    , containers
+    , criterion
+    , deepseq
+    , demangler
+    , extra
+    , filepath
+    , ghc-debug-stub
+    , graphviz
+    , grisette ==0.11.*
+    , hashable >=1.3 && <1.5
+    , hierasynth
+    , hslogger
+    , lens
+    , megaparsec
+    , mtl >=2.2.2 && <2.4
+    , optparse-applicative
+    , ordered-containers >=0.1.1 && <0.3
+    , pqueue
+    , prettyprinter >=1.5 && <1.8
+    , psqueues
+    , quickcheck-with-counterexamples ==1.2.*
+    , random
+    , rvv-synthesizer
+    , sayable
+    , sbv >=8.11 && <11
+    , split
+    , stm
+    , template-haskell
+    , text >=1.2.4.1 && <2.2
+    , time
+    , unix
+    , unordered-containers >=0.2.11 && <0.3
+    , vector
+  default-language: Haskell2010
+
+executable vqsort
+  main-is: Main.hs
+  other-modules:
+      Paths_rvv_synthesizer
+  hs-source-dirs:
+      vqsort
+  ghc-options: -Wextra -Wcompat -Widentities -Wincomplete-record-updates -Wmissing-export-lists -Wmissing-home-modules -Wmissing-import-lists -Wpartial-fields -Wunused-type-patterns -Wno-x-partial -threaded -rtsopts -finfo-table-map -fdistinct-constructor-tables -fwarn-orphans
+  build-depends:
+      Chart
+    , Chart-cairo
+    , Chart-diagrams
+    , QuickCheck ==2.14.*
+    , ansi-terminal
+    , ascii
+    , async
+    , base >=4.16 && <5
+    , bytes
+    , bytestring
+    , containers
+    , criterion
+    , deepseq
+    , demangler
+    , extra
+    , filepath
+    , ghc-debug-stub
+    , graphviz
+    , grisette ==0.11.*
+    , hashable >=1.3 && <1.5
+    , hierasynth
+    , hslogger
+    , lens
+    , megaparsec
+    , mtl >=2.2.2 && <2.4
+    , optparse-applicative
+    , ordered-containers >=0.1.1 && <0.3
+    , pqueue
+    , prettyprinter >=1.5 && <1.8
+    , psqueues
+    , quickcheck-with-counterexamples ==1.2.*
+    , random
+    , rvv-synthesizer
+    , sayable
+    , sbv >=8.11 && <11
+    , split
+    , stm
+    , template-haskell
+    , text >=1.2.4.1 && <2.2
+    , time
+    , unix
+    , unordered-containers >=0.2.11 && <0.3
+    , vector
+  default-language: Haskell2010
+
+executable zero_extend_resize_bit_cast
+  main-is: Main.hs
+  other-modules:
+      Paths_rvv_synthesizer
+  hs-source-dirs:
+      zero_extend_resize_bit_cast
+  ghc-options: -Wextra -Wcompat -Widentities -Wincomplete-record-updates -Wmissing-export-lists -Wmissing-home-modules -Wmissing-import-lists -Wpartial-fields -Wunused-type-patterns -Wno-x-partial -threaded -rtsopts -finfo-table-map -fdistinct-constructor-tables -fwarn-orphans
+  build-depends:
+      Chart
+    , Chart-cairo
+    , Chart-diagrams
+    , QuickCheck ==2.14.*
+    , ansi-terminal
+    , ascii
+    , async
+    , base >=4.16 && <5
+    , bytes
+    , bytestring
+    , containers
+    , criterion
+    , deepseq
+    , demangler
+    , extra
+    , filepath
+    , ghc-debug-stub
+    , graphviz
+    , grisette ==0.11.*
+    , hashable >=1.3 && <1.5
+    , hierasynth
+    , hslogger
+    , lens
+    , megaparsec
+    , mtl >=2.2.2 && <2.4
+    , optparse-applicative
+    , ordered-containers >=0.1.1 && <0.3
+    , pqueue
+    , prettyprinter >=1.5 && <1.8
+    , psqueues
+    , quickcheck-with-counterexamples ==1.2.*
+    , random
+    , rvv-synthesizer
+    , sayable
+    , sbv >=8.11 && <11
+    , split
+    , stm
+    , template-haskell
+    , text >=1.2.4.1 && <2.2
+    , time
+    , unix
+    , unordered-containers >=0.2.11 && <0.3
+    , vector
+  default-language: Haskell2010
+
+test-suite spec
+  type: exitcode-stdio-1.0
+  main-is: Main.hs
+  other-modules:
+      RVV.Circuit.ParallelFoldableTest
+      RVV.Semantics.BitSizeUtilTest
+      RVV.Semantics.ElementTest
+      RVV.Semantics.PrimOp.BroadcastTest
+      RVV.Semantics.PrimOp.CompareTest
+      RVV.Semantics.PrimOp.ElementWiseTest
+      RVV.Semantics.PrimOp.FullMaskTest
+      RVV.Semantics.PrimOp.GetVLTest
+      RVV.Semantics.PrimOp.ImmToRegTest
+      RVV.Semantics.PrimOp.IotaTest
+      RVV.Semantics.PrimOp.MaskLogicalTest
+      RVV.Semantics.PrimOp.MergeTest
+      RVV.Semantics.PrimOp.MiscMaskTest
+      RVV.Semantics.PrimOp.MulAddTest
+      RVV.Semantics.PrimOp.SlideTest
+      RVV.Semantics.PrimOp.UndefinedTest
+      RVV.Semantics.PrimOp.UnitStrideLoadStoreTest
+      RVV.Semantics.PrimOp.UtilTest
+      RVV.Semantics.PrimOp.VGetTest
+      RVV.Semantics.PrimOp.VSetTest
+      RVV.Semantics.SizeConstraintTest
+      RVV.Semantics.VectorConfigConstants
+      RVV.Semantics.VectorConfigTest
+      RVV.Synthesizer.ElementOpTest
+      RVV.Synthesizer.GeneratorTest
+      RVV.Synthesizer.InterpreterTest
+      RVV.Synthesizer.MatcherTest
+      RVV.Synthesizer.OpSemantics.Common
+      RVV.Synthesizer.OpSemantics.CompareTest
+      RVV.Synthesizer.OpSemantics.ConvertTest
+      RVV.Synthesizer.OpSemantics.FixedPointClipTest
+      RVV.Synthesizer.OpSemantics.IotaTest
+      RVV.Synthesizer.OpSemantics.MaskElementWiseTest
+      RVV.Synthesizer.OpSemantics.MaskLogicalTest
+      RVV.Synthesizer.OpSemantics.MergeTest
+      RVV.Synthesizer.OpSemantics.MiscMaskTest
+      RVV.Synthesizer.OpSemantics.MiscTest
+      RVV.Synthesizer.OpSemantics.MoveTest
+      RVV.Synthesizer.OpSemantics.MulAddTest
+      RVV.Synthesizer.OpSemantics.NarrowingRightShiftTest
+      RVV.Synthesizer.OpSemantics.ReinterpretTest
+      RVV.Synthesizer.OpSemantics.ScalarTest
+      RVV.Synthesizer.OpSemantics.SingleWidthTest
+      RVV.Synthesizer.OpSemantics.SlideTest
+      RVV.Synthesizer.OpSemantics.UnitStrideLoadStoreTest
+      RVV.Synthesizer.OpSemantics.VGetTest
+      RVV.Synthesizer.OpSemantics.VlenbTest
+      RVV.Synthesizer.OpSemantics.VSetTest
+      RVV.Synthesizer.OpSemantics.WideningTest
+      RVV.Synthesizer.PrettyPrintingTest
+      RVV.Synthesizer.SketchGen.SketchTest
+      RVV.Synthesizer.SketchGen.SplitChoiceTest
+      RVV.Synthesizer.SketchTest
+      RVV.Synthesizer.Specification.ScaleTest
+      RVV.Synthesizer.TypeTest
+      RVV.Synthesizer.ValueTest
+      TestUtil.SymbolicAssertion
+      Paths_rvv_synthesizer
+  hs-source-dirs:
+      test
+  ghc-options: -Wextra -Wcompat -Widentities -Wincomplete-record-updates -Wmissing-export-lists -Wmissing-home-modules -Wmissing-import-lists -Wpartial-fields -Wunused-type-patterns -Wno-x-partial -threaded -rtsopts -finfo-table-map -fdistinct-constructor-tables -fwarn-orphans
+  build-depends:
+      Chart
+    , Chart-cairo
+    , Chart-diagrams
+    , HUnit >=1.6
+    , QuickCheck ==2.14.*
+    , ansi-terminal
+    , ascii
+    , async
+    , base >=4.16 && <5
+    , bytes
+    , bytestring
+    , containers
+    , criterion
+    , deepseq
+    , demangler
+    , extra
+    , filepath
+    , ghc-debug-stub
+    , graphviz
+    , grisette ==0.11.*
+    , hashable >=1.3 && <1.5
+    , hierasynth
+    , hslogger
+    , lens
+    , megaparsec
+    , mtl >=2.2.2 && <2.4
+    , optparse-applicative
+    , ordered-containers >=0.1.1 && <0.3
+    , pqueue
+    , prettyprinter >=1.5 && <1.8
+    , psqueues
+    , quickcheck-with-counterexamples ==1.2.*
+    , random
+    , rvv-synthesizer
+    , sayable
+    , sbv >=8.11 && <11
+    , split
+    , stm
+    , template-haskell
+    , test-framework >=0.8.2 && <0.9
+    , test-framework-hunit >=0.3.0.2 && <0.4
+    , test-framework-quickcheck2 >=0.3.0.5 && <0.4
+    , text >=1.2.4.1 && <2.2
+    , time
+    , unix
+    , unordered-containers >=0.2.11 && <0.3
+    , vector
+  default-language: Haskell2010

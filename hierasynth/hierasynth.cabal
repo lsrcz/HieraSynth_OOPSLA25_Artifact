@@ -1,0 +1,366 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.38.0.
+--
+-- see: https://github.com/sol/hpack
+
+name:           hierasynth
+version:        0.1.0.0
+synopsis:       Library for building synthesizers with HieraSynth
+description:    Library for building synthesizers with HieraSynth
+category:       Formal Methods, Theorem Provers, Symbolic Computation, SMT
+build-type:     Simple
+extra-source-files:
+    CHANGELOG.md
+    README.md
+
+library
+  exposed-modules:
+      HieraSynth.Combinator.Embed
+      HieraSynth.Combinator.Invoke
+      HieraSynth.Combinator.Null
+      HieraSynth.Combinator.Sum
+      HieraSynth.Context
+      HieraSynth.Operator.OpParser
+      HieraSynth.Operator.OpReachableSymbols
+      HieraSynth.Operator.OpSemantics
+      HieraSynth.Operator.OpTyping
+      HieraSynth.Program.ByteCodeSketch
+      HieraSynth.Program.ByteCodeSketch.Program
+      HieraSynth.Program.Choice.ChoiceTree
+      HieraSynth.Program.Choice.ComponentBag
+      HieraSynth.Program.Choice.Counting
+      HieraSynth.Program.Choice.Split
+      HieraSynth.Program.ComponentSketch
+      HieraSynth.Program.ComponentSketch.Builder
+      HieraSynth.Program.ComponentSketch.GenIntermediate
+      HieraSynth.Program.ComponentSketch.Program
+      HieraSynth.Program.ComponentSketch.SymmetryReduction
+      HieraSynth.Program.Concrete
+      HieraSynth.Program.Concrete.Builder
+      HieraSynth.Program.Concrete.Flatten
+      HieraSynth.Program.Concrete.OpPPrint
+      HieraSynth.Program.Concrete.OpToDot
+      HieraSynth.Program.Concrete.Program
+      HieraSynth.Program.Concrete.ProgramMayMultiPath
+      HieraSynth.Program.CostModel.NoCostModel
+      HieraSynth.Program.CostModel.PerStmtCostModel
+      HieraSynth.Program.ProgCost
+      HieraSynth.Program.ProgParser
+      HieraSynth.Program.ProgPPrint
+      HieraSynth.Program.ProgSemantics
+      HieraSynth.Program.ProgToDot
+      HieraSynth.Program.ProgTyping
+      HieraSynth.Program.ProgUtil
+      HieraSynth.Program.SymbolTable
+      HieraSynth.Reasoning.Fuzzing
+      HieraSynth.Reasoning.IOPair
+      HieraSynth.Reasoning.Matcher
+      HieraSynth.Reasoning.Parallel.Scheduler
+      HieraSynth.Reasoning.Parallel.Scheduler.Action
+      HieraSynth.Reasoning.Parallel.Scheduler.BiasedQueue
+      HieraSynth.Reasoning.Parallel.Scheduler.Config
+      HieraSynth.Reasoning.Parallel.Scheduler.DCTree
+      HieraSynth.Reasoning.Parallel.Scheduler.LogConfig
+      HieraSynth.Reasoning.Parallel.Scheduler.NodeState
+      HieraSynth.Reasoning.Parallel.Scheduler.NodeStatus
+      HieraSynth.Reasoning.Parallel.Scheduler.Process
+      HieraSynth.Reasoning.Parallel.Scheduler.Result
+      HieraSynth.Reasoning.Parallel.Scheduler.Scheduler
+      HieraSynth.Reasoning.Parallel.Scheduler.Sketch
+      HieraSynth.Reasoning.Parallel.Scheduler.Stats
+      HieraSynth.Reasoning.Parallel.Scheduler.Transition
+      HieraSynth.Reasoning.Parallel.Scheduler.TreeStats
+      HieraSynth.Reasoning.Synthesis
+      HieraSynth.Reasoning.Verification
+      HieraSynth.Type.TypeParser
+      HieraSynth.TypeSignature
+      HieraSynth.Util.Exception
+      HieraSynth.Util.Logging
+      HieraSynth.Util.Parser
+      HieraSynth.Util.Pretty
+      HieraSynth.Util.Serialize
+      HieraSynth.Util.Show
+      HieraSynth.VarId
+  other-modules:
+      Paths_hierasynth
+  hs-source-dirs:
+      src
+  ghc-options: -Wextra -Wcompat -Widentities -Wincomplete-record-updates -Wmissing-export-lists -Wmissing-home-modules -Wmissing-import-lists -Wpartial-fields -Wunused-type-patterns -Wno-x-partial -Wno-unrecognised-warning-flags
+  build-depends:
+      Chart >=1.9.3 && <1.10
+    , Chart-cairo >=1.9.3 && <1.10
+    , QuickCheck >=2.14.1 && <2.16
+    , ansi-terminal
+    , async
+    , base >=4.14 && <5
+    , binary
+    , bytes
+    , bytestring
+    , cereal
+    , containers
+    , deepseq
+    , extra
+    , graphviz >=2999.20.0.4 && <3000
+    , grisette ==0.12.*
+    , hashable >=1.3 && <1.6
+    , hslogger
+    , megaparsec
+    , mtl >=2.2.2 && <2.4
+    , ordered-containers >=0.2.3 && <0.3
+    , parser-combinators
+    , prettyprinter >=1.5 && <1.8
+    , psqueues
+    , quickcheck-with-counterexamples ==1.2.*
+    , random ==1.2.*
+    , safe-exceptions
+    , sbv >=8.17 && <12
+    , stm
+    , template-haskell
+    , text >=1.2.4.1 && <2.2
+    , time
+    , unix
+    , unordered-containers >=0.2.11 && <0.3
+  default-language: Haskell2010
+
+executable arith
+  main-is: Main.hs
+  other-modules:
+      Arith
+      Paths_hierasynth
+  hs-source-dirs:
+      arith
+  ghc-options: -Wextra -Wcompat -Widentities -Wincomplete-record-updates -Wmissing-export-lists -Wmissing-home-modules -Wmissing-import-lists -Wpartial-fields -Wunused-type-patterns -Wno-x-partial -Wno-unrecognised-warning-flags
+  build-depends:
+      Chart >=1.9.3 && <1.10
+    , Chart-cairo >=1.9.3 && <1.10
+    , QuickCheck >=2.14.1 && <2.16
+    , ansi-terminal
+    , async
+    , base >=4.14 && <5
+    , binary
+    , bytes
+    , bytestring
+    , cereal
+    , containers
+    , deepseq
+    , extra
+    , graphviz >=2999.20.0.4 && <3000
+    , grisette ==0.12.*
+    , hashable >=1.3 && <1.6
+    , hierasynth
+    , hslogger
+    , megaparsec
+    , mtl >=2.2.2 && <2.4
+    , ordered-containers >=0.2.3 && <0.3
+    , parser-combinators
+    , prettyprinter >=1.5 && <1.8
+    , psqueues
+    , quickcheck-with-counterexamples ==1.2.*
+    , random ==1.2.*
+    , safe-exceptions
+    , sbv >=8.17 && <12
+    , stm
+    , template-haskell
+    , text >=1.2.4.1 && <2.2
+    , time
+    , unix
+    , unordered-containers >=0.2.11 && <0.3
+  default-language: Haskell2010
+
+executable arith-sum
+  main-is: Main.hs
+  other-modules:
+      Arith
+      EvalMode
+      Operator.Add
+      Operator.AddImm
+      Operator.Mul
+      Paths_hierasynth
+  hs-source-dirs:
+      arith-sum
+  ghc-options: -Wextra -Wcompat -Widentities -Wincomplete-record-updates -Wmissing-export-lists -Wmissing-home-modules -Wmissing-import-lists -Wpartial-fields -Wunused-type-patterns -Wno-x-partial -Wno-unrecognised-warning-flags
+  build-depends:
+      Chart >=1.9.3 && <1.10
+    , Chart-cairo >=1.9.3 && <1.10
+    , QuickCheck >=2.14.1 && <2.16
+    , ansi-terminal
+    , async
+    , base >=4.14 && <5
+    , binary
+    , bytes
+    , bytestring
+    , cereal
+    , containers
+    , deepseq
+    , extra
+    , graphviz >=2999.20.0.4 && <3000
+    , grisette ==0.12.*
+    , hashable >=1.3 && <1.6
+    , hierasynth
+    , hslogger
+    , megaparsec
+    , mtl >=2.2.2 && <2.4
+    , ordered-containers >=0.2.3 && <0.3
+    , parser-combinators
+    , prettyprinter >=1.5 && <1.8
+    , psqueues
+    , quickcheck-with-counterexamples ==1.2.*
+    , random ==1.2.*
+    , safe-exceptions
+    , sbv >=8.17 && <12
+    , stm
+    , template-haskell
+    , text >=1.2.4.1 && <2.2
+    , time
+    , unix
+    , unordered-containers >=0.2.11 && <0.3
+  default-language: Haskell2010
+
+executable control
+  main-is: Main.hs
+  other-modules:
+      ConProg
+      Semantics
+      Sketch
+      Typing
+      Value
+      Paths_hierasynth
+  hs-source-dirs:
+      control
+  ghc-options: -Wextra -Wcompat -Widentities -Wincomplete-record-updates -Wmissing-export-lists -Wmissing-home-modules -Wmissing-import-lists -Wpartial-fields -Wunused-type-patterns -Wno-x-partial -Wno-unrecognised-warning-flags
+  build-depends:
+      Chart >=1.9.3 && <1.10
+    , Chart-cairo >=1.9.3 && <1.10
+    , QuickCheck >=2.14.1 && <2.16
+    , ansi-terminal
+    , async
+    , base >=4.14 && <5
+    , binary
+    , bytes
+    , bytestring
+    , cereal
+    , containers
+    , deepseq
+    , extra
+    , graphviz >=2999.20.0.4 && <3000
+    , grisette ==0.12.*
+    , hashable >=1.3 && <1.6
+    , hierasynth
+    , hslogger
+    , megaparsec
+    , mtl >=2.2.2 && <2.4
+    , ordered-containers >=0.2.3 && <0.3
+    , parser-combinators
+    , prettyprinter >=1.5 && <1.8
+    , psqueues
+    , quickcheck-with-counterexamples ==1.2.*
+    , random ==1.2.*
+    , safe-exceptions
+    , sbv >=8.17 && <12
+    , stm
+    , template-haskell
+    , text >=1.2.4.1 && <2.2
+    , time
+    , unix
+    , unordered-containers >=0.2.11 && <0.3
+  default-language: Haskell2010
+
+test-suite spec
+  type: exitcode-stdio-1.0
+  main-is: Main.hs
+  other-modules:
+      HieraSynth.Operator.OpPPrintTest
+      HieraSynth.Operator.OpSemanticsTest
+      HieraSynth.Operator.OpToDotTest
+      HieraSynth.Operator.OpTypingTest
+      HieraSynth.Program.BuiltinProgConstraintsTest
+      HieraSynth.Program.ByteCodeSketch.ProgUtilTest
+      HieraSynth.Program.ByteCodeSketch.SemanticsTest
+      HieraSynth.Program.ByteCodeSketch.ToConTest
+      HieraSynth.Program.ByteCodeSketch.TypingTest
+      HieraSynth.Program.ByteCodeSketchTest
+      HieraSynth.Program.Choice.ChoiceTreeTest
+      HieraSynth.Program.Choice.ComponentBagTest
+      HieraSynth.Program.ChoiceTest
+      HieraSynth.Program.ComponentSketch.BuilderTest
+      HieraSynth.Program.ComponentSketch.GenIntermediateTest
+      HieraSynth.Program.ComponentSketch.ProgCostTest
+      HieraSynth.Program.ComponentSketch.ProgUtilTest
+      HieraSynth.Program.ComponentSketch.SemanticsTest
+      HieraSynth.Program.ComponentSketch.TestProgram
+      HieraSynth.Program.ComponentSketch.ToConTest
+      HieraSynth.Program.ComponentSketch.ToSymTest
+      HieraSynth.Program.ComponentSketch.TypingTest
+      HieraSynth.Program.ComponentSketchTest
+      HieraSynth.Program.Concrete.BuilderTest
+      HieraSynth.Program.Concrete.EliminateDeadCodeTest
+      HieraSynth.Program.Concrete.FlattenTest
+      HieraSynth.Program.Concrete.GenSymSimpleTest
+      HieraSynth.Program.Concrete.MayMultiPathTest
+      HieraSynth.Program.Concrete.ParserTest
+      HieraSynth.Program.Concrete.PartitionTest
+      HieraSynth.Program.Concrete.PrettyTest
+      HieraSynth.Program.Concrete.ProgCostTest
+      HieraSynth.Program.Concrete.ProgUtilTest
+      HieraSynth.Program.Concrete.SemanticsTest
+      HieraSynth.Program.Concrete.ToDotTest
+      HieraSynth.Program.Concrete.TypingTest
+      HieraSynth.Program.ConcreteTest
+      HieraSynth.Reasoning.FuzzingTest
+      HieraSynth.Reasoning.Parallel.Scheduler.DCTreeTest
+      HieraSynth.Reasoning.ReverseMatcher
+      HieraSynth.Reasoning.Synthesis.ByteCodeSketchTest
+      HieraSynth.Reasoning.Synthesis.ComponentSketchTest
+      HieraSynth.Reasoning.Synthesis.Problem
+      HieraSynth.Reasoning.SynthesisTest
+      HieraSynth.TestOperator.TestCostOperator
+      HieraSynth.TestOperator.TestPrettyOperator
+      HieraSynth.TestOperator.TestSemanticsOperator
+      HieraSynth.Util.PrettyTest
+      HieraSynth.Util.ShowTest
+      Test.SymbolicAssertion
+      Paths_hierasynth
+  hs-source-dirs:
+      test
+  ghc-options: -Wextra -Wcompat -Widentities -Wincomplete-record-updates -Wmissing-export-lists -Wmissing-home-modules -Wmissing-import-lists -Wpartial-fields -Wunused-type-patterns -Wno-x-partial -Wno-unrecognised-warning-flags
+  build-depends:
+      Chart >=1.9.3 && <1.10
+    , Chart-cairo >=1.9.3 && <1.10
+    , HUnit >=1.6
+    , QuickCheck >=2.14.1 && <2.16
+    , ansi-terminal
+    , async
+    , base >=4.14 && <5
+    , binary
+    , bytes
+    , bytestring
+    , cereal
+    , containers
+    , deepseq
+    , extra
+    , graphviz >=2999.20.0.4 && <3000
+    , grisette ==0.12.*
+    , hashable >=1.3 && <1.6
+    , hierasynth
+    , hslogger
+    , megaparsec
+    , mtl >=2.2.2 && <2.4
+    , ordered-containers >=0.2.3 && <0.3
+    , parser-combinators
+    , prettyprinter >=1.5 && <1.8
+    , psqueues
+    , quickcheck-with-counterexamples ==1.2.*
+    , random ==1.2.*
+    , safe-exceptions
+    , sbv >=8.17 && <12
+    , stm
+    , template-haskell
+    , test-framework >=0.8.2 && <0.9
+    , test-framework-hunit >=0.3.0.2 && <0.4
+    , test-framework-quickcheck2 >=0.3.0.5 && <0.4
+    , text >=1.2.4.1 && <2.2
+    , time
+    , unix
+    , unordered-containers >=0.2.11 && <0.3
+  default-language: Haskell2010

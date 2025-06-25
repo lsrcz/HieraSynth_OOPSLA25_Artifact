@@ -1,0 +1,24 @@
+{
+  "results": [
+    {
+      "command": "./scripts/target/min_max_128.sh -j 72 --ir-func-name Min128 --sketch-selector=fixed_cmp_inferred_7 --log-prog-name Min128.Fixed.72 --target-cost 15 ",
+      "mean": 867.0588735911133,
+      "stddev": 307.6253426840692,
+      "median": 996.9264496447801,
+      "user": 23614.84444833333,
+      "system": 488.4636612266667,
+      "min": 515.79632176478,
+      "max": 1088.45384936378,
+      "times": [
+        515.79632176478,
+        996.9264496447801,
+        1088.45384936378
+      ],
+      "exit_codes": [
+        0,
+        0,
+        0
+      ]
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+cradle:
+  stack:
+    - path: "./src"
+      component: "hierasynth:lib"
+
+    - path: "./arith/Main.hs"
+      component: "hierasynth:exe:arith"
+
+    - path: "./arith/Arith.hs"
+      component: "hierasynth:exe:arith"
+
+    - path: "./arith/Paths_hierasynth.hs"
+      component: "hierasynth:exe:arith"
+
+    - path: "./arith-sum/Main.hs"
+      component: "hierasynth:exe:arith-sum"
+
+    - path: "./arith-sum/Arith.hs"
+      component: "hierasynth:exe:arith-sum"
+
+    - path: "./arith-sum/EvalMode.hs"
+      component: "hierasynth:exe:arith-sum"
+
+    - path: "./arith-sum/Operator/Add.hs"
+      component: "hierasynth:exe:arith-sum"
+
+    - path: "./arith-sum/Operator/AddImm.hs"
+      component: "hierasynth:exe:arith-sum"
+
+    - path: "./arith-sum/Operator/Mul.hs"
+      component: "hierasynth:exe:arith-sum"
+
+    - path: "./arith-sum/Paths_hierasynth.hs"
+      component: "hierasynth:exe:arith-sum"
+
+    - path: "./control/Main.hs"
+      component: "hierasynth:exe:control"
+
+    - path: "./control/ConProg.hs"
+      component: "hierasynth:exe:control"
+
+    - path: "./control/Semantics.hs"
+      component: "hierasynth:exe:control"
+
+    - path: "./control/Sketch.hs"
+      component: "hierasynth:exe:control"
+
+    - path: "./control/Typing.hs"
+      component: "hierasynth:exe:control"
+
+    - path: "./control/Value.hs"
+      component: "hierasynth:exe:control"
+
+    - path: "./control/Paths_hierasynth.hs"
+      component: "hierasynth:exe:control"
+
+    - path: "./test"
+      component: "hierasynth:test:spec"
