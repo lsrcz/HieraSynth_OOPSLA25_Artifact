@@ -17,6 +17,7 @@ from plot_util import (
     time_to_float,
     setup_plot_params,
     save_plot,
+    latex_escape,
 )
 
 # Create parser with common options and add parallel-specific arguments
@@ -340,7 +341,7 @@ def plot_parallel_performance(
     xaxis = np.arange(len(targets))
     plt.xticks(
         xaxis,
-        targets,
+        [latex_escape(t) for t in targets],
         rotation=args.xaxis_rotation,
         ha="right",
         fontproperties=fm.FontProperties(stretch="ultra-condensed", size=args.font_size),
@@ -362,6 +363,9 @@ def plot_parallel_performance(
 
     # Set up y-axis ticks and reference lines
     ticks = [1, 2, 4, 8, 16, 24, 48]
+    # For the proving optimality figure (total solution time), hide the 48x tick
+    if output_file == args.all_output and 48 in ticks:
+        ticks.remove(48)
     ticks.append(max_result)
     # if max_result < 72:
     #     ticks.append(max_result)
@@ -391,7 +395,7 @@ def plot_parallel_performance(
             xaxis + start + i * each_width,
             values,
             each_width,
-            label=f"{core} cores",
+            label=f"{core} core{'s' if core != 1 else ''}",
         )
 
     # Add y-axis label

@@ -41,14 +41,40 @@ def add_reference_lines(ax: Any) -> None:
 
 def setup_plot_params():
     """Set up common plot parameters."""
-    # plt.rcParams["xtick.labelsize"] = 20
-    # plt.rcParams["ytick.labelsize"] = 20
-    # plt.rcParams["legend.fontsize"] = 20
-    fm.fontManager.addfont("scripts/LinBiolinum_Rah.ttf")
-    fm.fontManager.addfont("scripts/LinBiolinum_Kah.ttf")
-    fm.fontManager.addfont("scripts/LinBiolinum_RBah.ttf")
-    fm.fontManager.addfont("scripts/LinBiolinum_RIah.ttf")
-    plt.rcParams["font.family"] = "Linux Biolinum"
+    # Route all text rendering through LaTeX to ensure Type 1 fonts
+    plt.rcParams["text.usetex"] = True
+    # Use Biolinum as default (sans) and Libertine-based math, both Type 1
+    plt.rcParams["font.family"] = "sans-serif"
+    plt.rcParams["text.latex.preamble"] = (
+        # r"\usepackage[sfdefault]{biolinum}"
+        r"\usepackage[tt=false, type1=true]{libertine}"
+        r"\usepackage[libertine]{newtxmath}"
+        # r"\usepackage{amsmath,amssymb}"
+    )
+
+
+def latex_escape(text: str) -> str:
+    """Escape LaTeX special characters in plain text.
+
+    This is useful for tick labels and other text injected into LaTeX when
+    usetex=True. It does not add math mode; it only escapes.
+    """
+    replacements = {
+        "\\": r"\textbackslash{}",
+        "_": r"\_",
+        "%": r"\%",
+        "&": r"\&",
+        "#": r"\#",
+        "$": r"\$",
+        "{": r"\{",
+        "}": r"\}",
+        "~": r"\textasciitilde{}",
+        "^": r"\textasciicircum{}",
+    }
+    escaped = text
+    for k, v in replacements.items():
+        escaped = escaped.replace(k, v)
+    return escaped
 
 
 def setup_y_axis(ax: Any, fontsize: int = 25):

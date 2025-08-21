@@ -511,7 +511,13 @@ def create_plot(use_selected_points: bool = False) -> Figure:
     y_pred_fit = X @ np.array([k_hat, b_hat])
     R2 = 1 - np.sum((y_fit - y_pred_fit) ** 2) / np.sum((y_fit - y_fit.mean()) ** 2)
 
-    fitted_line_rep = f"k = {k_hat:.2f}/log(n) + {b_hat:.2f}"
+    # Build a nicely formatted regression label that uses a proper minus sign for negatives
+    minus = "-" 
+    slope_sign = minus if k_hat < 0 else ""
+    slope_mag = abs(k_hat)
+    intercept_sign = minus if b_hat < 0 else "+"
+    intercept_mag = abs(b_hat)
+    fitted_line_rep = f"k = {slope_sign}{slope_mag:.2f}/\\ln(n) {intercept_sign} {intercept_mag:.2f}"
     print("Fitted line: ", fitted_line_rep)
     print("R2: ", R2)
 
@@ -548,18 +554,24 @@ def create_plot(use_selected_points: bool = False) -> Figure:
     y_lower997, y_upper997 = y_line - t997 * se_line, y_line + t997 * se_line
 
     if use_selected_points:
-        fig, ax = plt.subplots(figsize=(12, 7.5), constrained_layout=True)
+        fig, ax = plt.subplots(figsize=(13, 6.5), constrained_layout=True)
     else:
         fig, ax = plt.subplots(figsize=(9, 7), constrained_layout=True)
 
     # Confidence bands
     ax.fill_between(u_line, y_lower997, y_upper997, color='gold', alpha=0.25,
-                    label='99.7% confidence band')
+                    label='99.7\\% confidence band')
     ax.fill_between(u_line, y_lower95, y_upper95, color='coral', alpha=0.35,
-                    label='95% confidence band')
+                    label='95\\% confidence band')
 
     # Fitted line & existing tools data
-    ax.plot(u_line, y_line, color='tab:orange', linewidth=2, label="{} (R^2={:.2f})".format(fitted_line_rep, R2))
+    ax.plot(
+        u_line,
+        y_line,
+        color='tab:orange',
+        linewidth=2,
+        label=r"${} (R^{{2}}={:.2f})$".format(fitted_line_rep, R2),
+    )
     if use_selected_points:
         ax.scatter(u_fit, y_fit, marker='x', color='tab:red', label='Existing tools (best performance)')
         for yi, ui, label in zip(y_fit, u_fit, tool_labels):
@@ -568,9 +580,9 @@ def create_plot(use_selected_points: bool = False) -> Figure:
     # Plot HieraSynth data points
     plot_hierasynth_points(ax, hierasynth_data)
 
-    ax.set_xlabel('n (Size of Instruction Set)', fontsize=26)
-    ax.set_ylabel(r'k (Maximum Program Size)', fontsize=26)
-    # ax.set_title('Fit of $y = k / log(x) + b$ with confidence bands')
+    ax.set_xlabel(r'$n$ (Size of Instruction Set)', fontsize=26)
+    ax.set_ylabel(r'$k$ (Maximum Program Size)', fontsize=26)
+    # ax.set_title('Fit of $y = k / ln(x) + b$ with confidence bands')
 
     def x_to_u(x): return 1/np.log(x)
 
@@ -629,9 +641,9 @@ def create_plot(use_selected_points: bool = False) -> Figure:
 
             annotation_lines = []
             if k_ratio and k_ratio > 1.0:
-                annotation_lines.append(f"k = {k_ratio:.2f}x")
+                annotation_lines.append(f"$k = {k_ratio:.2f}\\hat{{k}}$")
             if n_ratio and n_ratio > 1.0:
-                annotation_lines.append(f"n = {n_ratio:.2f}x")
+                annotation_lines.append(f"$n = {n_ratio:.2f}\\hat{{n}}$")
 
             if annotation_lines:
                 ax.annotate("\n".join(annotation_lines),
@@ -739,24 +751,24 @@ def main():
     # Create plot with all points
     fig_all = create_plot(use_selected_points=False)
     output_file_all = f"{args.output_file_prefix}_curve.pdf"
-    fig_all.savefig(output_file_all, dpi=300, bbox_inches="tight")
+    fig_all.savefig(output_file_all, dpi=300, bbox_inches="tight", pad_inches=0.2)
     print(f"Figure with all points saved to {output_file_all}")
 
     # Also save a PNG version
     png_output_all = output_file_all.replace(".pdf", ".png")
-    fig_all.savefig(png_output_all, dpi=300, bbox_inches="tight")
+    fig_all.savefig(png_output_all, dpi=300, bbox_inches="tight", pad_inches=0.2)
     print(f"PNG version with all points saved to {png_output_all}")
     plt.close()
 
     # Create plot with only selected points
     fig_selected = create_plot(use_selected_points=True)
     output_file_selected = f"{args.output_file_prefix}_curve_selected.pdf"
-    fig_selected.savefig(output_file_selected, dpi=300, bbox_inches="tight")
+    fig_selected.savefig(output_file_selected, dpi=300, bbox_inches="tight", pad_inches=0.2)
     print(f"Figure with selected points saved to {output_file_selected}")
 
     # Also save a PNG version
     png_output_selected = output_file_selected.replace(".pdf", ".png")
-    fig_selected.savefig(png_output_selected, dpi=300, bbox_inches="tight")
+    fig_selected.savefig(png_output_selected, dpi=300, bbox_inches="tight", pad_inches=0.2)
     print(f"PNG version with selected points saved to {png_output_selected}")
     plt.close()
 

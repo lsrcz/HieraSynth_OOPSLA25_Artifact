@@ -307,7 +307,7 @@ if __name__ == "__main__":
                 continue
 
             if elapsed_time is None and sol_type["name"] == "main":
-                problem_label[target] += "*"
+                problem_label[target] += "$*$"
 
             timeouted[f"{name}_best"] = (
                 time_to_best is None
@@ -336,12 +336,12 @@ if __name__ == "__main__":
 
         # Add special markers for main solution
         if target in hacker_need_extra_targets:
-            problem_label[target] += "★"
+            problem_label[target] += "$\\star$"
 
         # Mark initial cost improvement (using main solution data)
         filepath = os.path.join(args.results_dir, f"{target}.{args.cores}.csv")
         if check_cost_improvement(filepath):
-            problem_label[target] += "♦"
+            problem_label[target] += "$\\blacklozenge$"
     
     print("best acc ratio:", min(stdlib_best_ratios), max(stdlib_best_ratios))
     print("all acc ratio:", min(stdlib_all_ratios), max(stdlib_all_ratios))
