@@ -575,7 +575,7 @@ def create_plot(use_selected_points: bool = False) -> Figure:
     if use_selected_points:
         ax.scatter(u_fit, y_fit, marker='x', color='tab:red', label='Existing tools (best performance)')
         for yi, ui, label in zip(y_fit, u_fit, tool_labels):
-            ax.annotate(label, (ui, yi), fontsize=20, ha='left', va='center')
+            ax.annotate(label, (ui, yi), fontsize=20, xytext=(4, 0), textcoords='offset points', ha='left', va='center')
 
     # Plot HieraSynth data points
     plot_hierasynth_points(ax, hierasynth_data)
@@ -595,6 +595,10 @@ def create_plot(use_selected_points: bool = False) -> Figure:
 
     # u_min, u_max = ax.get_xlim()
     k_min, k_max = ax.get_ylim()
+
+    annotated_infos: list[dict[str, Any]] = []
+    annotated_ns: list[float] = []
+    annotated_ks: list[float] = []
     
     # ---------------- Additional analysis for k=7 and k=8 points (only for selected plot) ----------------
     if use_selected_points:
@@ -607,6 +611,9 @@ def create_plot(use_selected_points: bool = False) -> Figure:
             n_val = rightmost_pt["n"]
             k_val = rightmost_pt["k"]
             u_val = n_to_u(n_val)
+
+            annotated_ns.append(n_val)
+            annotated_ks.append(k_val)
 
             # Draw horizontal and vertical dashed lines through the point
             # ax.axvline(x=u_val, color="gray", linestyle="--", linewidth=1)
@@ -646,13 +653,14 @@ def create_plot(use_selected_points: bool = False) -> Figure:
                 annotation_lines.append(f"$n = {n_ratio:.2f}\\hat{{n}}$")
 
             if annotation_lines:
-                ax.annotate("\n".join(annotation_lines),
-                            (u_val, k_val),
-                            xytext=annotation_position[k_target],
-                            textcoords='offset points',
-                            fontsize=20,
-                            ha='center', va='top',
-                            bbox=dict(boxstyle='round,pad=0.2', fc='white', alpha=0.7))
+                annotated_infos.append(
+                    {
+                        "text": "\n".join(annotation_lines),
+                        "k_val": k_val,
+                        "u_val": u_val,
+                    }
+                )
+                
     # ----------------------------------------------------------------------------------------------
 
     ax.set_xlim(u_min, u_max)
@@ -660,6 +668,51 @@ def create_plot(use_selected_points: bool = False) -> Figure:
 
     # Invert x-axis so that n goes from 20 to 800 (left to right)
     ax.invert_xaxis()
+
+    # ---------------- Place consolidated annotations at top-right with arrows ----------------
+    if use_selected_points and annotated_infos:
+        # Sort annotations by k so they stack nicely (lowest k at bottom)
+        annotated_infos.sort(key=lambda d: d["k_val"])  # ascending k
+
+        # Starting position (axes fraction)
+        x_text_base = 0.97  # rightmost
+        x_step = 0.08  # horizontal spacing between boxes
+        y_text_start = 0.95
+        y_step = 0.12  # vertical spacing between boxes
+
+        for idx, info in enumerate(annotated_infos):
+            # Stagger boxes horizontally: move each successive box leftwards
+            x_text = max(0.05, x_text_base - idx * x_step)
+
+            ax.annotate(
+                info["text"],
+                xy=(info["u_val"], info["k_val"]),
+                xycoords="data",
+                xytext=(x_text, y_text_start - idx * y_step),
+                textcoords="axes fraction",
+                fontsize=20,
+                ha="right",
+                va="top",
+                bbox=dict(boxstyle="round,pad=0.2", fc="white", alpha=0.7),
+                arrowprops=dict(arrowstyle="->", color="gray", lw=1.2),
+            )
+    # ----------------------------------------------------------------------------------------------
+
+        # ---------------- Override axis ticks to show selected annotated points ----------------
+    if use_selected_points and annotated_ns:
+        # Base ticks we always want to show
+        base_ns = [20, 50, 100]
+        # Combine and sort unique n values for ticks
+        x_tick_ns = sorted(set(base_ns + annotated_ns))
+        ax.set_xticks([x_to_u(n) for n in x_tick_ns])
+        ax.set_xticklabels([str(int(round(n))) for n in x_tick_ns], fontsize=18)
+
+        # y-axis ticks: include 0 and annotated k values
+        base_ks = [0, 5, 10, 15]
+        y_tick_ks = sorted(set(base_ks + annotated_ks))
+        ax.set_yticks(y_tick_ks)
+        ax.set_yticklabels([str(int(round(k))) for k in y_tick_ks], fontsize=18)
+
 
     # Add legend with timeout hatching explanation
     add_plot_legend(use_selected_points, ax)
